@@ -1,0 +1,95 @@
+*{
+    padding:0;
+    margin:0;
+}
+html,body{
+    height:100%;
+    background-color:#282424;
+}
+.wrap{
+    background-color:#090001;
+    width:60%;
+    margin:100px auto;
+    color:#514f4f;
+    border:1px solid #090001;
+    box-shadow:0 0 12px #ddcbcb;
+}
+header{
+    padding:10px 30px;
+    border-bottom:1px solid #656161;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color:#6d4a8a;
+}
+header h2{
+    font-size:1.7rem;
+}
+.content{
+    padding:10px 30px;
+    background-color:#282424;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+.content div{
+    margin-bottom:5px;
+}
+.content div label{
+    display:block;
+    margin-bottom:5px;
+}
+.content div input,
+.subject{
+    width:90%;
+    height:40px;
+    font-size:1rem;
+    color:#d2c7c7;
+    border:1px solid #282424;
+    border-radius:3px;
+    box-shadow:0 0 8px #c8acb0;
+    text-indent:2rem;
+    font-family:"Comic Sans MS",cursive;
+    background-color: transparent;
+}
+.content div input:focus,
+.message:focus{
+    outline:none;
+    border-color:#a9a0a4;
+}
+.message {
+    width: 90%;
+    box-sizing: border-box;
+    height: 300px;
+    color: #d2c7c7;
+    border: 1px solid #282424;
+    box-shadow: 0 0 8px #c8acb0;
+    border-radius: 5px;
+    text-indent: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Comic Sans MS", cursive;
+    background-color: transparent;
+}
+.subject{
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+
+
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+.send{
+    width:100px;
+    height:30px;
+    font-size:1rem;
+    line-height:30px;
+    display:block;
+    text-align:center;
+    border:1px solid #705a5a;
+    border-radius:5px;
+    margin-top:0.5rem;
+    text-decoration:none;
+    color:#cdbfb8;
+}

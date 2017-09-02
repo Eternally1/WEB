@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<div id="app">
+    <p>{{a}}</p>
+    <p>{{b}}</p>
+    <button v-on:click="sayHello()">显示</button>
+    <button @click = "incre">自增</button>
+</div>
+
+<body>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                a:"hello world",
+                b:1
+            },
+            methods:{
+                sayHello:function(){
+                    console.log(this.a);
+                },
+                incre:function(){
+                    this.b++;
+                }
+            },
+            watch:{
+                'b':function(val,oldVal){
+                    console.log(val,oldVal);
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

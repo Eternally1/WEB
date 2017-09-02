@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <script src="/static/js/marked.js"></script>
+    <script src="/static/js/api-blog.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/edit.css">
+</head>
+<body>
+    <div class="edit-wrap">
+        {{!--返回按钮--}}
+        <div class="edit-back">
+            <a href="/home">&lt;&nbsp;返回</a>
+            <a href="#" class="publish">发布</a>
+        </div>
+        {{!--标题--}}
+        <div class="edit-title">
+            <label>标题</label>
+            <input type="text" placeholder="请输入文章标题" id="title" />
+        </div>
+        {{!--标签--}}
+        <div class="edit-tag">
+            <label>标签</label>
+            <div class="tags">
+                <ul>
+                    <li>Vue.js<a href="#">X</a></li>
+                    <li>javascript<a href="#">X</a></li>
+                    <li>java<a href="#">X</a></li>
+                </ul>
+            <span><a href="#" class="addTag">+ new tag</a></span>
+            </div>
+        </div>
+        {{!--简介--}}
+        <div class="edit-abstract">
+            <label>简介</label>
+            <textarea cols="30" rows="10" id="abstract"></textarea>
+        </div>
+        {{!--编辑区--}}
+        <div class="edit-cont">
+            <label>内容</label>
+            <textarea cols="30" rows="10" class="rowText" id="rowText">
+               
+            </textarea>
+            <div class="markedText" id="markedText">
+                    
+            </div>
+        </div>
+    </div>
+
+    {{!--创建一个oMask的div显示new tag弹出框--}}
+    <div class="createTags">
+        <h2 class="title">输入标签</h2>
+        <div class="cont">
+            <input type="text" class="input-cont">
+            <a href="#" class="add">添加</a>
+        </div>
+        <ul class="choosedTags">
+            <li>Vue.js<a href="#">X</a></li>
+            <li>javascript<a href="#">X</a></li>
+            <li>java<a href="#">X</a></li>
+        </ul>
+        <div class="close">X       
+        </div>
+    </div>
+</body>
+<script src="/static/js/edit.js"></script>
+</html>

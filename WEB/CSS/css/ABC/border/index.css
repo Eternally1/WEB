@@ -1,0 +1,41 @@
+.border{
+    width:200px;
+    height:200px;
+    margin-left:20px;
+    float:left
+}
+/*1点线框*/
+.border1{
+    border:1px dotted green;
+}
+/*2虚线框*/
+.border2{
+    border-style:dashed;
+    border-color:red;
+    border-width:1px;
+}
+/*3凹槽边款*/
+.border3{
+    /*border:10px groove red;*/
+    border:10px outset red;
+}
+/*4 3d垄断边框*/
+.border4{
+    /*border:10px ridge red;*/
+    border:10px inset red;
+}
+/*border-color  属性的语法以及参数*/
+.borcol{
+    border:10px solid transparent;
+    border-radius:15px 0 15px 0;
+    -moz-border-top-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+    -moz-border-right-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+    -moz-border-bottom-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+    -moz-border-left-colors:#a0a #909 #808 #707 #606 #505 #404 #303;
+}
+
+.borimg{
+    border:2px solid;
+    -webkit-border-image:url(./2.jpg) 2 round stretch;
+    border-image:url(./2.jpg) 2 round stretch;
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个不错的注册界面</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        html{
+            height:100%;
+            width:100%;
+            background:linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),
+            url('http://thecodeplayer.com/uploads/media/gs.png');
+        }
+        .m-register{
+            width: 320px;
+            height: 415px;
+            box-sizing: border-box;
+            background: #fff;
+            padding: 20px 30px;
+            margin: 5rem auto;
+        }
+        .m-register h2.title{
+            font-size:1rem;
+            font-family:"Comic Sans Ms","Microsoft YaHei",serif;
+            text-align:center;
+            margin:0.5rem 0 1rem 0;
+        }
+        .m-register input{
+            width: 80%;
+            height: 2.7rem;
+            font-size: 0.9rem;
+            font-family: "Comic Sans Ms","Microsoft YaHei",serif;
+            color: #8ecaed;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0.5rem auto;
+            display: block;
+            text-indent: 1rem;
+            transition:border-color 0.4s;
+        }
+        .m-register input:focus{
+            outline:none;
+            border-color:#203949;
+        }
+        .m-register input[type="button"]{
+            border: none;
+            background: #008CBA;
+            text-align: center;
+            color:#f7f5f5;
+            transition: background 0.3s;
+        }
+        .m-register input[type="button"]:hover{
+            background: #555;
+            box-shadow:0 0 5px #6e5656;
+            cursor: pointer;
+        }
+        .m-register input.login{
+            background: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="m-register">
+        <h2 class="title">CREATE YOUR ACCOUNT</h2>
+        <input type="text" class="username" placeholder="Username" autocomplete="off">
+        <input type="password" class="password" placeholder="Password" autocomplete="new-password">
+        <input type="password" class="check_psw" placeholder="Password Again" autocomplete="off">
+        <input type="email" class="email" placeholder="Email" autocomplete="off">
+        <input type="button" class="signup" value="SignUp">
+        <input type="button" class="login" value="LoginIn">
+    </div>
+</body>
+</html>

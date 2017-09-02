@@ -1,0 +1,194 @@
+/**
+guestbook.html的css样式
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #302f2f;
+}
+
+.wrap {
+    /*min-width:1000px;*/
+    min-width: 650px;
+    width: 80%;
+    background: #111010;
+    margin: 3rem auto;
+    color: #935050;
+}
+
+header {
+    height: 3rem;
+    line-height: 3rem;
+}
+header .title{
+    position:relative;
+}
+header .title h2 {
+    font-size: 1.3rem;
+    font-family: "Comic Sans MS", Serif;
+    font-weight: normal;
+    padding-left: 1rem;
+    border-bottom: 1px solid #675c5c;
+}
+.title .signIn {
+    color: #9f9191;
+    text-decoration: none;
+    display: inline-block;
+    width: 5rem;
+    height: 1.7rem;
+    text-align: center;
+    line-height: 1.7rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: 1px solid #7e7c7c;
+    transition: border-color 0.5s;
+    position:absolute;
+    right:1rem;
+    top:0.7rem;
+}
+.title .signIn:hover{
+    border-color:#fff;
+}
+
+
+/*end header*/
+
+.content {
+    width: 94%;
+    margin: 2rem auto;
+    /*border:1px solid #ccc;*/
+}
+
+.content .message {
+    border-bottom: 1px solid #675c5c;
+    margin-bottom: 0.5rem;
+}
+
+.content .userMessage {
+    /*border:1px solid #ccc;*/
+}
+
+.content .message .info {
+    height: 2rem;
+    line-height: 2rem;
+    /*background: #4d4747;*/
+    /*border-radius:8px;*/
+    /*box-shadow:0 0 5px #efebeb;*/
+}
+
+.message .info .edit {
+    float: left;
+    margin-left: 2rem;
+}
+
+.message .info .edit .reply,
+.message .info .edit .delete {
+    border-right: 1px solid #705454;
+}
+
+.message .info span a {
+    text-decoration: none;
+    color: #bcb7b7;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.message .info span a:hover {
+    color: #f1ebeb;
+}
+
+.message .userInfo {
+    float: left;
+    margin-left: 40%;
+    color: #adacac;
+}
+
+/*end message info*/
+.message .cont {
+    padding: 1rem 0.5rem;
+    line-height: 1.5rem;
+    text-indent: 2rem;
+    color: #5d5959;
+    font-family: "Comic Sans MS", Serif;
+}
+
+.message .replyMessage {
+    margin-top: 1rem;
+}
+
+.message .replyMessage .info {
+    border: none;
+    text-indent: 2rem;
+    background: #0b0b0b;
+    color: #4b5ca5;
+}
+
+.message .replyMessage .info label {
+    padding-right: 0.5rem;
+}
+
+.message .replyMessage .info span {
+    margin-right: 3rem;
+}
+
+/*end content*/
+footer.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.footer {
+    float: right;
+    margin-right: 3rem;
+}
+
+.footer .prev,
+.footer .next {
+    display: inline-block;
+    color: #8a8787;
+    text-decoration: none;
+    width: 4rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: #534e4a;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.footer span a {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1rem;
+    color: #355934;
+    text-decoration: none;
+    background: #422222;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    margin: 0 0.3rem;
+    text-align: center;
+    border-radius: 3px
+}
+
+/**
+被选中的页码显示不一样的背景色
+ */
+footer a.active {
+    background: #c8bcbc;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+</head>
+<body>
+    <div class="m-register">
+        <form name="info" action="register.php" autocomplete="off" method="post" onsubmit="return check()">
+            <h2 class="title">CREATE YOUR ACCOUNT</h2>
+            <input type="text" class="username" placeholder="Username" name="username">
+            <input type="password" class="password" placeholder="Password" name="password" autocomplete="new-password">
+            <input type="password" class="check_psw" name="cpassword" placeholder="Password Again">
+            <input type="email" class="email" name="email" placeholder="Email">
+            <input type="submit" class="signup" value="SignUp">
+            <input type="button" class="login" value="LoginIn">
+        </form>
+    </div>
+    <div class="m-login">
+
+    </div>
+<script>
+    function check(){
+        if(document.info.username.value.trim() == ""){
+            alert("请输入用户名");
+            return false;
+        }
+        if(document.info.username.value.trim().length<2){
+            alert("用户名长度必须大于2");
+            return false;
+        }
+        if(document.info.password.value.trim() == ""){
+            alert("请输入密码");
+            return false;
+        }
+        if(document.info.password.value.trim().length<6){
+            alert("密码长度必须大于6");
+            return false;
+        }
+        if(document.info.password.value.trim() != document.info.cpassword.value.trim()){
+            alert("两次输入的密码不一致");
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

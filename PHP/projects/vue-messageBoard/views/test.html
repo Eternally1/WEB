@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../static/js/vue.js"></script>
+    <script src="../static/js/axios.js"></script>
+    <title>测试文件</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <div class="message" v-for="item in comments">
+        <div class="userMessage">
+            <div class="info">
+                <div class="edit">
+                    <span><a href="#" class="reply">回复</a></span>
+                    <span><a href="#" class="delete">删除</a></span>
+                    <span><a href="#" class="advice">建议</a></span>
+                </div>
+                <div class="userInfo">
+                    <span class="userName">{{item.name}}</span>
+                    <span class="commitTime">{{item.content_time}}</span>
+                </div>
+            </div>
+            <div class="cont">这里是留言区</div>
+        </div>
+        <div class="replyMessage">
+            <div class="info">
+                <label for="replyTitle">回复标题:</label><span id="replyTitle">你好</span>
+                <label for="replyPer">回复人:</label><span id="replyPer">管理员</span>
+                <label for="replyTime">回复时间:</label><span id="replyTime">2017/07/31</span>
+            </div>
+            <div class="cont">这里是回复区</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            message:"world",
+            comments:[]
+        },
+        mounted:function(){
+            this.$nextTick(function(){
+                this.initialData();
+            })
+        },
+        methods:{
+            /**
+             * 这里执行
+             */
+            initialData:function(){
+                var _this = this;
+                axios.get('../php/initial.php').then(function(response){
+                    /**
+                     * 通过输出response可以发现axios对数据进行了一层封装，
+                     * 数据在response.data里面
+                     */
+                    console.log(response);
+                    _this.comments = JSON.parse(response.data.data);
+//                    console.log(typeof response.data.data);//string
+//                    console.log(typeof _this.comments);//object
+                    console.log(_this.comments);//object
+                }).catch(function(err){
+                    console.log(err);
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

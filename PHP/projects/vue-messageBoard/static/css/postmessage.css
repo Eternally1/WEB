@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    background: #302f2f;
+}
+
+.wrap {
+    min-width: 400px;
+    width: 50%;
+    background: #212020;
+    margin: 3rem auto;
+    color: #935050;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.wrap h2 {
+    font-size: 1rem;
+    /* width: 2rem; */
+    height: 2rem;
+    color: #9279af;
+    border-bottom: 1px solid #5d5353;
+    font-family:"Comic Sans MS",Serif;
+}
+
+.wrap div {
+    margin-bottom: 1rem;
+    margin-top:0.5rem;
+}
+
+.wrap div label {
+    color: #7d867e;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    height: 2rem;
+    line-height: 2rem;
+    width: 5rem;
+    display: inline-block;
+}
+
+.wrap div input {
+    width: 60%;
+    height: 2rem;
+    border: 1px solid #212020;
+    border-radius: 0.5rem;
+    text-indent: 1rem;
+    background: #5b5858;
+    color: #ded9d9;
+    font-family: "Comic Sans MS";
+    /*font-family:"Microsoft YaHei",Serif;*/
+    letter-spacing: 0.5px;
+}
+
+.wrap div input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+.wrap div textarea {
+    width: 60%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #5b5858;
+    height: 10rem;
+    vertical-align: top;
+    color: #ded9d9;
+    border: 1px solid #212020;
+    font-family: "Comic Sans MS", Serif;
+    letter-spacing: 0.8px;
+    /*font-family:"Microsoft YaHei",Serif;*/
+}
+
+.wrap div textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+.wrap div a {
+    color: #9f9191;
+    text-decoration: none;
+    display: inline-block;
+    width: 5rem;
+    height: 1.7rem;
+    text-align: center;
+    line-height: 1.7rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+}
+
+.wrap div .submit {
+    background: #4f8fb6;
+    color: #f5f4f4;
+    transition: background 0.5s;
+}
+
+.wrap div .submit:hover {
+    background: #50c4af;
+}
+
+.wrap div .reset {
+    border: 1px solid #7e7c7c;
+    transition: border-color 0.5s;
+}
+
+.wrap div .reset:hover {
+    border-color: #fff;
+}

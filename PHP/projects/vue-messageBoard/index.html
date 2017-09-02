@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guestbook</title>
+    <link rel="stylesheet" href="static/css/common.css">
+    <script src="./static/js/vue.js"></script>
+    <script src="./static/js/axios.js"></script>
+</head>
+<body>
+<div class="wrap" id="app">
+    <header>
+        <div class="title">
+            <h2>{{message}}</h2>
+            <a href="./views/signIn.html" class="signIn" id="signIn" v-if="!isManager">登录</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="message" v-for="item in comments">
+            <div class="userMessage">
+                <div class="info">
+                    <div class="edit">
+                        <span><a class="reply" v-on:click="reply(item.id)" v-if="isManager">回复</a></span>
+                        <span><a class="delete" v-on:click="delMessage(item.id)" v-if="isManager">删除</a></span>
+                        <span><a class="advice">建议</a></span>
+                    </div>
+                    <div class="userInfo">
+                        <span class="userName">[{{item.name}}]</span>
+                        <span class="commitTime">[{{item.content_time}}]</span>
+                    </div>
+                </div>
+                <div class="cont">{{item.content}}</div>
+            </div>
+            <div class="replyMessage" v-if="replyIsNull(item.reply)">
+                <div class="info">
+                    <label for="replyTitle">回复标题:</label><span id="replyTitle">你好</span>
+                    <label for="replyPer">回复人:</label><span id="replyPer">管理员</span>
+                    <label for="replyTime">回复时间:</label><span id="replyTime">{{item.reply_time}}</span>
+                </div>
+                <div class="cont">{{item.reply}}</div>
+            </div>
+        </div>
+    </div>
+    <footer class="clear">
+        <div class="footer">
+            <a class="prev" href="#" v-on:click="goPrePage()">上一页</a>
+            <span v-for="item in showPageBtn">
+                <a href="#" v-bind:class="{active: item === currentPage}" v-if="item" v-on:click="currentPage = item">{{item}}</a>
+                <a v-else>...</a>
+            </span>
+            <a class="next" href="#" v-on:click="goNextPage()">下一页</a>
+        </div>
+    </footer>
+</div>
+<script>
+    /**
+     * 使用vue
+     */
+    new Vue({
+        el: "#app",
+        data: {
+            message: "MessageBoard",
+            comments: [],    //留言
+            totalPages:0,     //总页数
+            currentPage:1,      //当前页码
+            isManager:false
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                this.initialData();
+            })
+        },
+        methods: {
+            /**
+             * 这里执行
+             */
+            initialData: function () {
+                var _this = this;
+                axios.get('./php/initial.php').then(function (response) {
+                    /**
+                     * 通过输出response可以发现axios对数据进行了一层封装，
+                     * 数据在response.data里面
+                     */
+                    console.log(response);
+//                    _this.comments = JSON.parse(response.data.data);
+//                    console.log(typeof response.data.data);//string
+//                    console.log(typeof _this.comments);//object
+//                    console.log(_this.comments);//object
+                    _this.comments = JSON.parse(response.data.messages);
+                    _this.totalPages = response.data.totalPages;
+                    //将服务器返回的总页数转换成对应的数组
+//                    console.log("总页数是"+totalPages);
+//                    for(let i = 0;i<totalPages;i++){
+//                        _this.arrTotal.push(i+1);
+//                    }
+//                    console.log(_this.arrTotal);
+                /**
+                 * 判断是否是管理员登陆
+                 */
+                _this.isManager = response.data.isManager;
+                console.log(_this.isManager);
+                }).catch(function (err) {
+                    console.log(err);
+                })
+            },
+            replyIsNull: function (reply) {
+                /**
+                 * 如果reply直接为空的时候，就不要显示了
+                 */
+                if (reply == null || reply.trim() == "" ) {
+                    return false;
+                }else{
+                    return true;
+                }
+            },
+            /**
+             * 定义点击前一页的方法
+             */
+            goPrePage:function(){
+                /**
+                 *  先要判断当前页是不是第一页，如果是，则不执行操作，否则、
+                 *  currentPage-1
+                 */
+                if(this.currentPage === 1){
+                    return false;
+                }else{
+                    this.currentPage--;
+                }
+
+            },
+            /**
+             * 定义点击下一页的方法
+             * 判断是否为最后一页，如果是则返回false。否则，currentPage+1
+             */
+            goNextPage:function(){
+                if(this.currentPage === this.totalPages){
+                    return false;
+                }else{
+                    this.currentPage++;
+                }
+            },
+            /**
+             * 定义点击回复的时候操作的内容
+             */
+            reply:function(id){
+//                console.log(id);
+                location.href="./views/reply.html?id="+id;
+            },
+            /**
+             *  删除留言
+             */
+            delMessage:function(id){
+//                alert('.....');
+                let _this = this;
+                axios.get("./php/delete.php?id="+id).then(function(res){
+                    if(res.data.status == "3001"){
+                        alert("请登录");
+                        return false;
+                    }
+                    if(res.data.status){
+                        alert("删除成功");
+                        //刷新页面
+                        _this.initialData();
+                    }else{
+                        console.log(res.data.msg);
+                    }
+                }).catch(function(err){
+                    console.log(err);
+                })
+            }
+        },
+        computed:{
+            showPageBtn:function(){
+                let arr = [],
+                    current = this.currentPage,
+                    total = this.totalPages;
+                if(this.totalPages<7){
+                    for(let i = 0;i<this.totalPages;i++){
+                        arr.push(i+1);
+                    }
+                    return arr;
+                }
+                //下面定义的一些事当页码大于5页，根据当前页的显示状况
+                if(current<=2)return [1,2,3,0,total-1,total];
+//                if(current>=total-1) return[1,2,0,total-2,total-1,total];
+                if(current>=total-2) return[1,2,3,0,total-2,total-1,total];
+                if(current >=3 && current <=total-3){
+                    return [current-2,current-1,current,current+1,0,total];
+                }
+            }
+        },
+        watch:{
+            currentPage:function(){
+                let _this = this;
+                axios.get('./php/initial.php?page='+this.currentPage).then(function(res){
+                    _this.comments = JSON.parse(res.data.messages);
+                }).catch(function(err){
+                    console.log(err);
+                })
+            }
+        }
+    })
+    /**
+     * 这里随便写一段代码，获取php文件中返回的json数据，看是否可以获取得到
+     * 这里算是测试成功了，可以获取得到从服务器返回来的string字符串。
+     */
+    //    document.getElementById("submit").onclick = function(){
+    //1、设定URL
+    //    let url = "../php/initial.php";
+    //    //2、创建xhr对象
+    //    const xhr = new XMLHttpRequest();
+    //    //3、open()创建一个http请求
+    //    xhr.open("GET", url, true);
+    //    //4、send()
+    //    xhr.send();
+    //    //5、监听
+    //    xhr.onreadystatechange = function () {
+    //        if (xhr.status == 200 && xhr.readyState == 4) {
+    //            var data = xhr.responseText;
+    //            console.log(JSON.parse(data));
+    //        }
+    //    }
+    //    }
+</script>
+</body>
+
+</html>

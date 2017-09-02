@@ -1,0 +1,18 @@
+html,body{
+	padding:0;
+	margin:0;
+	background: url('../assets/1.jpg');
+}
+ul,li{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.flex-div{
+	/*这个属性在每个浏览器中的显示都不同，需要自己添加前缀
+	但是可以使用一个loader。就是postcss-loader*/
+	width:200px;
+	height:300px;
+	/*display: flex;*/
+	background: linear-gradient(red, blue); /* 标准的语法 */
+}

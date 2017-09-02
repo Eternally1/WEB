@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    background: #f5f5f5;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.todo-wrapper {
+    width: 350px;
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.todo-header {
+    /* background: url(https://images.unsplash.com/photo-1440613905118-99b921706b5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=255b304482a2f50d0917f3de7b06251e) no-repeat; */
+    border-radius: 6px 6px 0 0;
+    padding: 55px 20px;
+    position: relative;
+    background-size: cover;
+}
+
+.todo-header .overlay {
+    /*用于在背景图片上添加一个遮盖层  */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*这里还要使right bottom为0.从而使它可以和父容器的宽高相等  */
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 0 0;
+}
+
+
+/*time不是块元素  */
+
+.todo-header time {
+    display: block;
+    color: #fff;
+    position: relative;
+}
+
+
+/* 解决clearfix容器内的元素浮动制后带来的影响 
+主要应该是为了清除浮动带来的影响*/
+
+.todo-header .clearfix {
+    overflow: hidden;
+    /* overflow:auto; 这个也行*/
+    zoom: 1;
+}
+
+.todo-header time .day {
+    float: left;
+    margin-right: 10px;
+    font-size: 4em;
+}
+
+.todo-header time .dayofweek {
+    display: block;
+    margin-top: 13px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.todo-header .add-circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: red;
+    right: 20px;
+    bottom: -20px;
+    box-shadow: 0 0 13px #ff3c41;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+
+
+/*至此，头部的内容已经书写好了。  */
+
+
+/*todo-content内容的样式  */
+
+.todo-content {
+    padding: 1rem;
+}
+
+.todo-content .todo-content-title {
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/*li标签里面的内容  */
+
+.todo-content .todo-list>li {
+    position: relative;
+    padding: 0.8rem;
+    list-style: none;
+    border-top: 1px solid #ccc;
+    margin-top: 2px;
+    border-radius: 2px
+}
+
+.todo-content .todo-list .done {
+    /* background: #f7f7f7; */
+    color: #ccc;
+}
+
+.todo-content .todo-list li>span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border-top: 1px solid #f7f7f7;
+    border: none;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+
+/*用于标注任务的颜色  */
+
+.todo-content .todo-list .important {
+    background: red;
+}
+
+.todo-content .todo-list .normal {
+    background: #37EAA0;
+}
+
+.todo-content .todo-list .whatever {
+    background: #3772FD;
+}
+
+.todo-list li .text {
+    display: inline-block;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.todo-content .todo-list li input {
+    border: none;
+    font-size: 0.8rem;
+    outline: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+/*对于每一个留言的更多的操作  */
+
+.todo-list .todo-action {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.todo-list .todo-action .more {
+    cursor: pointer;
+}
+
+.todo-list .todo-action .more span {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    line-height: 100%;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 1.3px;
+}
+
+.todo-list .todo-action .action-list {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #f1f0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff;
+    top: 20px;
+    right: 10px;
+    display: none;
+    z-index: 5;
+    color: #000;
+}
+
+.todo-list .todo-action .action-list li {
+    list-style: none;
+    white-space: nowrap;
+    text-align: center;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.todo-list .todo-action .action-list li:hover {
+    border-bottom: 1px solid #725f5f;
+}
+
+.todo-list .todo-action .show {
+    display: block;
+}
+
+
+/* label-list 标签的选择 */
+
+.todo-list .label-list {
+    list-style: none;
+    position: absolute;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    left: 0px;
+    top: 38px;
+    z-index: 5;
+    display: none;
+}
+
+.todo-list .label-list li {
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 3px;
+    text-align: center;
+}
+
+.todo-list .label-list :nth-child(1) {
+    background: #ff3c41;
+}
+
+.todo-list .label-list :nth-child(2) {
+    background: #37EAA0;
+}
+
+.todo-list .label-list :nth-child(3) {
+    background: #3772FD;
+}
+
+.todo-list .show {
+    display: block;
+}

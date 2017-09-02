@@ -1,0 +1,104 @@
+<div class="wrap">
+    <h2 class="title"><a href="#">首屏大图，最大程度利用设计</a></h2>
+    <img src="/static/images/artic1.jpg" />
+    <div class="wrap-cont">
+        <div class="article">
+            <p>
+                当西天最后一抹红霞渐渐消逝，月亮已悄然爬上树梢，
+                倾泻一片流光。不一会儿，满天的繁星便都被招惹来。
+                每逢这时，天空就开始活泼起来，像有一群顽皮的孩子
+                在游乐园里畅快地玩耍。而我，在这湛蓝的夜空下，
+                喜欢静坐在校园里绿草地旁边的圆石上，欣赏对面怒放
+                的月季摇曳的身姿，尽情地吮吸晚风送来的阵阵清凉。
+                融身在这样柔美、宁谧的月夜，仿佛心灵在闲饮一杯柠檬，
+                股股清爽从心底冒出来，向周身弥漫，直到浸透每一寸肌肤
+                ，煞是舒服。
+             夜色渐浓，心情也随之慢慢沉淀，没有歌舞笙
+                箫的扑朔迷离，没有吵闹喧嚣的市井烦俗，没有人情琐事
+                的缠绵侵扰，思绪如蚕丝一般，透明纯净，编织着美丽的
+                回忆和梦幻。此时，最适合细细咀嚼往日的某种甜蜜或者
+                畅想未来日子的某种传奇。仿若湖面的心，平静却又不
+                失灵动，淡然却又颇有情趣。周围的空气像玻璃杯里的
+                柠檬一样，摇曳着，晃动着，散发着怡人的香味，迷醉
+                了我的心。
+            </p>
+        </div>
+        <div class="foot">
+            <span class="more"><a href="#">阅读全文</a></span>
+            <span class="time">2016-02-19</span>
+            <span class="author">Qiu</span>
+        </div>
+    </div>
+</div>
+
+{{#section 'style'}}
+<style>
+    .wrap{
+        width:700px;
+        margin:20px auto;
+        height:500px;
+        background:#838e61;
+    }
+    .wrap .title{
+        height:36px;
+        line-height: 36px;
+        border-bottom:1px solid #ccc;
+        margin:0 20px;
+    }
+    .wrap .title a{
+        font-size:16px;
+        color:#f8c691;
+        text-decoration: none;
+    }
+    .wrap .title a:hover{
+        color:#612121;
+    }
+    .wrap img{
+        width:300px;
+        height:auto;
+        margin-top:20px;
+        margin-left:50px;
+        margin-bottom:10px;
+    }
+    /**
+        这里的多行文本显示省略号目前只是适用于
+        chrome浏览器。
+    */
+    .wrap .wrap-cont .article{
+        margin:20px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        display: -moz-box;
+        text-overflow: ellipsis;  
+        word-break: break-all;  
+    }
+    .wrap .wrap-cont .article p{
+        text-indent:2em;
+        font-size:14px;
+        line-height:25px;
+    }
+    .wrap .wrap-cont .foot{
+        float:right;
+        margin-right:20px;
+    }
+    .foot .more{
+        padding-right:50px;
+    }
+    .foot .more a{
+        color:#faedcb;
+        text-decoration: underline;
+    }
+    .foot .more a:hover{
+        color:red;
+        text-decoration: none;
+    }
+</style>
+
+{{/section}}
+{{#section 'js'}}
+    <script>
+        console.log("hello world");
+    </script>
+{{/section}}

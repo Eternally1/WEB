@@ -1,0 +1,30 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+html,body{
+	background-color:#8a8680;
+}
+ul>li{
+	height:30px;
+	line-height:30px;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+a:hover{
+	color:#a95517;
+}
+div{
+	margin:30px auto;
+	padding-left:30px;
+	width:600px;
+	background:#ccc;
+	border:1px solid #000;
+	box-shadow: 0 0 5px #000;
+	border-radius:5px;
+}

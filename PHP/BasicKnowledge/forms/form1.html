@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form1</title>
+</head>
+<body>
+<?php include 'menu.php'; ?>
+    <form action="form1.php" method="POST">
+        <input type="text" placeholder="请输入用户名" name="userName" />
+        <input type="text" placeholder="请输入你的年龄" name = "age" />
+        <select name="site">
+            <option value="">选择一个站点</option>
+            <option value="runoob">RUNOOB</option>
+            <option value="taobao">TAOBAO</option>
+            <option value="qiu">QIU</option>
+        </select>
+        <!--下拉菜单多选-->
+        <select multiple name="interest[]">
+            <option value="basketball">篮球</option>
+            <option value="football">足球</option>
+            <option value="badminton">羽毛球</option>
+        </select>
+        <!--单选按钮-->
+        <label>性别：</label>
+        <input type="radio" name="gender" value="male">男
+        <input type="radio" name="gender" value="female">女
+        <!--复选框-->
+        <br>
+        <label>选择你喜欢的城市:</label>
+        <input type="checkbox" name="city[]" value="beijing">北京
+        <input type="checkbox" name="city[]" value="shanghai">上海
+        <input type="checkbox" name="city[]" value="shenzhen">深圳
+        <input type="submit" value="提交" />
+    </form>
+</body>
+</html>

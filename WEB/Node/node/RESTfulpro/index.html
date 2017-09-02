@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RESTful设计规范</title>
+</head>
+<body>
+	<a href="http://localhost:8888/listUsers">列出用户信息</a>
+	<form action="http://localhost:8888/addUser" method="POST">
+		<input type="text" name="name" placeholder="userName">
+		<input type="password" name="password" placeholder="password">
+		<input type="text" name="profession" placeholder="输入职业" >
+		<input type="number" name="userId" placeholder="用户ID">
+		<input type="submit" value="提交" id="submit">
+	</form>
+<script>
+var btn = document.getElementById("submit");
+btn.onclick = function(){
+	// alert('...')
+}
+</script>
+</body>
+</html>

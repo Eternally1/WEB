@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    background: #302f2f;
+}
+.wrap{
+    min-width:1000px;
+    width:80%;
+    background: #b8b8b8;
+    margin:3rem auto;
+}
+header{
+    height:2rem;
+    line-height:2rem;
+}
+header .title h2{
+    font-size:1.3rem;
+    font-family:"Comic Sans MS",Serif;
+    font-weight:normal;
+    padding-left:1rem;
+    border-bottom:1px solid #ccc;
+}
+/*end header*/
+
+.content{
+    width:94%;
+    margin:0.3rem auto;
+    /*border:1px solid #ccc;*/
+}
+.content .userMessage{
+    border:1px solid #ccc;
+}
+.content .message .info{
+    height:2rem;
+    line-height:2rem;
+    background: #ccc;
+}
+.message .info .edit{
+    float:left;
+    margin-left:2rem;
+}
+.message .info .edit .reply{
+    border-right:1px solid #705454;
+}
+.message .info  span a{
+    text-decoration:none;
+    color:#000;
+    display:inline-block;
+    width:2.5rem;
+    height:1.5rem;
+    line-height:1.5rem;
+    text-align:center;
+}
+.message .info span a:hover{
+    color:#a32828;
+}
+.message .userInfo{
+    float:left;
+    margin-left:25rem;
+}
+/*end message info*/
+.message .cont{
+    height:10rem;
+}
+.message .replyMessage{
+    border:1px solid #ccc;
+    margin-top:1rem;
+}
+.message .replyMessage .info label{
+    padding-right:0.5rem;
+}
+.message .replyMessage .info span{
+    margin-right:3rem;
+}
+
+/*end content*/
+footer.clear:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+footer{
+    height:2rem;
+    line-height:2rem;
+}
+.footer{
+    float:right;
+    margin-right:3rem;
+}
+.footer a{
+    text-decoration: none;
+    color:#000;
+}
+.footer a:hover{
+    color:#931313;
+}

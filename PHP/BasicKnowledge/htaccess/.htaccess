@@ -1,0 +1,6 @@
+# 告诉Apache对验证失败的访问者显示什么样的文档。
+ErrorDocument 401 ./rejected.html
+# 告诉Apache将在什么地方可以找到包含已经通过身份验证的用户的密码文件，
+# 该文件不应该保存在Web树目录中
+AuthUserFile ./htpass
+

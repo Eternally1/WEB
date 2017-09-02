@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .red{
+            color:red;
+        }
+        .thick{
+            font-weight:bold;
+        }
+        .italic{
+            font-style:italic;
+        }
+    </style>
+    <script src="./vue.js"></script>
+</head>
+<div id="app">
+    <!--这三个就目前看，是等价的,当把a中加上一些html标签的时候就不一样了。-->
+    <p>{{a}}</p>
+    <p v-text="a"></p>
+    <p v-html="a"></p>
+    <!--v-if  v-show-->
+    <p v-if = "isShow">这里显示出来</p>
+    <p v-show = "isNotShow">和上面同步</p>
+
+    <!--  v-for  -->
+    <ul>
+        <li v-for="item in items">
+            <p v-text="item.label"></p>
+        </li>
+    </ul>
+
+    <img v-bind:src="imageSrc">
+
+    <div v-bind:class="{red:isRed}">我是红色的</div>
+    <div  :class="[red, thick]">我是红色粗体字</div>
+    <div  :class="[red, {thick:isThick,italic:isItalic}]">我是红色粗体斜体字字</div>
+
+    
+</div>
+
+<body>
+    <script>
+        //关于模板指令的使用
+        new Vue({
+            el:"#app",
+            data:{
+                a:"<b>hello world</b>",
+                b:1,
+                isShow:true,
+                isNotShow:false,
+                items:[
+                    {label:"Apple"},
+                    {label:"Banana"}
+                ],
+                imageSrc:"./9.jpg",
+                isRed:true,
+                red:"red",
+                thick:"thick",
+                isThick:true,
+                isItalic:true
+            },
+            methods:{
+                sayHello:function(){
+                    console.log(this.a);
+                },
+                incre:function(){
+                    this.b++;
+                }
+            },
+            watch:{
+                'b':function(val,oldVal){
+                    console.log(val,oldVal);
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

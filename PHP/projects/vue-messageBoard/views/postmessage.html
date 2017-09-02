@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>message board</title>
+    <link rel="stylesheet" href="../static/css/postmessage.css">
+    <script src="../static/js/axios.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Message Board</h2>
+        <div>
+            <label for="username">用户名</label>
+            <input type="text" id="username" class="username">
+        </div>
+        <div>
+            <label for="content">发表内容</label>
+            <textarea id="content" class="content"></textarea>
+        </div>
+        <div>
+            <a href="#" class="submit" id="submit">提交</a>
+            <a href="#" class="reset" id="reset">重置</a>
+        </div>
+    </div>
+<script>
+    let username = document.getElementById("username"),
+        content = document.getElementById("content"),
+        submit = document.getElementById("submit"),
+        reset = document.getElementById("reset");
+
+    /**
+     * checkInput()
+     * 验证用户名：限制输入10个字符（5个汉字）怎么判断是5个汉字？？  不能输入非法字符，不能为空
+     * 验证留言内容：留言内容不能为空，留言内容长度不能超过400字
+     */
+    function checkInput(){
+        //获取输入用户名的长度
+        let userValue = username.value.trim();
+        let contentValue = content.value.trim();
+        //定义特殊字符，名字中不能包含
+        const SPECIAL_CHAR = "~!@#$%^&*():|\"><{}[]\\,:/=+-";
+        //定义一个标志flag，用于判断是否符合要求;
+        let flag = true;
+        //判断是否为空
+        if(userValue==""){
+            alert("请填写用户名称");
+            return false;
+        }
+        //判断是否含有特殊字符
+        for(let i = 0;i<userValue.length;i++){
+            if(SPECIAL_CHAR.indexOf(userValue.charAt(i))!=-1){
+                flag = false;
+            }
+        }
+        if(!flag){
+            alert("用户名称中不能包含 "+SPECIAL_CHAR+" 等非法字符，请更改");
+            return false;
+        }
+        //如果用户填写的字符超过10个
+        if(userValue.length >= 10){
+            alert("用户名称最多为10个字符");
+            return false;
+        }
+
+        //验证留言内容
+        if(contentValue==""){
+            alert("请输入留言内容");
+            return false;
+        }
+        if(contentValue.length>=400){
+            alert("留言内容过长");
+            return false;
+        }
+        return {
+            name:userValue,
+            content:contentValue
+        }
+    }
+
+    /**
+     * 提交按钮，发送请求
+     */
+    submit.onclick = function(){
+        let ret = checkInput();
+        if(ret){
+            console.log(ret);
+            var params = new URLSearchParams();
+            params.append("name",ret.name);
+            params.append("content",ret.content);
+            axios.post('../php/sent.php',params).then(function(res){
+                let result = res.data;
+                if(result.status){
+                    //如果留言成功，跳转到guestbook.html页面
+                    location.href = "../index.html";
+                }else if(result.status ===false){
+                    console.log(result.error);
+                    alert("留言失败，请再次尝试!");
+                }
+            }).catch(function(err){
+                console.log(err);
+            })
+        }
+    }
+</script>
+</body>
+</html>

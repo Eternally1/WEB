@@ -1,0 +1,26 @@
+
+.aside{
+	height:36px;
+	width:36px;
+	background-color: #ccc;
+	cursor:pointer;
+	display:flex;
+	/*从上向下显示子元素*/
+	/*box-orient: vertical;*/
+	/*按正常顺序显示子元素*/
+	/*box-direction: normal;*/
+	/*伸缩流方向*/
+	flex-direction: column;
+	/*-webkit-box-pack: center;*/
+	justify-content: center;
+	/*-webkit-box-align: center;*/
+	/* 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。*/
+	align-items:center;
+	text-align: center;
+}
+.line{
+	height:2px;
+	width:20px;
+	background:red;
+	border:2px solid #ccc;
+}

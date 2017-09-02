@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>todolist</title>
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+    <script src="dist/js/vue.js"></script>
+    <script src="dist/js/vuex.js"></script>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="todo-wrapper">
+            <todo-header></todo-header>
+            <div class="todo-content">
+                <todo-content-title></todo-content-title>
+                <todo-list></todo-list>
+            </div>
+        </div>
+    </div>
+    <!-- todo-header  -->
+    <template id="todo-header">
+        <div class="todo-header">
+            <div class="overlay"></div>
+            <time class="clearfix">
+                <span class="day">{{day}}</span>
+                <span class="dayofweek">{{dayofweek}}</span>
+                <span class="month">{{month}}</span>
+            </time>
+            <div class="add-circle" v-on:click="add">
+                <i class="fa fa-plus"></i>
+            </div>
+        </div>
+    </template>
+
+    <!-- todo-content-title  -->
+    <template id="todo-content-title">
+        <div class="todo-content-title">
+            <h2>Your tasks</h2>
+            <p><span>0</span> done / <span>{{allTasks}}</span> task(s) </p>
+        </div>
+    </template>
+
+    <!-- todo-list  -->
+    <template id="todo-list">
+        <ul class="todo-list">
+            <li v-for="item in Items" v-bind:class="item.status">
+                <span v-bind:class="item.label" v-on:click="showLable">
+                    <ul class="label-list">
+                        <li>important</li>
+                        <li>normal</li>
+                        <li>whatever</li>
+                    </ul>
+                </span>
+                <p class="text" v-if="item.isEditing">
+                    <input v-focus placeholder="Type a task and hit enter" v-model = "tempText" v-on:keyup.enter = "save(item)"/>                    
+                </p>
+                 <p class="text" v-if="item.isEditing == false">{{item.text}}</p>  
+                <!-- 一个功能操作框  -->
+                <div class="todo-action" v-on:click="showAction">
+                    <p class="more" >
+                        <span></span><span></span><span></span>
+                    </p>
+                    <!-- 当点击上面的more的时候显示这下面的  -->
+                    <ul class="action-list" >
+                        <li @click="makedownAct(item)" v-if="item.status=='done'?false:true">mark down</li>
+                        <li @click="editAct(item)" v-if="item.status=='done'?false:true">Edit</li>
+                        <li @click="deleteAct(item)">Delete</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </template>
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>

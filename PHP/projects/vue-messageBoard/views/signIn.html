@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <script src="../static/js/axios.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .wrap{
+            width:100%;
+            height:400px;
+            padding:40px 0;
+            position:fixed;
+            top:50%;
+            margin-top:-200px;
+            opacity:0.8;
+            background: linear-gradient(to bottom right,#50a3a2,#53e3a6);
+            background: -webkit-linear-gradient(to bottom right,#50a3a2,#53e3a6);
+        }
+        .container{
+            width:60%;
+            margin:0 auto;
+        }
+        .container h1{
+            text-align:center;
+            color:#fff;
+            font-weight:500;
+        }
+        .container input{
+            width:320px;
+            display:block;
+            height:36px;
+            border:0;
+            outline:0;
+            padding:6px 10px;
+            line-height:24px;
+            margin:32px auto;
+            transition: width 0.5s;
+        }
+        .container input[type="text"],
+        .container input[type="password"]
+        {
+            background: #fff;
+            font-size:16px;
+            color:#50a3a2;
+        }
+        .container input[type='submit']{
+            font-size:18px;
+            font-family:"Comic Sans MS","Segoe MDL2 Assets";
+            color:#666;
+            background: #fff;
+        }
+        .container input:focus{
+            width:400px;
+        }
+        .container input[type='submit']:hover{
+            width:400px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <h1>Welcome</h1>
+        <div>
+            <input type="text" placeholder="user login" id="username">
+            <input type="password" placeholder="password" id="psw">
+            <input type="submit" placeholder="Login" id="submit">
+        </div>
+    </div>
+</div>
+<script>
+    let username = document.getElementById("username"),
+        password = document.getElementById("psw"),
+        submit=document.getElementById("submit");
+    /**
+     * 点击submit按钮之后提交信息
+     */
+    submit.onclick = function(){
+        let params = new URLSearchParams();
+        params.append("name",username.value.trim());
+        params.append("password",password.value.trim());
+        axios.post("../php/login.php",params).then(function(res){
+            console.log(res);
+            if(res.data.status){
+                location.href="../index.html";
+            }else{
+                alert("账号或者密码错误");
+            }
+        }).catch(function(err){
+            console.log(err);
+        })
+    }
+</script>
+</body>
+</html>

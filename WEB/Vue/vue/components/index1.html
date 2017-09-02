@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组件注册基础</title>
+	<script type="text/javascript" src="../../lib/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<my-component></my-component>
+
+		<table>
+			<tr is="my-component"></tr>
+		</table>
+		<table>
+			<my-component></my-component>
+		</table>
+		<ul>
+			<my-component></my-component>
+		</ul>
+	</div>
+
+	<script>
+// Vue.component('my-component',{
+// 	template:'<div>A custom component</div>'
+// })
+//通过构造vue实例来启动vue应用。
+var Child = {
+	template: '<div>{{message}}</div>',
+	data(){
+		// data必须是函数
+		return {
+			message:"A child component"
+		}
+	}
+}	
+new Vue({
+	el:"#app",
+	//局部注册组件。
+	components:{
+		'my-component':Child
+	}
+})
+</script>
+</body>
+</html>

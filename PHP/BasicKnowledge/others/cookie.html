@@ -1,0 +1,28 @@
+<?php
+    $expire = time()+60*60;
+    setCookie("user","Tom",$expire);
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie</title>
+</head>
+<body>
+<label>显示cookie</label>
+<?php
+//输出cookie的值
+    echo $_COOKIE["user"];
+//显示所有的cookie
+    print_r($_COOKIE["user"]);
+    echo "<br>";
+if(isset($_COOKIE["user"])){
+    echo "欢迎".$_COOKIE["user"]."<br>";
+}else{
+    echo "普通访客"."<br>";
+}
+//删除cookie
+setCookie("user","",time()-3600);
+?>
+</body>
+</html>

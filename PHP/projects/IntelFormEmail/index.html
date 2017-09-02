@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能表单邮件</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        input {
+            width: 300px;
+            height: 36px;
+            font-size: 16px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: cornflowerblue;
+        }
+
+        .feedback textarea {
+            width: 300px;
+            border: 1px solid #f5f5f5;
+            border-radius: 5px;
+            font-size:16px;
+            padding:10px;
+            box-sizing:border-box;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+        }
+
+        .info {
+            margin-bottom: 50px;
+        }
+
+        div {
+            margin-bottom: 20px;
+
+        }
+
+        .submit a {
+            display: block;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            color: #8a3e3e;
+            background: #8ecaed;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>Customer Feedback</h1>
+    <p class="info">Please tell us what you think</p>
+    <div class="customerName">
+        <label for="customerName">your name:</label>
+        <input type="text" id="customerName"/>
+    </div>
+    <div class="address">
+        <label for="address">your address:</label>
+        <input type="text" id="address">
+    </div>
+    <div class="feedback">
+        <label for="feedback">your feedback:</label>
+        <textarea name="" id="feedback" cols="30" rows="10"></textarea>
+    </div>
+    <div class="submit">
+        <a id="submit">Send Feedback</a>
+    </div>
+</div>
+
+<script>
+    //封装一个getById方法；
+    function getById(id) {
+        return document.getElementById(id);
+    }
+    //1、获取输入的数据
+    let customerName = getById("customerName");
+    let address = getById("address");
+    let feedback = getById("feedback");
+    //submit提交
+    let submit = getById("submit");
+    submit.onclick = function () {
+        //2、把值通过&链接起来
+        let data = "name=" + customerName.value+ "&address=" + address.value + "&feedback=" + feedback.value;
+        console.log(data);
+        //3、定义URL
+        let url = "processfeedback.php";
+        const xhr = new XMLHttpRequest();
+        //open方法打开连接
+        xhr.open("POST",url,true);
+        //设置头信息
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        //发送post数据
+        xhr.send(data);
+        //监听状态改变事件
+        xhr.onreadystatechange = function(){
+            if(xhr.status == 200 && xhr.readyState == 4){
+                console.log("服务器返回的是"+xhr.responseText);
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

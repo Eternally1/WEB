@@ -1,0 +1,325 @@
+/* article页面的css样式
+*/
+
+html,
+body {
+    background-color: #f5f5f5;
+}
+
+.edit-wrap {
+    width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px 40px;
+    z-index: -1;
+}
+
+
+/*edit-wrap  end*/
+
+.edit-back {
+    height: 30px;
+    line-height: 30px;
+}
+
+.edit-back a:link,
+.edit-back a:visited {
+    display: inline-block;
+    width: 120px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #c8a9a9;
+    color: #000;
+    text-decoration: none
+}
+
+.edit-back .publish {
+    float: right;
+}
+
+.edit-back a:hover,
+.edit-back a:active {
+    color: red;
+    text-decoration: none;
+}
+
+
+/*edit-back  end*/
+
+.edit-title {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #ccc;
+    margin: 20px 0 0 0;
+}
+
+.edit-title label {
+    font-size: 14px;
+    line-height: 50px;
+    padding-right: 20px;
+}
+
+.edit-title input {
+    border: 1px solid #acacac;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    color: #464545;
+    font-size: 14px;
+    text-indent: 1rem;
+}
+
+.edit-title input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+
+/*edit-title end*/
+
+.edit-tag {
+    height: 40px;
+    /*line-height: 30px;*/
+}
+
+.edit-tag label {
+    line-height: 20px;
+    height: 30px;
+    font-size: 14px;
+    padding-right: 15px;
+    float: left;
+}
+
+.edit-tag .tags ul {
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+
+.edit-tag .tags ul li {
+    float: left;
+    padding: 0 5px;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    /*display: block;*/
+}
+
+.edit-tag .tags ul li a {
+    display: inline-block;
+    padding-left: 5px;
+    color: #ea10f1;
+    text-decoration: none;
+}
+
+.edit-tag .tags ul li a:hover {
+    color: #0a74ef;
+}
+
+.edit-tag .tags span {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-tag span a:link,
+.edit-tag span a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.edit-tag span a:hover,
+.edit-tag span a:active {
+    color: red;
+    text-decoration: none;
+}
+
+
+/*edit-tag end*/
+
+.edit-abstract {
+    height: 120px;
+}
+
+.edit-abstract label {
+    display: inline-block;
+    font-size: 14px;
+    /*line-height: 150px;*/
+    vertical-align: middle;
+    padding-right: 10px;
+    height: 100%;
+}
+
+.edit-abstract textarea {
+    width: 500px;
+    height: 90%;
+    padding: 5px;
+    /*去掉右下角的*/
+    resize: none;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.edit-abstract textarea:focus,
+.edit-cont textarea:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+
+/*edit-abstract end*/
+
+.edit-cont {
+    height: 800px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.edit-cont label {
+    font-size: 14px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.edit-cont textarea,
+.edit-cont .markedText {
+    line-height: 20px;
+    font-size: 16px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 380px;
+    height: 760px;
+    padding: 5px;
+}
+
+.edit-cont textarea {
+    resize: none;
+}
+
+.edit-cont .markedText {
+    float: right;
+    margin-left: 10px;
+    border: 1px solid #cfcccc;
+}
+
+
+/*edit-cont  end*/
+
+#oMask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(101, 105, 98, 0.43);
+    z-index: 1;
+}
+
+
+/*oMask  end*/
+
+.createTags {
+    width: 350px;
+    height: 133px;
+    position: fixed;
+    border-radius: 5px;
+    z-index: 2;
+    background-color: #f6f9fb;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.createTags .title {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.createTags .cont {
+    text-align: center;
+}
+
+.createTags .cont input {
+    width: 200px;
+    height: 25px;
+    font-size: 14px;
+    text-indent: 20px;
+    border: 1px solid #464545;
+}
+
+.createTags .cont input:focus {
+    outline: none;
+    border-color: #9ecaed;
+}
+
+.createTags .cont a {
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+
+.createTags .cont a:hover {
+    color: black;
+    background-color: #0a74ef;
+    text-decoration: none;
+}
+
+.createTags .choosedTags {
+    margin: 10px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 8px 0 0 0;
+}
+
+.choosedTags li {
+    float: left;
+    list-style: none;
+    border: 1px solid #acacac;
+    border-radius: 3px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.choosedTags li a {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+
+/*右上角关闭按钮实现*/
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #c8a9a9;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: red;
+}
+
+
+/*createTags end*/

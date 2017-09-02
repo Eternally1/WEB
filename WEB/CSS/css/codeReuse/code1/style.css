@@ -1,0 +1,59 @@
+
+/**
+    对于对齐的相关，一般都是使用verticle-align属性，因此，可以借鉴。
+*/
+/*让图片和字可以对齐*/
+#logo>img{
+    width:100px;
+    height:auto;
+    vertical-align:middle;
+}
+
+/*当一行有多个元素的时候，让多个元素显示在一条线上。*/
+#forUser+img{
+    width:30px;
+    vertical-align:middle;
+    margin-left:5px;
+}
+/*当图片嵌套在a标签中时如何对齐*/
+.aimgp img{
+    width:50px;
+    vertical-align:middle;
+}
+.aimgp p{
+    display:inline-block;
+}
+
+/*关于一些字体  font-family*/
+.fontFam p:nth-child(1){
+    font-family:"Arial";
+}
+.fontFam p:nth-child(2){
+    /*font-family:"Times New Roman";*/
+    font-family:"Lucida Console", Monaco, monospace;/*也挺不错的一种英文显示*/
+}
+.fontFam p:nth-child(3){
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+
+/*字体大小的解决方案*/
+body{
+    font-size:100%;
+}
+p{
+    font-size:0.8em;
+}
+
+/*字体粗细进行设置*/
+#fontWei p:nth-child(2){
+    font-weight:normal;
+    /*等价于font-weight:400*/
+    /*font-weight:400;*/
+}
+#fontaWei p:nth-child(3){
+    font-weight:100;
+}
+#fontWei p:nth-child(4){
+    font-weight:900;
+}

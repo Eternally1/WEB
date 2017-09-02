@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guestbook</title>
+    <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="title">
+            <h2>留言板</h2>
+        </div>
+    </header>
+    <div class="content">
+        <div class="message">
+            <div class="userMessage">
+                <div class="info">
+                    <div class="edit">
+                        <span><a href="#" class="reply">回复</a></span>
+                        <span><a href="#" class="delete">删除</a></span>
+                        <span><a href="#" class="advice">建议</a></span>
+                    </div>
+                    <div class="userInfo">
+                        <span class="userName">[留言人姓名]</span>
+                        <span class="commitTime">[留言提交时间]</span>
+                    </div>
+                </div>
+                <div class="cont">这里是留言区</div>
+            </div>
+            <div class="replyMessage">
+                <div class="info">
+                    <label for="replyTitle">回复标题:</label><span id="replyTitle">你好</span>
+                    <label for="replyPer">回复人:</label><span id="replyPer">管理员</span>
+                    <label for="replyTime">回复时间:</label><span id="replyTime">2017/07/31</span>
+                </div>
+                <div class="cont">这里是回复区</div>
+            </div>
+        </div>
+    </div>
+    <footer class="clear">
+        <div class="footer">
+            <a class="prev" href="#">上一页</a>
+            <a class="next" href="#">下一页</a>
+        </div>
+    </footer>
+    <button id="submit">获取数据</button>
+</div>
+<script>
+    /**
+     * 这里随便写一段代码，获取php文件中返回的json数据，看是否可以获取得到
+     * 这里算是测试成功了，可以获取得到从服务器返回来的string字符串。
+     */
+//    document.getElementById("submit").onclick = function(){
+//        //1、设定URL
+//    let url = "initial.php";
+//    //2、创建xhr对象
+//    const xhr = new XMLHttpRequest();
+//    //3、open()创建一个http请求
+//    xhr.open("GET", url, true);
+//    //4、send()
+//    xhr.send();
+//    //5、监听
+//    xhr.onreadystatechange = function () {
+//        if (xhr.status == 200 && xhr.readyState == 4) {
+//            var data = xhr.responseText;
+//            console.log(JSON.parse(data));
+//        }
+//    }
+    //    }
+</script>
+</body>
+
+</html>

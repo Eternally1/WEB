@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>渐变</title>
+    <style>
+        body,
+        html {
+            text-align: center;
+        }
+        
+        div {
+            width: 300px;
+            height: 200px;
+        }
+        
+        .one {
+            background: -webkit-linear-gradient(left, red, blue);
+            /*目前在浏览器中查看的时候已经是可以使用标准语法了
+            下面这个就是可以使用的*/
+            background: linear-gradient(to right, red, blue);
+        }
+        
+        .two {
+            background: -webkit-linear-gradient(left top, red, blue);
+            background: linear-gradient(to right bottom, red, blue);
+        }
+        
+        .three {
+            background: yellow;
+            transform: translate(50px, 100px);
+            -webkit-transform: translate(50px, 100px);
+        }
+        
+        .four {
+            background: radial-gradient(center, blue, red);
+            background: -webkit-radial-gradient(center, blue, red);
+            transform: rotate(30deg);
+            -webkit-transform: rotate(30deg);
+        }
+        
+        .five {
+            background: red;
+            transform: scale(0.5, 0.3);
+            -webkit-transform: scale(0.5, 0.3);
+        }
+        
+        .six {
+            background: yellow;
+            transform: skew(10deg, 0deg);
+            -webkit-transform: skew(10deg, 0deg);
+        }
+        
+        .seven {
+            background: #ccc;
+            transition: width 2s, height 2s;
+        }
+        
+        .seven:hover {
+            width: 100px;
+            height: 50px;
+        }
+        
+        .eight {
+            animation: myeight 5s;
+            position: relative;
+            -webkit-animation: myeight 5s;
+        }
+        
+        @keyframes myeight {
+            0% {
+                background: red;
+                left: 0;
+                top: 0;
+            }
+            20% {
+                background: yellow;
+                left: 50px;
+                top: 5px;
+            }
+            50% {
+                background: blue;
+                left: 100px;
+                top: 10px;
+            }
+            70% {
+                background: yellow;
+                left: 50px;
+                right: 5px;
+            }
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+        
+        .nine {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        线性渐变
+    </div>
+    <div class="two">
+        对角渐变
+    </div>
+    <div class="three">
+        2d转换-translate
+    </div>
+    <div class="four">
+        2d转换-rotate
+    </div>
+    <div class="five">
+        2d转换-scale
+    </div>
+    <div class="six">
+        2d转换-skew
+    </div>
+    <div class="seven">
+        css3过渡
+    </div>
+    <div class="eight">
+        css3动画
+    </div>
+    <div class="nine">
+        border-box
+    </div>
+</body>
+
+</html>

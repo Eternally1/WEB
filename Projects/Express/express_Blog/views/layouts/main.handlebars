@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    {{{_sections.style}}}
+</head>
+
+<body>
+    <div class="mainCont">
+            {{!--头部部分--}}
+        <header>
+            <div class="head-top">
+                <h2>eternally</h2>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">日志</a></li>
+                        <li><a href="#">图书</a></li>
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">其他</a></li>
+                        <li><a href="/edit">写文章</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="head-main">
+                <img src="/static/images/headMain.jpg" />
+                <h2>去你的城市，走你的路，做你的尾巴</h2>
+                <p>我看着马路对面的你，不知道你要等哪一路公交，也不知道我们
+                    为什么会这样走去相反的防线，但是我希望，你等的车能先来
+                </p>
+            </div>
+        </header>
+    
+        {{{body}}}
+        {{!-- footer部分--}}
+        <footer>
+            <div class="foot-info">
+                created by Eternally  2017-06-21
+            </div>
+        </footer>
+    </div>
+   
+
+    {{{_sections.js}}}
+</body>
+
+</html>
