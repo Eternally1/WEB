@@ -31,6 +31,7 @@ body {
 }
 
 .todo-header {
+    background: url("../img/bg.jpg");
     /* background: url(https://images.unsplash.com/photo-1440613905118-99b921706b5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=255b304482a2f50d0917f3de7b06251e) no-repeat; */
     border-radius: 6px 6px 0 0;
     padding: 55px 20px;
@@ -241,6 +242,11 @@ body {
     padding: 3px 5px;
     margin: 3px;
     text-align: center;
+}
+
+.todo-list .label-list li:hover {
+    box-shadow: 0 0 5px #000;
+    color: #FFF;
 }
 
 .todo-list .label-list :nth-child(1) {

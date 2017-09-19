@@ -1,5 +1,6 @@
 /**
- * defineProperty
+ * 关于对象和原型的一些方法
+ * 《来源于JavaScript专家编程》
  */
 //1、configurable(可配置属性)
 var car = {};
@@ -173,4 +174,16 @@ function seal() {
     //输出修改之后的对象
     console.log(person);
 }
-seal();
+
+//11、valueOf()返回指定对象的原始值。一般JavaScript会自动调用。
+function valueOfObject() {
+    function number(n) {
+        this.number = n;
+    }
+    var c = new number(3);
+    console.log(c);
+    number.prototype.valueOf = function() {
+        return this.number;
+    };
+    console.log(c + 4); //7
+}

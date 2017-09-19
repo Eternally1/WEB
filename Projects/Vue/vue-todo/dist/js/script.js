@@ -78,6 +78,15 @@
         computed: {
             allTasks: function() {
                 return store.state.Items.length
+            },
+            doneTasks: function() {
+                let count = 0;
+                for (let i = 0; i < store.state.Items.length; i++) {
+                    if (store.state.Items[i].status == "done") {
+                        count++;
+                    }
+                }
+                return count;
             }
         }
     });
@@ -148,9 +157,20 @@
                 store.commit('saveLocal');
             },
             deleteAct: function(item) {
-                console.log(JSON.stringify(store.state.Items));
-                console.log(JSON.stringify(item));
-                console.log(item);
+                console.log(store.state.Items);
+                for (let i = 0; i < store.state.Items.length; i++) {
+                    if (_.isEqual(store.state.Items[i], item)) {
+                        store.state.Items.splice(i, 1);
+                    }
+                }
+                store.commit("saveLocal");
+                // console.log(store.state.Items);
+                // console.log(item);
+            },
+            //保存选择的标签，也就是任务的紧急程度
+            saveLabel: function(label, item) {
+                item.label = label;
+                store.commit('saveLocal');
             }
         }
     })

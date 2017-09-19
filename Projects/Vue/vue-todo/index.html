@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
     <script src="dist/js/vue.js"></script>
     <script src="dist/js/vuex.js"></script>
+    <script src="dist/js/underscore.js"></script>
+    <script src="dist/js/echo.min.js"></script>
 </head>
 
 <body>
@@ -39,7 +41,7 @@
     <template id="todo-content-title">
         <div class="todo-content-title">
             <h2>Your tasks</h2>
-            <p><span>0</span> done / <span>{{allTasks}}</span> task(s) </p>
+            <p><span>{{doneTasks}}</span> done / <span>{{allTasks}}</span> task(s) </p>
         </div>
     </template>
 
@@ -49,9 +51,9 @@
             <li v-for="item in Items" v-bind:class="item.status">
                 <span v-bind:class="item.label" v-on:click="showLable">
                     <ul class="label-list">
-                        <li>important</li>
-                        <li>normal</li>
-                        <li>whatever</li>
+                        <li @click="saveLabel('important',item)">important</li>
+                        <li @click="saveLabel('normal',item)">normal</li>
+                        <li @click="saveLabel('whatever',item)">whatever</li>
                     </ul>
                 </span>
                 <p class="text" v-if="item.isEditing">

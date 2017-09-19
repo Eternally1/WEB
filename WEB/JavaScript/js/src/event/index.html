@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>绑定多个事件</title>
+</head>
+
+<body>
+    <div style="text-align:center;">
+        <p>DOM0级事件和DOM2级事件</p>
+    </div>
+    <input type="button" value="按钮1" id="btn1">
+    <input type="button" value="按钮2" id="btn2">
+    <input type="button" value="按钮3-删" id="btn3">
+</body>
+<script>
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    const btn3 = document.getElementById("btn3");
+    //DOM0级标准 onclick
+    btn1.onclick = function() {
+        alert("哈哈");
+    };
+    btn1.onclick = function() {
+        alert("呵呵");
+    };
+    //这里绑定的两个时间，其实只是绑定了一个，是后面的这个。
+
+    /**
+     * DOM2级标准 addEventListener 
+     */
+    btn2.addEventListener("click", function() {
+        //this表示的是DOM对象本身
+        console.log(this);
+    });
+    //下面绑定的两个事件会依次显示。
+    function haha() {
+        alert("haha");
+    }
+    btn2.addEventListener("click", haha);
+    btn2.addEventListener("click", function() {
+        alert("hehe");
+    });
+    //解除绑定，点击按钮3的时候，解除按钮2中的一个绑定事件
+    btn3.addEventListener("click", function() {
+        btn2.removeEventListener("click", haha);
+    })
+</script>
+
+</html>

@@ -1,0 +1,82 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "微软雅黑 Regular", "微软雅黑";
+    font-weight: 400;
+    color: #6c7279;
+    min-width: 1200px;
+}
+
+
+/* 开始banner的设置 */
+
+.banner {
+    width: 100%;
+    height: 430px;
+    background: url("../img/shouye.png");
+    background-size: 100% 100%;
+}
+
+.banner__head {
+    /* 在滚动时不让它跟着滚动 */
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+}
+
+.banner__head__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+
+/* banner__head__content  logo */
+
+.banner__head__content .logo {
+    margin-top: -15px;
+    float: left;
+}
+
+.banner__head__content .clear {
+    /* 里面包含浮动元素，这里清除浮动 */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.banner__head__content .logo .logo__pic,
+.banner__head__content .logo .logo__title {
+    float: left;
+}
+
+.banner__head__content .logo .logo__pic img {
+    vertical-align: middle;
+}
+
+.banner__head__content .logo .logo__title {
+    margin-top: 10px;
+}
+
+
+/* banner__head__content  nav */
+
+.banner__head__content .nav {
+    float: left;
+    margin-top: -25px;
+    margin-left: 20px;
+}
+
+.banner__head__content .nav li {
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    font-size: 2rem;
+    margin: 0 20px
+}
+
+.banner__head__content .nav li a {
+    color: rgba(63, 209, 189, 1);
+}
