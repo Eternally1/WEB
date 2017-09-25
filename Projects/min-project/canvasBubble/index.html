@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>canvas气泡以及导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            overflow: auto;
+        }
+        
+        #canvas {
+            background: #000;
+        }
+        
+        #nav {
+            width: 130px;
+            height: 334px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        
+        #nav li {
+            /* width: 100%;
+            height: 334px; */
+            list-style: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: 25px 310px;
+            transition: 1s;
+            box-shadow: 0 0 2px #000;
+            /* font-size: 0; */
+        }
+        
+        #nav li img {
+            width: 130px;
+            height: 334px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <ul id="nav">
+        <li><img src="images/1.png" alt=""></li>
+        <li><img src="images/2.png" alt=""></li>
+        <li><img src="images/3.png" alt=""></li>
+        <li><img src="images/4.png" alt=""></li>
+        <li><img src="images/5.png" alt=""></li>
+        <li><img src="images/6.png" alt=""></li>
+        <li><img src="images/7.png" alt=""></li>
+        <li><img src="images/8.png" alt=""></li>
+        <li><img src="images/9.png" alt=""></li>
+        <li><img src="images/10.png" alt=""></li>
+        <li><img src="images/11.png" alt=""></li>
+        <li><img src="images/12.png" alt=""></li>
+    </ul>
+    <script src="script.js"></script>
+</body>
+
+</html>
