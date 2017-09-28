@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片预加载之无序加载</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<style>
+		a{
+			text-decoration:none;
+		}
+		.box{
+			text-align:center;
+		}
+		.box img{
+			width:800px;
+			height:auto;
+		}
+		.btn{
+			display:inline-block;
+			height:30px;
+			line-height: 30px;
+			border:1px solid #ccc;
+			background-color: #fff;
+			padding:0 10px;
+			margin-right: 50px;
+			color:#000;
+		}
+		.btn:hover{
+			text-decoration:underline;
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618512715&di=56a7ae31aa7e99dba3d33986d28bf998&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2Fallimg%2F111120%2F1003433962-9.jpg" alt="">
+		<p>
+			<a href="javascript:;" class="btn" data-control="prev">上一页</a>
+			<a href="javascript:;" class="btn" data-control="next">下一页</a>
+		</p>
+	</div>
+
+	<script>
+		const imgs = [
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618512715&di=56a7ae31aa7e99dba3d33986d28bf998&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2Fallimg%2F111120%2F1003433962-9.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618581945&di=a6f57e340b81f81f3828172d96c8ef1e&imgtype=jpg&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D2105601784%2C3287626913%26fm%3D214%26gp%3D0.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618512713&di=643196f9cd29ac16561ca65d43c4bf22&imgtype=0&src=http%3A%2F%2F4493bz.1985t.com%2Fuploads%2Fallimg%2F141022%2F4-141022103459.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618512713&di=6b29d5ee766906e6f6d781e39e88586d&imgtype=0&src=http%3A%2F%2Fwww.gstad.com.cn%2FUploadFile%2F07.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618512712&di=b78d2d888174d9bbd11334b3f7749f63&imgtype=0&src=http%3A%2F%2F4493bz.1985t.com%2Fuploads%2Fallimg%2F141023%2F4-141023143159.jpg",
+			"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618655649&di=fe90f99db27c5f45c1f50e3bd2c60025&imgtype=0&src=http%3A%2F%2Fimgstore.cdn.sogou.com%2Fapp%2Fa%2F100540002%2F555561.jpg"
+		];
+		let index = 0;
+		$(".btn").on("click",function(){
+			if('prev' === $(this).data('control')){//上一张
+				//如果index小于0时，就不让它等于0
+				index = Math.max(0,--index);
+			}else{//下一张
+				index = Math.min(imgs.length-1,++index);
+			}
+			//显示对应索引的图片
+			$(".box img").attr("src",imgs[index]);
+			console.log(index);
+		});
+		/**
+		 * 版本一：此时通过浏览器开发者工具中的Network中可以查看，图片是点击一次显示一张的。
+		 * 而不是一次加载所有的图片。
+		 */
+	</script>
+</body>
+</html>

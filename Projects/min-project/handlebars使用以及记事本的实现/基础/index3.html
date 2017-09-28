@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>handlebars进一步使用</title>
+    <style>
+        .card {
+            border: 1px solid #000;
+            float: left;
+            margin: 10px;
+            height: 150px;
+            padding: 5px;
+            width: 150px;
+        }
+    </style>
+    <script src="../lib/jquery-3.2.1.min.js"></script>
+    <script src="../lib/handlebars-v4.0.10.js"></script>
+    <script id="card-template" type="text/x-handlebars-template">
+        <!-- {{#each cardData}}
+        <div class="card">
+            <div>姓名:{{this.name}}</div>
+            <div>年龄:{{this.age}}</div>
+        </div>
+        {{/each}} -->
+        {{#each this}}
+        <!-- 这里的this是指数组中的元素，也就是对象。 -->
+        <div class="card">
+            <div>{{chinese @index}}:</div>
+            <div>姓名:{{name}}</div>
+            {{#if age}}
+            <div>年龄:{{age}}</div>
+            {{/if}}
+            <ul>
+                {{#each favorite}}
+                <li {{#isFirst @index}}style="color:red;" {{/isFirst}} {{#isBlue ../favorite}} style="color:blue" {{/isBlue}}> {{addone @../index}}-{{addone @index}} {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+</head>
+
+<body>
+    <div id="card">
+
+    </div>
+    <script>
+        const cardData = [{
+            name: "Tom",
+            age: 18,
+            favorite: [
+                "basketball",
+                "football"
+            ]
+        }, {
+            name: "Mary",
+            age: 24,
+            favorite: [
+                "pingpang",
+                "beef"
+            ]
+        }, {
+            name: "Jack"
+        }];
+
+        /*
+            这两种是内联的helper，用返回值内容进行替换
+        **/
+        Handlebars.registerHelper("chinese", function(value) {
+            let arr = ["One", "Two", "There"];
+            return arr[value];
+        });
+        Handlebars.registerHelper("addone", function(value) {
+            return value + 1;
+        });
+
+        /*
+            这里是块级helper
+        **/
+        Handlebars.registerHelper("isFirst", function(value, options) {
+            //value是在模版中传递进来的@index的值，options是一个固定的对象，有一个fn方法,
+            //这个方法可以将上下文传入的主题编译到模板。返回编译后的结果
+            if (value == 0) {
+                console.log(this); //可以看到这里输出的this都是表示索引值为0的元素。此时就将这部分
+                //isFirst括起来的编译到模板中【s】
+                return options.fn(this);
+            }
+        });
+
+        /**
+        当这个人的favorite不少于两个的时候，剩余的显示为蓝色。
+        */
+        Handlebars.registerHelper("isBlue", function(value, options) {
+            if (value && value.length >= 2) {
+                return options.fn(this);
+            }
+        });
+        //1、使用jquery获取模板
+        let tem = $("#card-template").html();
+        //2、预编译模板
+        let template = Handlebars.compile(tem);
+        // console.log(template); //是一个函数，因此在下面可以发现是将参数传入函数的。
+        //3、匹配数据
+        //也可以通过传递json对象的格式实现
+        //此时在模板中{{each data}} 里面用this.name或者直接使用name。
+        // let html = template({
+        //     data: cardData
+        // });
+        let html = template(cardData);
+        //4、放入html中
+        $("#card").html(html);
+    </script>
+</body>
+
+</html>
