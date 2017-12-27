@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片预加载之无序加载</title>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .box {
+        text-align: center;
+    }
+
+    .box img {
+        width: 800px;
+        height: auto;
+    }
+
+    .btn {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 0 10px;
+        margin-right: 50px;
+        color: #000;
+    }
+
+    .btn:hover {
+        text-decoration: underline;
+        color: red;
+    }
+
+    .loading {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: #ccc;
+    }
+
+    .loading .progress {
+        margin-top: 300px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506618512715&di=56a7ae31aa7e99dba3d33986d28bf998&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2Fallimg%2F111120%2F1003433962-9.jpg" alt="">
+        <p>
+            <a href="javascript:;" class="btn" data-control="prev">上一页</a>
+            <a href="javascript:;" class="btn" data-control="next">下一页</a>
+        </p>
+        <div class="loading">
+            <p class="progress">0%</p>
+        </div>
+    </div>
+    <script src="js/preload.js"></script>
+</body>
+
+</html>
