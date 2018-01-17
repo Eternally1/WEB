@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分页功能测试</title>
+	 <style type="text/css">
+    #idData {color: red;border: solid;text-align: center;}
+    a{text-decoration: none;}
+ </style>
+</head>
+<body>
+	 <table id="idData" width="70%">        
+        <tr><td>liujinzhong1</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong2</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong3</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong4</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong5</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong6</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong7</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong8</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong9</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong10</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong11</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong12</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong13</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong14</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong15</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong16</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong17</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong18</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong19</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong20</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong21</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong22</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong23</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong24</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong25</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong26</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong27</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong28</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong29</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong30</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong31</td><td>25</td><td>男</td><td>山西吕梁</td></tr>        
+        <tr><td>liujinzhong32</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong33</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong34</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong35</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong36</td><td>25</td><td>男</td><td>山西吕梁</td></tr>
+        <tr><td>liujinzhong37</td><td>25</td><td>男</td><td>山西吕梁</td></tr>        
+        <tr><td>liujinzhong38</td><td>25</td><td>男</td><td>山西吕梁</td></tr>        
+        <tr><td>liujinzhong39</td><td>25</td><td>男</td><td>山西吕梁</td></tr>        
+        <tr><td>liujinzhong40</td><td>25</td><td>男</td><td>山西吕梁</td></tr>        
+    </table>
+    <div>
+    	<button class="prev">上一页</button>
+    	<button class="next">下一页</button>
+    </div>
+    <table width="60%" align="right">
+        <tr><td><div id="barcon" name="barcon"></div></td></tr>
+    </table>
+    <script type="text/javascript">
+    	let rows = document.querySelectorAll("tr");
+    	console.log(rows);
+    	function goPage(pno){
+    		pno = pno||1;
+    		let totalNum = 40;
+    		let pageSize = 9;
+    		let totalPage = totalNum/pageSize;
+    		console.log(Math.ceil(totalPage));
+    		let currentPage = pno;
+    		let startRow = (currentPage-1)*pageSize+1;
+    		let endRow = currentPage*pageSize;
+    		endRow = (endRow>totalNum)?totalNum:endRow;
+    		console.log(startRow+"开始  "+endRow+"结束");
+    		// 遍历显示数据实现分页
+    		for(let i = 1;i<=totalNum;i++){
+    			if(i>=startRow && i<=endRow){
+    				rows[i-1].style.display = "block";
+    			}else{
+    				rows[i-1].style.display = "none";
+    			}
+    		}
+    	}
+
+    	// goPage(2);
+    	let currentPage = 2;
+    	let totalPage = 5;
+    	goPage(currentPage);
+    	document.querySelector(".prev").onclick = function(){
+    		if(currentPage == 1){
+    			alert("当前已经是第一页");
+    		}else{
+    			currentPage--;
+    			goPage(currentPage);
+    		}
+    	}
+
+    	document.querySelector(".next").onclick = function(){
+    		if(currentPage == totalPage){
+    			alert("当前已经是最后一页");
+    		}else{
+    			currentPage++;
+    			goPage(currentPage);
+    		}
+    	}
+    	
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+.home_content .schelist,
+.home_content .encourage,
+.home_content .telephone{
+	width: 300px;
+	height: 450px;
+	margin: 20px;
+	background: #7c9daf;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #83858a;
+	box-sizing: border-box;
+	overflow:hidden;
+	float:left;
+}
+
+.schelist .schelist_title{
+	width: 100%;
+	padding: 20px;
+	height:100px;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 5px 5px 0 0;
+}
+.schelist_title .title_time{
+	float:left;
+}
+
+.schelist_title .title_time .time_week{
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.schelist_title .title_time .time_date{
+	font-size: 13px;
+	color: #777;
+}
+
+.schelist_title .title_opera{
+	float:right;
+}
+.schelist_title .title_opera span{
+	line-height: 50px;
+	vertical-align: middle;
+	font-size: 46px;
+	color: #fb701a;
+	cursor:pointer;
+	transition: color 1s;
+	padding: 0 10px;
+}
+.schelist_title .title_opera span:hover{
+	color:#983f08;;
+}
+
+.schelist .schelist_content{
+	padding:20px;
+}
+
+.schelist_content li{
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+.schelist_content li input{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	border: none;
+	outline: none;
+	background: #fff;
+	/*  -webkit-appearance: none;*/
+	border-radius: 2px;
+	margin-right: 5px;
+	cursor:pointer;
+}
+
+.schelist_content li span{
+	color:#fff;;
+}
+
+.home_content .encourage{
+	height:280px;
+	background:#998a7c;
+	width:260px;
+}
+
+.encourage label{
+	height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #da6014;
+    display: block;
+    background:#fff;
+    background: url(../lib/images/encourage.jpg);
+    /*background: url(https://images.unsplash.com/photo-1440613905118-99b921706b5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=255b304482a2f50d0917f3de7b06251e) no-repeat; */
+    border-radius: 6px 6px 0 0;
+    padding: 40px;
+    position: relative;
+    background-size: cover;
+    font-weight: 600;
+}
+
+.encourage p{
+	padding: 10px 20px;
+    font-size: 14px;
+    text-indent: 20px;
+    line-height: 30px;
+    color: #fff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+.home_content .telephone{
+	height:220px;
+	width:240px;
+	background:#5d676d;
+}
+
+.telephone ul{
+	padding: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.telephone ul li{
+	height:30px;
+	line-height:30px;
+}
+.telephone ul li label{
+	width: 100px;
+    display: inline-block;
+    text-align: right;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.telephone ul li span{
+	    font-family: "Comic Sans MS", cursive, sans-serif;
+}

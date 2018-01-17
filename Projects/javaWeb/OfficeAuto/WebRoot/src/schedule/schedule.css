@@ -1,0 +1,206 @@
+.home_content .add_schedule{
+	/*border-bottom:1px solid #ccc;*/
+	width:98%;
+	padding:10px;
+	box-sizing: border-box;
+	margin:0 auto;
+}
+
+.sche_title{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	font-size: 1.4rem;
+	color: #0a0a0a;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	background:#c3d1d8ed;
+	text-indent:2rem;
+}
+
+
+.add_schedule .sche_begin_time{
+	margin-bottom:10px;
+}
+
+.home_content .add_schedule input{
+	width:170px;
+	height:30px;
+	border:none;
+	border-radius:7px;
+	margin:0 5px;
+	border:1px solid #eee;
+	text-indent:1rem;
+}
+.home_content .add_schedule input:focus{
+	border:1px solid #ccc6c6;
+	outline:none;
+}
+.add_schedule label{
+	font-size:1.2rem;
+	height:35px;
+	line-height:35px;
+	padding-right:5px;
+}
+
+.add_schedule .sche_content{
+	margin-top:10px;
+}
+.add_schedule .sche_content input{
+	width: 600px;
+	height: 40px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #ccc;
+	font-size: 1.2rem;
+}
+
+.add_schedule .sche_content input:focus{
+	border-color:#ccc;
+	outline:none;
+}
+
+.add_schedule .add .add_sche{
+	width: 120px;
+	height: 35px;
+	line-height: 30px;
+	text-align: center;
+	background: #7fbbd8;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	margin: 10px 0 0 0;
+	transition:background,color 1s;
+}
+.add_schedule .add .add_sche:hover{
+	background-color: #0a435f;	
+	color:#f5f0f0;
+}
+.add_schedule .add .add_sche:focus{
+	outline:none;
+}
+
+/*閺冦儳鈻煎〒鍛礋*/
+.home_content .list_schedule{
+	padding: 10px 20px;
+	min-width: 300px;
+	height: 300px;
+	overflow: auto;
+	width: 600px;
+}
+
+.list_schedule .time{
+	float: right;
+	height: 35px;
+	line-height: 35px;
+	color: #b9b8b8;
+}
+.list_schedule ul li:nth-child(odd){
+	/*background:#bcc1c3;*/
+}
+.list_schedule ul li:nth-child(even){
+	/*background:#266c84;*/
+}
+.list_schedule ul li{
+	width:100%;
+	position:relative;
+	border-bottom:1px solid #ccc;
+}
+.list_schedule ul li input{
+	display: inline-block;
+	line-height:35px;
+	height:35px;
+	font-size:1.3rem;
+	text-indent:2rem;
+	/*color:#000;*/
+	width:70%;
+	transition:background 1s;
+	border:none;
+	background-color: inherit;
+
+}
+.list_schedule ul li input:hover{
+	background:#dad7d7;
+}
+.list_schedule ul li input:focus{
+	outline:none;
+	border-color:#7bc3fd;
+	background-color: inherit;
+}
+.list_schedule ul li .finish{
+	display:none;
+	background: #1883b7;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 4px;
+	color: #eff2f3;
+	font-size:2rem;
+}
+/*閸斻劍锟戒焦妯夌粈鐑樻Ц閸氾箓娈ｉ挊锟�*/
+.show_opera{
+	display:none;
+}
+.is_finish{
+	color:#ccc;
+}
+
+.is_delete{
+	color:#ccc;
+	text-decoration: line-through;
+}
+
+/*瀵懓鍤惃鍕閼宠姤顢嬮惃鍕壉瀵拷*/
+.list_schedule .sche_opera{
+	width: 70px;
+	background: #1c2123;
+	opacity: 0.5;
+	position: absolute;
+	right: -5px;
+	top: 33px;
+	text-align: center;
+	color: #ccc;
+	display: none;
+	z-index:100;
+}
+.list_schedule .sche_opera p{
+	border-bottom: 1px solid #7b7777;
+	font-size: 1.1rem;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition:background,color 1s;
+}
+.list_schedule .sche_opera p:hover{
+	background:#7fbbd8;
+	color:#000;
+}
+
+.list_schedule .opera{
+	float: right;
+	border-radius: 5px;
+	border: none;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	font-size: 1rem;
+	cursor: pointer;
+	background: #c6d3da;
+	color: #35484f;
+	transition:background 1s;
+	margin-left:20px;
+	margin-top:4px;
+}
+.list_schedule .opera:hover{
+	background:#7fbbd8;
+}
+.list_schedule .opera:focus{
+	outline:none;
+}
+
+
+.isshow{
+	opacity: 0;
+}

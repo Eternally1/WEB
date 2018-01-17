@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>工作日志</title>
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/home.css">
+    <link rel="stylesheet" type="text/css" href="./worklog.css">
+    <link rel="stylesheet" type="text/css" href="../public/calendar.css">
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/jquery-3.2.1.min.js"></script>
+    <script src="../lib/layer-v3.1.1/layer/layer.js"></script>
+    <script src="../public/api.js"></script>
+</head>
+
+<body>
+    <div class="home clear" id="worklog">
+        <div class="home_top">
+            <div class="top_logo">
+                <img src="../lib/images/logo.png">
+                <label>办公自动化系统</label>
+            </div>
+            <div class="top_search">
+                <input type="text" name="username" placeholder="搜索用户" class="search_str">
+                <i class="fa fa-search fa-2x search" @click="search()"></i>
+            </div>
+            <div class="top_exit">
+                <i class="fa fa-sign-out exit" @click="exit()"></i>
+            </div>
+        </div>
+        <div class="home_wrap clear">
+            <div class="home_nav">
+                <div class="user_info">
+                    <img src="" alt="头像" id="picture">
+                    <div>
+                        <label class="user_name">欢迎你，{{user.username}}</label>
+                        <span class="is_admin" v-if="user.role">【S】</span>
+                    </div>
+                </div>
+                <a href="../home/home.html">
+                    <div class="nav_home nav ">
+                        <i class="fa fa-home icon"></i>
+                        <label>系统首页</label>
+                    </div>
+                </a>
+                <a href="../schedule/index.html">
+                    <div class="nav_schedule nav ">
+                        <i class="fa fa-calendar icon"></i>
+                        <label>日程安排</label>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="nav_worklog nav active">
+                        <i class="fa fa-bookmark icon"></i>
+                        <label class="active_label">工作日志</label>
+                    </div>
+                </a>
+            </div>
+            <div class="home_content">
+                <div class="worklog_title">
+                    <label>工作日志</label>
+                    <i class="fa fa-plus add_worklog" id="add_worklog" v-if="isAdd" aria-hidden="true" @click="addLogBtn()"></i>
+                </div>
+                <div class="show_calendar">
+                    <div id='calendar-box' class="boxshaw"></div>
+                    <!-- <button style="border:none;padding:5px 10px; margin-left:100px">查看日志</button> -->
+                    <p id="select_date" style="opacity:0">{{today}}</p>
+                    <!-- 根据角色决定是否显示列表 -->
+                    <div class="calendar_list">
+                        <div class="title">
+                            <label>{{user.username}}的日志</label>
+                            <div class="opera" v-if="user.role">
+                                <button @click="listMonthLogs(today)">本人</button>
+                                <button @click="listAllPerLogs()">员工</button>
+                            </div>
+                        </div>
+                        <div style="overflow:auto;height:150px">
+                            <ul v-if="isHasEmployLog">
+                                <li v-for="log in monthLogs">
+                                    <a href="#" @click="showDetail(log)">{{log.title}}</a>
+                                    <time>{{(log.time.split("T")[0])}}</time>
+                                    <span>{{log.username}}</span>
+                                </li>
+                            </ul>
+                            <p v-else>员工还未添加日志</p>
+                            <p v-if="isHasMonthLog">用户本月还没有日志</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="show_log" id="show_log" v-if="isHasLog">
+                    <div class="log_title">
+                        <input type="text" name="title" v-model="dayLog.title" id="log_title" readonly>
+                        <div class="title_icon clear">
+                            <button class="opera" @click="editLog" v-if="isEdit">编辑</button>
+                        </div>
+                    </div>
+                    <div class="log_time">
+                        <span>{{dayLog.time}}</span>
+                    </div>
+                    <div class="log_user">
+                        <span>{{dayLog.username}}</span>
+                    </div>
+                    <div class="log_content">
+                        <textarea readonly id="log_content" v-model="dayLog.content">
+                        </textarea>
+                        <div class="log_save" id="log_save">
+                            <button @click="saveLog(dayLog)" v-if="isSave">保存</button>
+                            <!-- 只有在编辑文件的时候才会出现这个按钮 -->
+                        </div>
+                    </div>
+                </div>
+                <div v-else>当前无日志信息</div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/calendar.js"></script>
+    <script type="text/javascript">
+    // location.reload();
+    var vm = new Vue({
+        // 页面初始化时就将对应员工的今天的日志内容显示出来，如果还没有日志，显示“无”
+        // 如果是管理员，则显示员工列日志表，同时管理员自己的日志信息，没有日志的话，也显示无
+        el: "#worklog",
+        data() {
+            return {
+                today: this.formateDate(), //默认显示当前日期，记录的应该是日历中显示的具体时间
+                user: {},
+                dayLog: {},
+                monthLogs: [], //存储当月日志信息
+                isHasLog: 1,
+                isEdit: "", //是否显示编辑按钮
+                isSave: "", //是否显示保存按钮
+                isAdd: "", //是否显示添加按钮
+                isHasEmployLog:"",  //是否有员工日志
+                isHasMonthLog:"",  //当前用户本月是否有日志
+                sche: "", //存储当前最近的schedule
+                timer: null,
+            }
+        },
+        created: function() {
+            // this.isHasLog = 0;
+            // location.reload();
+            // history.go(0);
+            this.user = JSON.parse(localStorage.getItem("user"));
+            document.querySelector("#picture").src = localStorage.getItem("src");
+            this.initDayLog(); //获取当天日志显示出来
+            this.listMonthLogs(this.formateDate()); //获取当前月日志列表
+            this.getNearSche();
+
+        },
+        methods: {
+            initDayLog: function() {
+                let dayLogTime = this.formateDate();
+                let data = {
+                    strTime: dayLogTime,
+                    userID: this.user.userID
+                }
+                let that = this;
+                myApi.worklog.showPersonLog(data, function(err, result) {
+
+                    if (err) {
+                        console.log(err);
+                    }
+                    if (result[0] == null) {
+                        that.isHasLog = 0;
+                        that.isAdd = 1; //显示添加按钮
+                    } else {
+                        console.log(result[0]);
+                        that.dayLog = result[0];
+                        that.dayLog.time = that.dayLog.time.split("T")[0];
+                        that.isHasLog = 1;
+                        that.isAdd = 0; //不显示添加按钮
+                        // 显示编辑按钮
+                        that.isEdit = 1;
+                    }
+
+                });
+            },
+            listMonthLogs: function(time) {
+                console.log(time);
+                // 获得当前月的列表
+                let data2 = {
+                    strTime: time,
+                    userID: this.user.userID
+                };
+                let that = this;
+                myApi.worklog.showPersonLogList(data2, function(err, resultlist) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        if(resultlist[0].length == 0){
+                            // 当当月用户的日志为0时，显示用户本月还没有日志
+                            that.isHasMonthLog = 1;
+                        }else{
+                           that.isHasEmployLog = 1;   //让列表显示
+                           that.isHasMonthLog = 0;
+                           monthLogs = resultlist[0];
+                           that.monthLogs = monthLogs;
+                       }
+                   }
+               })
+            },
+            listChooseMonthLogs:function(){
+                // 列出选中月的本人的日志列表
+                console.log(this.today);
+            },
+            getNearSche: function() {
+                let data = {
+                    userID: this.user.userID
+                }
+                let that = this;
+                myApi.timer(data, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        if (result[0] != null) {
+                            // console.log(result[0]);
+                            that.sche = result[0];
+                            localStorage.setItem("schetime", result[0].starttime);
+                            that.setTimer();
+                        } else {
+                            //当没有日程的时候，清空本地存储
+                            localStorage.setItem("schetime", "");
+                            return; //当没有日程的时候，此时就直接返回，停止
+                        }
+                    }
+                })
+                //localStorage.setItem("schetime","2018-01-15T15:12:00");
+                //this.setTimer();
+            },
+            setTimer: function() {
+                let schetime = localStorage.getItem("schetime").split("T");
+                let datetime = schetime[0].split("-");
+                let time = schetime[1].split(":");
+                let date = new Date(datetime[0], datetime[1] - 1, datetime[2], time[0], time[1], time[2]);
+                let currenttime = new Date();
+                let interval = date.getTime() - currenttime.getTime();
+                if (interval < 0) {
+                    return;
+                } else {
+                    if (this.timer) {
+                        //因为每次更改一次状态就会导致一个定时器，这里设置成定时器唯一。先清除，在设置
+                        clearTimeout(this.timer);
+                        this.timer = setTimeout(this.nextScheTimer, interval);
+                    } else {
+                        // console.log(this.timer);
+                        this.timer = setTimeout(this.nextScheTimer, interval);
+                    }
+                }
+            },
+            nextScheTimer: function() {
+                let currenttime = this.formateDate();
+                alert("有日程开始了\n日程内容为:" + this.sche.content + "\n开始时间为:" + this.sche.starttime + "\n结束时间为:" + this.sche.endtime);
+                this.getNearSche();
+            },
+
+            formateDate: function() {
+                var date = new Date();
+                let year = date.getFullYear();
+                let month = date.getMonth() + 1;
+                let day = date.getDate();
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                return year + "-" + month + "-" + day
+            },
+            // 添加日志
+            addLogBtn: function() {
+                console.log(this.today);
+                layer.open({
+                    type: 2, //以框架的形式打开弹出框
+                    title: "添加日志",
+                    shadeClose: true,
+                    area: ['800px', '520px'],
+                    content: "./add_log.html", //可以引用html文件
+                    skin: "demo-class",
+                    end:function(){
+                        location.reload();
+                    }
+                })
+            },
+            // 显示日志编辑的操作框
+            // showOpera: function(ev) {
+            //     document.querySelector("#opera").style.display = "block";
+            // },
+            // hideOpera: function(ev) {
+            //     document.querySelector("#opera").style.display = "none";
+            // },
+            //让日志可以编辑
+            editLog: function() {
+                // alert("...")
+                document.querySelector("#log_title").readOnly = false;
+                document.querySelector("#log_content").readOnly = false;
+                this.isSave = 1;
+                // console.log(".......")
+            },
+            saveLog: function() {
+                // 保存日志信息，此时需要更新数据???
+                log_title = document.querySelector("#log_title");
+                log_content = document.querySelector("#log_content");
+                // 同时变成不可以编辑
+                log_title.readOnly = true;
+                log_content.readOnly = true;
+
+                //将一天的日志内容和标题修改
+                this.isSave = 0;
+                this.dayLog.title = log_title.value.trim();
+                this.dayLog.content = log_content.value.trim();
+                this.dayLog.strTime = this.dayLog.time;
+                console.log(this.dayLog);
+                let that = this;
+                myApi.worklog.updateLog(this.dayLog, function(err, result) {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        console.log(result);
+                        let data2 = {
+                            strTime: that.dayLog.strTime,
+                            userID: that.dayLog.userID
+                        };
+                        myApi.worklog.showPersonLogList(data2, function(err, resultlist) {
+                            if (err) {
+                                console.log(err);
+                            }
+                            console.log(resultlist[0]);
+                            monthLogs = resultlist[0];
+                            that.monthLogs = monthLogs;
+                        })
+                    }
+                })
+            },
+            // 显示点击用户的列表信息
+            showLogList: function() {
+                alert("...");
+            },
+            // 列举出当天所有员工的日志.
+            listAllPerLogs: function() {
+                let data = {
+                    strTime: document.querySelector("#select_date").innerHTML
+                }
+                let that = this;
+                myApi.worklog.showAllPerLogs(data, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        // 判断是否有日志
+                        if(result[0].length == 0){
+                            // 没有日志，显示提示信息
+                            that.isHasEmployLog = 0;
+                            that.isHasMonthLog = 0;
+                        }else{
+                            vm.$data.monthLogs = result[0];
+                            that.isHasEmployLog = 1;
+                        }
+                    }
+                })
+            },
+            //列举出本人这一个月的日志信息
+
+            showDetail: function(log) {
+                this.isHasLog = 1;
+                // document.querySelector(".show_log").style.display = "block";
+                log.time = log.time.split("T")[0];
+                this.dayLog = log;
+                // console.log(this.user.userID,this.dayLog.userID);
+                if (this.user.userID != this.dayLog.userID) {
+                    console.log("不是本人")
+                    // 如果打开的userID和登录用户的ID不一致，则不显示编辑按钮
+                    document.querySelector(".title_icon").style.display = "none";
+                } else {
+                    // 如果不是当前日期，也不能编辑
+                    //如果存在日志，但是当前天不是今天，就不显示编辑按钮
+                    if (log.time == this.formateDate()) {
+                        // console.log("是今天");
+                        document.querySelector(".title_icon").style.display = "block";
+                    } else {
+                        document.querySelector(".title_icon").style.display = "none";
+                    }
+                }
+
+            },
+            exit: function() {
+                localStorage.setItem("user", "");
+                localStorage.setItem("src", "");
+                location.href = "../login/index.html";
+            },
+            search: function() {
+                // 查询用户信息，通过用户名或者用户ID。
+                let search_str = document.querySelector(".search_str");
+                let data = {
+                    serachStr: search_str.value.trim()
+                }
+                myApi.search(data, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(result);
+                        localStorage.setItem("usersInfo", JSON.stringify(result[1]));
+                        if (result[1].length == 0) {
+                            alert("没有搜索到任何信息");
+                            return;
+                        } else {
+                            layer.open({
+                                type: 2, //以框架的形式打开弹出框
+                                title: "搜索结果",
+                                shadeClose: true,
+                                area: ['500px', '360px'],
+                                content: "../public/search_user.html", //可以引用html文件
+                                skin: "demo-class"
+                            })
+                        }
+
+                    }
+                })
+            }
+        }
+    });
+
+    // 第一次进来时显示这个月的日志列表以及当天的日志内容
+    let user = JSON.parse(localStorage.getItem("user"));
+    var mySchedule = new Schedule({
+        el: '#calendar-box',
+        clickCb: function(y, m, d) {
+            let temp = y + '-' + formate(m) + '-' + formate(d);
+            document.querySelector('#select_date').innerHTML = temp;
+            let data = {
+                strTime: temp,
+                userID: user.userID
+            }
+            
+            //在这里实现发送请求和获取请求数据，然后渲染,后面四个方法分别是在月份改变的时候获得日志列表·
+            myApi.worklog.showPersonLog(data, function(err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                console.log(result[0]);
+                if (result[0] == null) {
+                    // 此时表示还没有日志
+                    vm.$data.isHasLog = 0;
+                    vm.$data.isEdit = 0;
+                    //如果不是当前天，就不显示添加按钮
+                    if (temp == formateDate()) {
+                        // document.querySelector(".add_worklog").style.display = "block";
+                        vm.$data.isAdd = 1;
+                    } else {
+                        vm.$data.isAdd = 0;
+                        // document.querySelector(".add_worklog").style.display = "none";
+                    }
+                } else {
+                    let dayLog = result[0];
+                    console.log(dayLog);
+                    dayLog.time = dayLog.time.split("T")[0];
+                    vm.$data.dayLog = dayLog;
+                    //此时有日志，显示右边的日志框。
+                    vm.$data.isHasLog = 1;
+                    // document.querySelector(".show_log").style.display = "block";
+                    //如果已经存在日志，那么就不显示添加按钮
+                    // document.querySelector(".add_worklog").style.display = "none";
+                    vm.$data.isAdd = 0;
+                    //如果存在日志，但是当前天不是今天，就不显示编辑按钮
+                    if (temp == formateDate()) {
+                        console.log("是今天");
+                        // document.querySelector(".title_icon").style.display = "block";
+                        vm.$data.isEdit = 1;
+                    } else {
+                        // document.querySelector(".title_icon").style.display = "none";
+                        vm.$data.isEdit = 0;
+                    }
+                }
+            });
+
+            // 同时显示这一天所有员工的信息。当是管理员的时候，执行下方操作
+            if (user.role == 1) {
+                let data2 = {
+                    strTime: document.querySelector("#select_date").innerHTML
+                }
+                myApi.worklog.showAllPerLogs(data2, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        if(result[0].length==0){
+                            // 当当天还没有员工日志的时候，显示无员工日志
+                            vm.$data.isHasEmployLog = 0;
+                        }else{
+                            vm.$data.monthLogs = result[0];
+                            vm.$data.isHasEmployLog = 1;
+                        }
+                    }
+                })
+            }
+        },
+        nextMonthCb: function(y, m, d) {
+            document.querySelector('#select_date').innerHTML = y + '-' + formate(m) + '-' + formate(d)
+            MonthChange(y, m, d)
+        },
+        nextYeayCb: function(y, m, d) {
+            document.querySelector('#select_date').innerHTML = y + '-' + formate(m) + '-' + formate(d)
+            MonthChange(y, m, d)
+        },
+        prevMonthCb: function(y, m, d) {
+            document.querySelector('#select_date').innerHTML = y + '-' + formate(m) + '-' + formate(d)
+            MonthChange(y, m, d)
+        },
+        prevYearCb: function(y, m, d) {
+            document.querySelector('#select_date').innerHTML = y + '-' + formate(m) + '-' + formate(d)
+            MonthChange(y, m, d)
+        }
+    });
+
+    function MonthChange(y, m, d) {
+        let MonthLogTime = y + "-" + m + "-" + d;
+        // 此时应该对应的更新today
+        vm.$data.today = MonthLogTime;
+        console.log(MonthLogTime);
+        let data = {
+            strTime: MonthLogTime,
+            userID: user.userID
+        };
+        myApi.worklog.showPersonLogList(data, function(err, result) {
+            //列出当月用户本人的日志信息
+            if (err) {
+                console.log(err);
+            }
+            if(result[0].length ==0 ){
+                // 没有日志信息，显示提示信息
+                vm.$data.isHasMonthLog = 1;
+                vm.$data.isHasEmployLog = 0;
+            }else{
+                vm.$data.monthLogs = result[0];
+                vm.$data.isHasMonthLog = 0;
+                vm.$data.isHasEmployLog = 1;
+            }
+        });
+    }
+
+    function formateDate() {
+        var date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        if (month < 10) {
+            month = "0" + month;
+        }
+        if (day < 10) {
+            day = "0" + day;
+        }
+        return year + "-" + month + "-" + day
+    }
+
+    function formate(m) {
+        if (m < 10) {
+            return "0" + m
+        }
+        return m;
+    }
+</script>
+</body>
+
+</html>

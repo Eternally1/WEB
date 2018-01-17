@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity" auto-import="true">
+	<class name="Educate" table="educate">
+		<id name="id" type="long">
+			<column name="id"/>
+			<generator class="identity" />    <!--主键生成策略  -->
+		</id>
+		<property name="name" length="100" type="java.lang.String"></property>
+		<property name="purpose" length="500" type="java.lang.String"></property>
+		<property name="begintime" length="23" type="timestamp"></property>
+		<property name="endtime" length="23" type="timestamp"></property>
+		<property name="datum" length="2000" type="java.lang.String"></property>
+		<property name="teacher" length="50" type="java.lang.String"></property>
+		<property name="student" length="50" type="java.lang.String"></property>
+		<property name="createtime" length="23" type="timestamp"></property>
+		<property name="effect" length="500" type="java.lang.String"></property>
+		<property name="educate" length="1" type="byte"></property>
+		<property name="summarize" length="2000" type="java.lang.String"></property>
+	</class>
+</hibernate-mapping>

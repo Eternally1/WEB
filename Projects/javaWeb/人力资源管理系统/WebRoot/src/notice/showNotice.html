@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>公告</title>
+	<script src="../lib/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="showNotice.css">
+	<script src="../lib/axios.js"></script>
+</head>
+<body>
+	<div class="wrap-notice" id="notice-app">
+		<h1>信息公告</h1>
+		<div class="top">
+			<h2 class="title">{{title}}</h2>
+			<div class="content omit">{{content}}</div>
+			<span class="more"><a href="./detailNotice.html" v-on:click="detail(items[0])">阅读&gt;&gt;</a></span>
+		</div>
+		<div class="cont">
+			<ul>
+				<li v-for="item in items"><a href="./detailNotice.html" v-on:click="detail(item)">{{item.title}}</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el:"#notice-app",
+			data:{
+				items:[],
+				title:"",
+				content:""
+			},
+			mounted:function(){
+				this.initial();
+			},
+			methods:{
+				detail:function(notice){
+					localStorage.setItem("notice",JSON.stringify(notice));
+					// console.log(JSON.stringify(notice));
+				},
+				initial:function(){
+					let that = this;
+					axios.get("http://localhost:8080/javaWeb/notice/listnotice.action").then(function(res){
+							if(res.data.status == "1002"){
+								that.items = res.data.data;
+								that.title = res.data.data[0].title;
+								that.content = res.data.data[0].content;
+							}
+							// console.log(res.data);
+						}).catch(function(err){
+							console.log(err);
+						})
+				}
+			}
+		})
+	</script>
+</body>
+</html>

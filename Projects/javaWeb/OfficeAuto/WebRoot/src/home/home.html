@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>办公自动化管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/home.css">
+    <link rel="stylesheet" type="text/css" href="./home.css">
+    <script src="../lib/vue.js"></script>
+    <script src="../public/api.js"></script>
+    <script src="../lib/jquery-3.2.1.min.js"></script>
+    <script src="../lib/layer-v3.1.1/layer/layer.js"></script>
+</head>
+
+<body>
+    <div class="home" id="home">
+        <div class="home_top">
+            <div class="top_logo">
+                <img src="../lib/images/logo.png">
+                <label>办公自动化系统</label>
+            </div>
+            <div class="top_search">
+                <input type="text" name="username" placeholder="搜索用户" class="search_str">
+                <i class="fa fa-search fa-2x search" @click="search()"></i>
+            </div>
+            <div class="top_exit">
+                <i class="fa fa-sign-out exit" @click="exit()"></i>
+            </div>
+        </div>
+        <div class="home_wrap">
+            <div class="home_nav">
+                <div class="user_info">
+                    <img src="" src="头像" id="picture">
+                    <div>
+                        <label class="user_name">欢迎你，{{user.username}}</label>
+                        <span class="is_admin" v-if="user.role">【S】</span>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="nav_home nav active">
+                        <i class="fa fa-home icon"></i>
+                        <label class="active_label">系统首页</label>
+                    </div>
+                </a>
+                <a href="../schedule/index.html">
+                    <div class="nav_schedule nav">
+                        <i class="fa fa-calendar icon"></i>
+                        <label>日程安排</label>
+                    </div>
+                </a>
+                <a href="../worklog/index.html">
+                    <div class="nav_worklog nav">
+                        <i class="fa fa-bookmark icon"></i>
+                        <label>工作日志</label>
+                    </div>
+                </a>
+            </div>
+            <div class="home_content">
+                <div class="schelist">
+                    <div class="schelist_title clear">
+                        <div class="title_time">
+                            <p class="time_week">{{scheWeek}}</p>
+                            <p class="time_date">{{scheTime}}</p>
+                            <p v-if="isToday">【今天】</p>
+                        </div>
+                        <div class="title_opera">
+                            <span @click="prevSche">&lt;</span>
+                            <span @click="nextSche">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="schelist_content">
+                        <ul v-if="(scheListLen==0)?false:true">
+                            <li v-for="sche in schedules">
+                                <input type="checkbox" v-model="sche.state" @click="saveSche($event,sche)">
+                                <span>{{sche.content}}</span>
+                            </li>
+                        </ul>
+                        <p v-else class="no_sche" style="color: #fbfafa;font-size: 16px;">还没有日程</p>
+                    </div>
+                </div>
+                <div class="encourage">
+                    <label>每日一句</label>
+                    <p class="content">
+                        {{sentence}}
+                    </p>
+                </div>
+                <div class="telephone">
+                    <ul>
+                        <li>
+                            <label>总经理办公室：</label>
+                            <span>88886800</span>
+                        </li>
+                        <li>
+                            <label>人力资源部：
+                            </label>
+                            <span>88886801</span>
+                        </li>
+                        <li>
+                            <label>财务部：</label>
+                            <span>88886802</span>
+                        </li>
+                        <li>
+                            <label>技术部：</label>
+                            <span>88886803</span>
+                        </li>
+                        <li>
+                            <label>营销部：</label>
+                            <span>88886804</span>
+                        </li>
+                        <li>
+                            <label>保卫部：</label>
+                            <span>88886805</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    new Vue({
+        el: "#home",
+        data() {
+            return {
+                isToday:true,   //默认是今天
+                user: {},
+                schedules: [],
+                scheTime: null, //保存需要显示的时间
+                scheWeek: null, //当前星期几？？
+                weeks: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                scheListLen: 1, //当为空的时候，不显示列表，而是显示一个字,默认显示
+                // timer: null, //定时器，每次退出系统时清空
+                sche:"", //存储当前最近的schedule
+                sentence:""
+            }
+        },
+        created: function() {
+            this.initUser();
+            this.initImage();
+            this.getScheList(this.formateDate());
+            // 获取最近的一个日程信息.
+            this.getNearSche();
+            this.initSentence();
+        },
+        methods: {
+            initSentence:function(){
+                let that = this;
+                myApi.sentence({},function(err,result){
+                    if(err){
+                        console.log(err);
+                    }else{
+                        that.sentence = result[0];
+                    }
+                })
+            },
+            initImage: function() {
+                let picture = document.querySelector("#picture");
+                if (!localStorage.getItem("src")) {
+                    //console.log(this.user.role);
+                    let src = "../lib/images/user/" + this.user.gender + ".jpg";
+                    localStorage.setItem("src", src);
+                    picture.src = src;
+                } else {
+                    picture.src = localStorage.getItem("src");
+                }
+            },
+            initUser: function() {
+                this.user = JSON.parse(localStorage.getItem("user"));
+                //console.log(this.user); 
+            },
+            getScheList: function(time) {
+                //获取日程列表
+                let data = {
+                    userID: this.user.userID,
+                    time: time
+                }
+                let that = this;
+                myApi.schedule.showSchedule(data, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        // console.log(result);
+                        if (result[0].length) {
+                            // 当存在数据的时候,此时还应该判断所有数据是否都为2.
+                            that.schedules = result[0];
+                            that.excludeDelete();
+                            if(that.schedules.length == 0){
+                                //此时表示没有完成的或者未完成的数据
+                                that.scheListLen = 0;
+                            }else{
+                                that.scheListLen = 1;
+                            }
+                            that.scheTime = time;
+                        } else {
+                            //没有数据的时候，将时间scheTime设置为当前时间
+                            that.schedules = [];
+                            that.scheTime = time;
+                            that.scheListLen = 0;
+                        }
+                    }
+                })
+            },
+            getNearSche: function() {
+                let data = {
+                    userID: this.user.userID
+                }
+                let that = this;
+                myApi.timer(data, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        if (result[0] != null) {
+                            // console.log(result[0]);
+                            that.sche = result[0];
+                            localStorage.setItem("schetime", result[0].starttime);
+                            that.setTimer();
+                        } else {
+                            return; //当没有日程的时候，此时就直接返回，停止
+                        }
+                    }
+                })
+                //localStorage.setItem("schetime","2018-01-15T15:12:00");
+                //this.setTimer();
+            },
+            setTimer: function() {
+                let schetime = localStorage.getItem("schetime").split("T");
+                let datetime = schetime[0].split("-");
+                let time = schetime[1].split(":");
+                let date = new Date(datetime[0], datetime[1] - 1, datetime[2], time[0], time[1], time[2]);
+                let currenttime = new Date();
+                let interval = date.getTime() - currenttime.getTime();
+                if (interval < 0) {
+                    return;
+                } else {
+                    // 定时器会一直存在，即使刷新浏览器也不行，个人认为，在添加日程之后，计时器要重新设定。
+                    this.timer = setTimeout(this.nextScheTimer, interval);
+                }
+            },
+            nextScheTimer: function() {
+                let currenttime = this.formateDate();
+                alert("有日程开始了\n日程内容为:" + this.sche.content + "\n开始时间为:" + this.sche.starttime + "\n结束时间为:" + this.sche.endtime);
+                this.getNearSche();
+            },
+            formate: function(m) {
+                if (m < 10) {
+                    return "0" + m
+                }
+                return m;
+            },
+            prevSche: function() {
+                let time = this.scheTime.split("-");
+                let date = new Date(time[0], time[1] - 1, time[2]);
+                // console.log(date);
+                let prevDay = new Date(date.getTime() - 24 * 60 * 60 * 1000);
+                // console.log(prevDay);
+                this.scheTime = prevDay.getFullYear() + "-" + this.formate(prevDay.getMonth() + 1) + "-" + this.formate(prevDay.getDate());
+                this.scheWeek = this.weeks[prevDay.getDay()];
+                this.getScheList(this.scheTime);
+                if(this.scheTime == this.formateDate() ){
+                    this.isToday = true;
+                }else{
+                    this.isToday = false;
+                }
+            },
+            nextSche: function() {
+                let time = this.scheTime.split("-");
+                let date = new Date(time[0], time[1] - 1, time[2]);
+                let nextDay = new Date(date.getTime() + 24 * 60 * 60 * 1000);
+                this.scheTime = nextDay.getFullYear() + "-" + this.formate(nextDay.getMonth() + 1) + "-" + this.formate(nextDay.getDate());
+                this.scheWeek = this.weeks[nextDay.getDay()];
+                this.getScheList(this.scheTime);
+                if(this.scheTime == this.formateDate() ){
+                    this.isToday = true;
+                }else{
+                    this.isToday = false;
+                }
+            },
+            excludeDelete: function() {
+                // 排除状态码为2的日程
+                let sches = [];
+                for (let i = 0; i < this.schedules.length; i++) {
+                    if (this.schedules[i].state != 2) {
+                        sches.push(this.schedules[i]);
+                    }
+                }
+                this.schedules = sches;
+            },
+            saveSche: function(ev, sche) {
+                let state = ev.target.checked;
+                // 如果完成，就改变数据库数据的状态
+                if (state) {
+                    let data = {
+                        id: sche.id
+                    }
+                    myApi.schedule.finishSchedule(data, function(err, result) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log(result[0])
+                        }
+                    });
+                } else if (!state) {
+                    let data = {
+                        id: sche.id
+                    }
+                    myApi.schedule.unfinishSchedule(data, function(err, result) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log(result[0])
+                        }
+                    });
+                }
+            },
+            exit: function() {
+                localStorage.setItem("user", "");
+                localStorage.setItem("src", "");
+                localStorage.setItem("schetime", "");
+                localStorage.setItem("usersInfo", "");
+                location.href = "../login/index.html";
+            },
+            search: function() {
+                // 查询用户信息，通过用户名或者用户ID。
+                let search_str = document.querySelector(".search_str");
+                let data = {
+                    serachStr: search_str.value.trim()
+                }
+                myApi.search(data, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(result);
+                        localStorage.setItem("usersInfo", JSON.stringify(result[1]));
+                        if (result[1].length == 0) {
+                            alert("没有搜索到任何信息");
+                            return;
+                        } else {
+                            layer.open({
+                                type: 2, //以框架的形式打开弹出框
+                                title: "搜索结果",
+                                shadeClose: true,
+                                area: ['500px', '360px'],
+                                content: "../public/search_user.html", //可以引用html文件
+                                skin: "demo-class"
+                            });
+                            //此时应该禁用回车键。
+                            // 不然会重复弹出搜索结果
+                        }
+
+                    }
+                })
+            },
+            formateDate: function() {
+                // 规范化当前时间
+                var date = new Date();
+                this.scheWeek = this.weeks[date.getDay()];
+                let year = date.getFullYear();
+                let month = date.getMonth() + 1;
+                let day = date.getDate();
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                return year + "-" + month + "-" + day
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

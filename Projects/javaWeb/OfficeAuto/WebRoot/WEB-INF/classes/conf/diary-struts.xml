@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.action.extension" value="action" />
+	
+	<package name="Diary" namespace="/diary" extends="json-default">     
+		<!-- 访问标记 -->                  <!--类名  -->                  <!--类中方法  -->
+	   <action name="listDiarys_Month" class="action.DiaryAction" method="listDiarys_Month">
+	   		<!-- action返回的标记 -->
+	       <result name="success" type="json">
+	       				<!-- action中map的对象名 -->
+	            <param name="root">diaryMap</param>
+	       </result>
+	   </action>
+	   <action name="listDiarys_All" class="action.DiaryAction" method="listDiarys_All">
+	   		<!-- action返回的标记 -->
+	       <result name="success" type="json">
+	       				<!-- action中map的对象名 -->
+	            <param name="root">diaryMap</param>
+	       </result>
+	   </action>
+	   <action name="addDiary" class="action.DiaryAction" method="addDiary">
+	   		<!-- action返回的标记 -->
+	       <result name="success" type="json">
+	       				<!-- action中map的对象名 -->
+	            <param name="root">diaryMap</param>
+	       </result>
+	       <result name="failed" type="json">
+	            <param name="root">diaryMap</param>
+	       </result>
+	   </action>
+	   <action name="updateDiary" class="action.DiaryAction" method="updateDiary">
+	   		<!-- action返回的标记 -->
+	       <result name="success" type="json">
+	       				<!-- action中map的对象名 -->
+	            <param name="root">diaryMap</param>
+	       </result>
+	   </action>
+	   <action name="loadDiary" class="action.DiaryAction" method="loadDiary">
+	   		<result name="success" type="json">
+	   			<param name="root">diaryMap</param>
+	   		</result>
+	   </action>
+	</package>
+
+</struts>

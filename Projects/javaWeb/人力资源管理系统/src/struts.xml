@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.action.extension" value="action" />
+	<package name="Log" namespace="/" extends="json-default">
+	     
+	   <action name="login_*" class="action.LoginAction" method="{1}">
+	       <result name="success" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	       <result name="failed" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	       </action>
+	    <action name="adduser" class="action.LoginAction" method="addUsers">
+	       <result name="success" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	       <result name="false" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	    </action>
+	    <action name="listuser" class="action.LoginAction" method="listUser">
+	       <result name="success" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	    </action>
+	    <!-- 这里最好自己reAction -->
+	    <action name="deleteuser" class="action.LoginAction" method="deleteUser">
+	       <result name="success" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	    </action>
+	    <action name="updateuser" class="action.LoginAction" method="updateUser">
+	       <result name="success" type="json">
+	            <param name="root">loginSuccess</param>
+	       </result>
+	    </action>
+	</package>
+	<package name="job" namespace="/job" extends="json-default">
+	    <action name="addjob" class="action.JobAction" method="addJob">
+	       <result name="success" type="json">
+	            <param name="root">jobAction</param>
+	       </result>
+	       <result name="failed" type="json">
+	            <param name="root">jobAction</param>
+	       </result>
+	    </action>
+	    <action name="liststockjob" class="action.JobAction" method="listStockJob">
+	      <result name="success" type="json">
+	            <param name="root">jobAction</param>
+	       </result>
+	    </action>
+	    <action name="listunstockjob" class="action.JobAction" method="listUNStockJob">
+	      <result name="success" type="json">
+	            <param name="root">jobAction</param>
+	       </result>
+	    </action>
+	    <action name="stockjob" class="action.JobAction" method="stockJob">
+	      <result name="success" type="json">
+	            <param name="root">jobAction</param>
+	       </result>
+	    </action>
+	    <action name="deletejob" class="action.JobAction" method="deleteJob">
+	      <result name="success" type="json">
+	            <param name="root">jobAction</param>
+	       </result>
+	    </action>
+	</package>
+	<!--  
+	<package name="Educate" namespace="/educate" extends="json-default">
+	   <action name="addeducate" class="action.educateAction" method="addEducate">
+	     <result name="success" type="json">
+	            <param name="root">educateAction</param>
+	       </result>
+	       <result name="failed" type="json">
+	            <param name="root">educateAction</param>
+	       </result>
+	   </action>
+	   <action name="listeducate" class="action.educateAction" method="listEducate">
+	      <result name="success" type="json">
+	            <param name="root">educateAction</param>
+	       </result>
+	    </action>
+	 <action name="detaileducate" class="action.educateAction" method="detailEducate">
+	      <result name="success" type="json">
+	            <param name="root">educateAction</param>
+	       </result>
+	    </action>
+	 <action name="deleteeducate" class="action.educateAction" method="deleteEducate">
+	      <result name="success" type="json">
+	            <param name="root">educateAction</param>
+	       </result>
+	    </action>
+	</package>
+	-->
+	<package name="Notice" namespace="/notice" extends="json-default">
+	    <action name="listnotice" class="action.NoticeAction" method="listNotice">
+	      <result name="success" type="json">
+	            <param name="root">NoticeAction</param>
+	       </result>
+	    </action>
+	</package>
+</struts>

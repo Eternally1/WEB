@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Microsoft YaHei";
+    }
+
+    html,
+    body {
+        width: 100%;
+        background: #edede3;
+    }
+
+    .login {
+        width: 400px;
+        height: 200px;
+        margin: 70px auto;
+        background: #fff;
+        text-align: center;
+        padding: 2em;
+        box-shadow: 0 0 10px #fff;
+    }
+
+    .title {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .login div {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .login div label {
+        font-size: 1.1em;
+        margin-left: 2em;
+    }
+
+    .login div input {
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 1em;
+        text-indent: 5px;
+        /*font-size:1.2em;*/
+        /*border:none;*/
+    }
+
+    .btn {
+        width: 150px;
+        height: 40px;
+        border: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #eef1ef;
+        margin-top: 1em;
+        cursor: pointer;
+        transition: background 1s;
+        color: #fff;
+    }
+
+    .submit:hover {
+        background: #116bad;
+    }
+
+    .submit:focus{
+        outline:none;
+    }
+
+    .reset:hover {
+        background: #6d1616;
+    }
+
+    .submit {
+        background: #17bacc;
+    }
+
+    .reset {
+        background: #d2bcbc;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">人力资源管理系统</h1>
+    <div class="login">
+        <div class="userName">
+            <img src="./images/user-orange.png" align="absmiddle">
+            <label for="userName">用户名</label>
+            <input type="text" name="name" id="userName">
+        </div>
+        <div class="userPsw">
+            <img src="./images/password.png" align="absmiddle">
+            <label for="userPsw">密&nbsp;&nbsp;&nbsp;码</label>
+            <input type="password" name="password" id="userPsw">
+        </div>
+        <input type="submit" value="登录" id="submit" class="btn submit">
+        <input type="button" value="重置" id="reset" class="btn reset">
+    </div>
+    <script type="text/javascript">
+    let submit = document.getElementById("submit"),
+        reset = document.getElementById("reset");
+    submit.onclick = function() {
+        let request;
+        if (window.XMLHttpRequest) {
+            request = new XMLHttpRequest();
+        } else {
+            request = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        
+        request.open("POST", "http://localhost:8080/javaWeb/login_login.action");
+        let data = "username=" + document.getElementById("userName").value +
+            "&password=" + document.getElementById("userPsw").value;
+        console.log(data);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send(data);
+        //监听事件
+        request.onreadystatechange = function() {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    var jsonData=JSON.parse(request.responseText);
+                    if(jsonData.status == "1002"){
+                        console.log("登录成功");
+                        // console.log(data);
+                        localStorage.setItem("username",document.getElementById("userName").value);
+                        location.href = "../home.html";
+                    }else if(jsonData.status == "1001"){
+                        alert("用户名或者密码错误");
+                        return;
+                    }
+                } else {
+                    alert("error:" + request.status);
+                }
+            }
+        };
+    };
+    reset.onclick = function(){
+        document.getElementById("userName").value = "";
+        document.getElementById("userPsw").value = "";
+    }
+    </script>
+</body>
+
+</html>

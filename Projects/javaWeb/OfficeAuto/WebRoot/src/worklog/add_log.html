@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加日志</title>
+	<script src="../public/api.js"></script>
+	<script src="../lib/layer-v3.1.1/layer/layer.js"></script>
+	<style type="text/css">
+	.add_log{
+		padding:20px;
+		/*width:800px;
+		height:520px;
+		margin:0 auto;*/
+	}
+	.add_log .log_title,
+	.add_log .log_content{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.add_log input{
+		width:77%;
+		height: 35px;
+		font-size: 16px;
+		border: none;
+		border: 1px solid #e0d8d8;
+		outline: none;
+		padding: 20px;
+		text-align: center;
+		transition: border 1s;
+		box-sizing: border-box;
+	}
+	.add_log label{
+		padding-right:20px;
+		font-size:16px;
+	}
+	.add_log input:focus{
+		outline: none;
+		border-color: #887a7a;
+	}
+	.add_log .log_content label{
+		vertical-align: top;
+	}
+	.add_log .log_content textarea{
+		width:77%;
+		margin-top: 5px;
+		resize: none;
+		height: 300px;
+		font-size: 16px;
+		line-height: 32px;
+		text-indent: 1rem;
+		padding: 20px;
+		box-sizing: border-box;
+		transition: border 1s;
+	}
+	.add_log textarea:focus{
+		outline:none;
+		border-color:#887a7a;
+	}
+	.add_log .opera{
+		margin-top:20px;
+		height: 35px;
+		line-height: 35px;
+		padding-right:110px;
+	}
+	.opera button{
+		width:200px;
+		height:40px;
+		border: none;
+		padding: 7px 14px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #d0bcbc;
+		color:#fff;
+		float:right;
+		cursor:pointer;
+		font-size:16px;
+	}
+	.opera button{
+		background: #259ab5;
+	}
+	.opera button:hover{
+		background:#106b80;
+	}
+	.opera button:focus{
+		outline:none;
+	}
+	/*.opera button:nth-child(2){
+		background:#c35757;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="add_log">
+		<div class="log_title">
+			<label>日志标题</label>
+			<input type="text" name="" id="title" >
+		</div>
+		<div class="log_content">
+			<label>日志内容</label>
+			<textarea id="content"></textarea>
+		</div>
+		<div class="opera" onClick="addLog()">
+			<button>添加日志</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function addLog(){
+			// 这里将内容提交到后台去
+			let title = document.querySelector("#title");
+			let content = document.querySelector("#content");
+			// 当内容不为空的时候才能提交到后台  null不等于 ""
+			if(title.value.trim()!=""&&content.value.trim()!=""){
+				let log = {
+					title:title.value,
+					content:content.value,
+					userID:JSON.parse(localStorage.getItem("user")).userID
+				}
+				console.log(log)
+				myApi.worklog.addLog(log,function(err,result){
+					if(err){
+						alert(result[0]+",不能重复添加");
+					}else{
+						alert(result[0]);
+						var index = parent.layer.getFrameIndex(window.name);  
+						parent.layer.close(index); 
+						// location.href="./index.html"
+					}
+				})
+			}else if(title.value.trim()==""){
+				alert("标题不可为空");
+				title.focus();
+				return;
+			}else if(content.value.trim()==""){
+				alert("内容不可为空");
+				content.focus();
+				return;
+			}
+		}
+	</script>
+</body>
+</html>

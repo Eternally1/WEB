@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity" auto-import="true">
+	<class name="Job" table="job">
+		<id name="id" type="long">
+			<column name="id"/>
+			<generator class="identity" />    <!--主键生成策略  -->
+		</id>
+		<property name="name" length="50" type="java.lang.String"></property>
+		<property name="sex" length="1" type="byte"></property>
+		<property name="age" length="10" type="integer"></property>
+		<property name="job" length="50" type="java.lang.String"></property>
+		<property name="specialty" length="50" type="java.lang.String"></property>
+		<property name="experience" length="50" type="java.lang.String"></property>
+		<property name="studyeffort" length="50" type="java.lang.String"></property>
+		<property name="school" length="50" type="java.lang.String"></property>
+		<property name="tel" length="50" type="java.lang.String"></property>
+		<property name="email" length="50" type="java.lang.String"></property>
+		<property name="createtime" length="23" type="timestamp"></property>
+		<property name="content" length="1073741823" type="java.lang.String"></property>
+		<property name="isstock" length="1" type="byte"></property>
+	</class>
+</hibernate-mapping>

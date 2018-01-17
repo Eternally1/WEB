@@ -11538,8 +11538,11 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
+//
+//
+//
 //
 //
 //
@@ -11994,7 +11997,7 @@ if (false) {
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
 
 var _vue = __webpack_require__(1);
@@ -12014,10 +12017,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_vueRouter2.default);
 
 exports.default = new _vueRouter2.default({
-	routes: [{
-		path: '/',
-		component: _layouts2.default
-	}]
+    routes: [{
+        path: '/',
+        component: _layouts2.default,
+        name: 'Layouts' //路径名
+    }]
 });
 
 /***/ }),
@@ -14745,7 +14749,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.container{\n\twidth:100%;\n\tbackground: #ccc;\n}\n.container .menu{\n\twidth:30%;\n\tbackground: red;\n\tfloat:left;\n}\n.container .content-container{\n\twidth:65%;\n\tbackground: blue;\n\tfloat:left;\n}\n", ""]);
 
 // exports
 
@@ -14759,9 +14763,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("router")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "container" }, [
+      _c("section", { staticClass: "menu" }),
+      _vm._v(" "),
+      _c("section", { staticClass: "content-container" })
+    ])
+  }
+]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

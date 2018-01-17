@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+    <link rel="stylesheet" type="text/css" href="css/updateUser.css">
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/axios.js"></script>
+    <script src="../api/api.js"></script>
+    <script src="./js/schedule.js"></script>
+</head>
+
+<body>
+    <div class="update-wrap" id="app-update">
+        <div class="cont">
+            <div class="header">
+                <label class="tltle">人员信息</label>
+                <button class="back" v-on:click="back()">返回</button>
+            </div>
+            <div>
+                <label>用户名:</label>
+                <input type="text" name="username" id="username" v-model="user.username" />
+            </div>
+            <div>
+                <label>密&nbsp;&nbsp;&nbsp;码:</label>
+                <input type="password" name="password" id="password" v-model="user.password" />
+            </div>
+            <div>
+                <label>性&nbsp;&nbsp;&nbsp;别:</label>
+                <input type="radio" name="sex" value="1" v-model="user.sex" />男
+                <input type="radio" name="sex" value="0" v-model="user.sex" />女
+            </div>
+            <div class="pos">
+                <label>出生日期:</label>
+                <p id="birthday" class="birthday" v-on:click="showDatePicker()">{{user.birthday}}</p>
+                <!-- <input type="text" name="birthday" id="birthday"/> -->
+                <div id="schedule-box" class="boxshaw" style="display: none;"></div>
+            </div>
+            <div>
+                <label>是否管理员:</label>
+                <input type="checkbox" name="isadmin" id="isadmin" value="1" v-model="user.isadmin" />
+            </div>
+            <div>
+                <label>人员简介:</label>
+                <textarea id="content" v-model="user.content"></textarea>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="save" v-on:click="update()">保存</button>
+            <button class="reset" v-on:click="reset()">重置</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    const vm = new Vue({
+        el: "#app-update",
+        data: {
+            user: {},
+        },
+        created: function() {
+            let user = localStorage.getItem("updateUser");
+            console.log(JSON.parse(user));
+            this.user = JSON.parse(user);
+        },
+        methods: {
+            back: function() {
+                location.href = "./showUser.html";
+            },
+            update: function() {
+                // console.log(this.user);
+                let that = this;
+                this.user.birthday = document.getElementById("birthday").innerHTML;
+                console.log(this.user);
+                myApi.user.updateUser(that.user, function(err, data) {
+                    if (err) {
+                        console.log(err);
+                    }else{
+                        alert("修改成功");
+                        location.href="./showUser.html";
+                    }
+                });
+            },
+            showDatePicker:function() {
+                if (document.getElementById("schedule-box").style.display == "block") {
+                    document.getElementById("schedule-box").style.display = "none";
+                } else if (document.getElementById("schedule-box").style.display == "none" || !document.getElementById("schedule-box").style.display) {
+                    document.getElementById("schedule-box").style.display = "block";
+                }
+            }
+        }
+    })
+    var mySchedule = new Schedule({
+                el: '#schedule-box',
+                //date: '2018-9-20',
+                clickCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                nextMonthCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                nextYeayCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                prevMonthCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                prevYearCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                }
+            });
+    </script>
+</body>
+
+</html>

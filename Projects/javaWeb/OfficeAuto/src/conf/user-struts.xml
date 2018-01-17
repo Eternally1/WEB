@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="user" namespace="/user" extends="json-default">
+    <action name="loginCheck" class="action.UserAction" method="loginCheck">
+           <result name="getsuccess" type="json">
+	            <param name="root">usermap</param>
+	       </result>
+	       <result name="getfailed" type="json">
+	            <param name="root">usermap</param>
+	       </result>
+    </action>
+    <action name="saveUser" class="action.UserAction" method="saveUser">
+           <result name="savesuccess" type="json">
+	            <param name="root">usermap</param>
+	       </result>
+	       <result name="savefailed" type="json">
+	            <param name="root">usermap</param>
+	       </result>
+    </action>
+    <action name="searchUser" class="action.UserAction" method="searchUser">
+           <result name="searchsuccess" type="json">
+	            <param name="root">usermap</param>
+	       </result>
+    </action>
+</package>
+</struts>

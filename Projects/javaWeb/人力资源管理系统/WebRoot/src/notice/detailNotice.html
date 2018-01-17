@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详细页面</title>
+	<script type="text/javascript" src="../lib/vue.js"></script>
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		html,body{
+			font-size:12px;
+		}
+		.wrap-detail{
+			padding:10px 20px;
+			box-sizing: border-box;
+		}
+		.title{
+			font-size: 1.4rem;
+			text-align: center;
+			font-family: Tahoma, Geneva, sans-serif;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			color: #027dc3;
+		}
+		.createTime{
+			text-align: center;
+		    background: #ccc;
+		    padding: 4px;
+		    margin-bottom: 20px;
+		}
+		.content{
+		    text-indent: 2rem;
+		    font-size: 1.2rem;
+		    line-height: 1.8rem;
+		    color: #4e4d4d;
+		    padding: 0 20px;
+		}
+		.author{
+		    margin-right: 20px;
+		    margin-top: 30px;
+		    width: 130px;
+		    float: right;
+		    text-align: center;
+		    background: #c1bfbf;
+		    font-size: 1.1rem;
+		    padding: 3px 0;
+		    color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap-detail" id="detail-app">
+		<h2 class="title">{{notice.title}}</h2>
+		<p class="createTime">发布时间：{{notice.createtime.replace("T","  ")}}</p>
+		<div class="content">{{notice.content}}</div>
+		<p class="author">发布人：{{notice.author}}</p>
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el:"#detail-app",
+			data:{
+				notice:null
+			},
+			created:function(){
+				let notice = localStorage.getItem("notice");
+				this.notice = JSON.parse(notice);
+				console.log(this.notice);
+			}
+		})
+	</script>
+</body>
+</html>

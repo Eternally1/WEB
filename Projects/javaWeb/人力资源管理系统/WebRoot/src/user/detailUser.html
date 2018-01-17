@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="css/detailUser.css">
+	<script src="../lib/vue.js"></script>
+</head>
+<body>
+	<div class="detail-wrap" id="app-detail">
+		<div class="cont">
+           <div class="header">
+	           	<label class="tltle">人员信息</label>
+	            <button class="back" v-on:click="back()">返回</button>
+           </div>
+            <div>
+                <label>用户名:</label>
+                <input type="text" name="username" id="username"  readonly="readonly" v-model="user.username"/>
+            </div>
+           
+            <div>
+                <label>性&nbsp;&nbsp;&nbsp;别:</label>
+                <input type="radio" name="sex" value="1" disabled ="disabled" v-model="user.sex" />男
+                <input type="radio" name="sex" value="0" disabled ="disabled" v-model="user.sex"/>女
+            </div>
+            <div class="pos">
+                <label>出生日期:</label>
+                <p id="birthday" class="birthday" onclick="showDatePicker()">{{user.birthday}}</p>
+                <!-- <input type="text" name="birthday" id="birthday"/> -->
+                <div id="schedule-box" class="boxshaw" style="display: none;"></div>
+            </div>
+            <div>
+                <label>是否管理员:</label>
+                <input type="checkbox" name="isadmin" id="isadmin" disabled value="1" v-model="user.isadmin" />
+            </div>
+            <div>
+                <label>人员简介:</label>
+                <textarea id="content" readonly="readonly" >{{user.content}}</textarea>
+            </div>
+        </div>
+	</div>
+	<script type="text/javascript">
+		const vm = new Vue({
+			el:"#app-detail",
+			data:{
+				user:{}
+			},
+			created:function(){
+				let user = localStorage.getItem("detailUser");
+				console.log(JSON.parse(user));
+				this.user = JSON.parse(user);
+			},
+			methods:{
+				back:function(){
+					location.href="./showUser.html";
+				}
+			}
+		})
+	</script>
+</body>
+</html>

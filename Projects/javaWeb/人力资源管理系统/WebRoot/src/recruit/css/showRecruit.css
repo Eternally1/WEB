@@ -1,0 +1,95 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html,
+body {
+    background: #ebeaea;
+    font-size: 12px;
+    font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+.show-wrap .title{
+	text-align: left;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.show-wrap .cont{
+   height:380px;
+}
+.show-wrap .cont p{
+	background: #0b5065;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    color: #fff;
+    text-align:center;
+}
+.show-wrap .cont table{
+	border-collapse:collapse;
+}
+.show-wrap .cont table tr{
+	border-bottom:1px solid #ccc;
+
+}
+.show-wrap .cont table tbody tr:nth-child(odd){
+	background: #d8d8d8;
+}
+
+.show-wrap .cont table tbody tr td.operation{
+    width:100px;
+}
+
+.show-wrap .cont table td,
+.show-wrap .cont table th{
+	/*width:99px;*/
+    padding:2px 5px;
+	height:2.8rem;
+	text-align:center;
+	font-size:1.1rem;
+	border-right:1px solid #ccc;
+    line-height:2.8rem;
+}
+.show-wrap .cont .omit{
+    /*内容较多时，显示省略号*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 85px;
+    display: inline-block
+}
+.btn{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn .prev,
+.btn .next{
+    border: none;
+    margin-left: 21px;
+    margin-right: 20px;
+    background: #ccc;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prev:hover,
+.next:hover{
+    background: #ccc4c4;
+}
+.next:focus,
+.prev:focus{
+    outline:none;
+}
+
+.func:link,
+.func:visited{
+    color:#2b2d2f;
+}
+.func:hover,
+.func:focus{
+    color:red;
+}
+
+
+

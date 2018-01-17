@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>主页</title>
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/addUser.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
+    <script src="../api/api.js"></script>
+    <script src="../lib/schedule.js"></script>
+</head>
+
+<body>
+    <div class="add-wrap">
+        <div class="title">
+            <h2>人员信息录入</h2>
+        </div>
+        <div class="cont">
+            <label class="tl">人员信息</label>
+            <div>
+                <label>用户名:</label>
+                <input type="text" name="username" id="username" />
+            </div>
+            <div>
+                <label>密&nbsp;&nbsp;&nbsp;码:</label>
+                <input type="password" name="password" id="password" />
+            </div>
+            <div>
+                <label>性&nbsp;&nbsp;&nbsp;别:</label>
+                <input type="radio" name="sex" value="1" checked />男
+                <input type="radio" name="sex" value="0" />女
+            </div>
+            <div class="pos">
+                <label>出生日期:</label>
+                <p id="birthday" class="birthday" onclick="showDatePicker()"></p>
+                <!-- <input type="text" name="birthday" id="birthday"/> -->
+                <div id="schedule-box" class="boxshaw" style="display: none;"></div>
+            </div>
+            <div>
+                <label>是否管理员:</label>
+                <input type="checkbox" name="isadmin" id="isadmin" />
+            </div>
+            <div>
+                <label>人员简介:</label>
+                <textarea id="content"></textarea>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="save" id="save">保存</button>
+            <button class="reset" id="reset">重置</button>
+        </div>
+    </div>
+    <!-- <script src="js/addUser.js"></script> -->
+    <script type="text/javascript">
+            function $getId(id) {
+                return document.getElementById(id);
+            }
+            /**
+             * 保存事件
+             */
+            let save = $getId("save"),
+                reset = $getId("reset"),
+                username = $getId("username"),
+                password = $getId("password"),
+                sex = checkRadio("sex"),
+                birthday = $getId("birthday"),
+                isadmin = $getId("isadmin"),
+                content = $getId("content");
+               
+            reset.onclick = function(){
+            	username.value = "";
+            	password.value = "";
+            	birthday.innerHTML = "";
+            	content.value = "";
+            	isadmin.checked = false;//取消复选框的选择
+            	document.getElementsByName("sex")[0].checked = true;
+            }
+            save.onclick = function() {
+                let data = {
+                    username: username.value.trim(),
+                    password: password.value,
+                    sex: sex,
+                    birthday: birthday.innerHTML ? birthday.innerHTML : setBirthday(),
+                    isadmin: isadmin.checked ? 1 : 0,
+                    content: content.value
+                };
+                console.log(data);
+                if(checkIsEmpty()){
+                myApi.user.addUser(data, function(err, result) {
+                    if (err) {
+                       alert(err);
+                    } else {
+                        //如果添加成功就将页面跳转到显示人员信息页面
+                        alert("人员添加成功");
+                        location.href = "./showUser.html";
+                    }
+                });
+                }
+            };
+
+            /** 
+             * 检查用户名和密码是否等必要信息是否为空
+             */
+            function checkIsEmpty() {
+                if (!username.value.trim()) {
+                    username.focus();
+                    alert("请填写用户名");
+                    return false;
+                } else if (!password.value.trim()) {
+                    password.focus();
+                    alert("请输入用户密码");
+                    return false;
+                } else if (!content.value.trim()) {
+                    content.focus();
+                    alert("请输入人员简介");
+                    return false;
+                }
+                return true;
+            }
+
+            /**
+             * 如果没有选择出生日期（可能忘记了，所以没有填写）
+             * 那么默认的出生日期是填写的那一天.
+             */
+            function setBirthday() {
+                let date = new Date();
+                return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+            }
+
+            /**
+             * 单选按钮值,传入的参数是单选按钮的name属性
+             */
+            function checkRadio(radioname) {
+                let rLists = document.getElementsByName(radioname),
+                    radioV,
+                    i;
+                for (i = 0; i < rLists.length; i++) {
+                    if (rLists[i].checked) {
+                        radioV = rLists[i].value;
+                        return radioV;
+                    }
+                }
+                //如果没有选中，就返回第一个单选款的值
+                if (i == rLists.length) {
+                    radioV = rLists[0].value;
+                }
+                return radioV;
+            }
+
+            //显示日期
+            function showDatePicker() {
+                if ($getId("schedule-box").style.display == "block") {
+                    $getId("schedule-box").style.display = "none";
+                } else if ($getId("schedule-box").style.display == "none" || !$getId("schedule-box").style.display) {
+                    $getId("schedule-box").style.display = "block";
+                }
+            }
+            // 日期插件
+            var mySchedule = new Schedule({
+                el: '#schedule-box',
+                //date: '2018-9-20',
+                clickCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                nextMonthCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                nextYeayCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                prevMonthCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                },
+                prevYearCb: function(y, m, d) {
+                    document.querySelector('#birthday').innerHTML = y + '-' + m + '-' + d
+                }
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>人才库浏览</title>
+    <link rel="stylesheet" type="text/css" href="css/showRecruit.css">
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/axios.js"></script>
+</head>
+
+<body>
+    <div class="show-wrap" id="app-recurit">
+        <h2 class="title">已入库人才信息查看</h2>
+        <div class="cont">
+            <p>人才信息列表</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="50px">姓名</th>
+                        <th width="50px">性别</th>
+                        <th width="120px">职位</th>
+                        <th width="120px">所学专业</th>
+                        <th width="80px">工作经验</th>
+                        <th width="114px">执行操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="rowItem" v-for="item in items">
+                        <td>{{item.name}}</td>
+                        <td>{{item.sex == "1"?"男":"女"}}</td>
+                        <td>{{item.job}}</td>
+                        <td>{{item.specialty}}</td>
+                        <td>{{item.experience}}</td>
+                        <td class="operation">
+                            <a class="func" href="./detailRecruit.html" v-on:click="showDetail(item)">详情</a>
+                            <a class="func" href="#" v-on:click="deleteRecruit(item.id)">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btn">
+            <button class="prev" @click="prevPage()">前一页</button>
+            <button class="next" @click="nextPage()">后一页</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    const vm = new Vue({
+        el: "#app-recurit",
+        data: {
+            items: [],
+            totalNum: 0,
+            currentPage: 0,
+            totalPage: 0,
+        },
+        created: function() {
+            var that = this;
+            axios.get("http://localhost:8080/javaWeb/job/liststockjob.action").then(function(res) {
+                if (res.data.status === "1002") {
+                    that.items = res.data.data;
+                    that.totalNum = res.data.totalNumber;
+                    //让dom结构渲染完之后在执行下面的goPage()方法
+                    that.$nextTick(function() { that.goPage() });
+                    // console.log(res.data);
+                } else {
+                    console.log("服务器通讯异常。");
+                }
+            }).catch(function(e) {
+                console.log(e);
+            })
+        },
+        methods: {
+            goPage: function(pno) {
+                // console.log(this.totalNum);
+                pno = pno || 1;
+                let pageSize = 9;
+                this.totalPage = Math.ceil(this.totalNum / pageSize);
+                // console.log(this.totalPage);
+                this.currentPage = pno;
+                let startRow = (this.currentPage - 1) * pageSize + 1;
+                let endRow = this.currentPage * pageSize;
+                endRow = (endRow > this.totalNum) ? this.totalNum : endRow;
+                // console.log(startRow + "开始  " + endRow + "结束");
+                // 遍历显示数据实现分页
+                let rows = document.querySelectorAll(".rowItem");
+                // console.log(rows);
+                for (let i = 1; i <= this.totalNum; i++) {
+                    if (i >= startRow && i <= endRow) {
+                        rows[i - 1].style.display = "table-row";
+                    } else {
+                        rows[i - 1].style.display = "none";
+                    }
+                }
+            },
+            nextPage: function() {
+                if (this.currentPage == this.totalPage) {
+                    alert("当前已经是最后一页");
+                } else {
+                    this.currentPage++;
+                    this.goPage(this.currentPage);
+                }
+            },
+            prevPage: function() {
+                if (this.currentPage == 1) {
+                    alert("当前已经是第一页");
+                } else {
+                    this.currentPage--;
+                    this.goPage(this.currentPage);
+                }
+            },
+            // 显示详情页面
+            showDetail: function(recruit) {
+                console.log(recruit);
+                localStorage.setItem("detailRecruit", JSON.stringify(recruit));
+            },
+            updateUser: function(recruit) {
+                localStorage.setItem("updateRecruit", JSON.stringify(recruit));
+            },
+            deleteRecruit: function(id) {
+                let that = this;
+                let r = confirm("是否确定删除？");
+                if (r) {
+                    axios.get("http://localhost:8080/javaWeb/job/deletejob.action?id=" + id).then(function(res) {
+                        if (res.data.status == "1002") {
+                            alert("删除成功");
+                            //此时刷新页面
+                            location.href="showTalents.html"
+                        }
+                    }).catch(function(err) {
+                        console.log(err);
+                    });
+                }
+            },
+
+        }
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>主页</title>
+    <meta charset="utf-8">
+     <script type="text/javascript" src="api/api.js"></script>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html,
+    body {
+        background: #ebeaea;
+        font-size: 12px;
+        font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    }
+
+    .wrap-home {
+        min-width: 1000px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .clear {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .wrap-home .title h2 {
+        text-align: center;
+        line-height: 80px;
+        font-size: 2rem;
+    }
+
+    .wrap-home nav {
+        width: 20%;
+        height: 470px;
+        min-width: 200px;
+        border: 1px solid #c0abab;
+        float: left;
+        font-size: 1.2rem;
+        padding: 5px;
+        box-sizing: content-box;
+        border-radius: 5px
+    }
+
+    .wrap-home nav .info img {
+        width: 50px;
+        height: auto;
+        float: left;
+    }
+
+    nav .info .info-cont {
+        float: left;
+        margin-left: 1rem;
+        padding-top: 3px;
+    }
+
+    nav .nav li {
+        list-style: none;
+    }
+
+    nav .nav a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .nav div {
+        margin: 5px 0;
+    }
+
+    .nav div p>a {
+        background: #8cbacc;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    nav .nav .nav-second {
+        /*display: none;*/
+        margin-left: 20px;
+        padding: 5px;
+    }
+
+    nav .nav .nav-second li a {
+        display: inline-block;
+        padding: 5px;
+        text-align: center;
+        transition: "text-decoration" 1s;
+        margin-top: 2px;
+        text-decoration: underline;
+    }
+
+    nav .nav .nav-second li a:hover {
+        color: #3045af;
+    }
+
+    .content {
+        float: left;
+        width: 60%;
+        max-width: 600px;
+        min-width: 400px;
+        height: 480px;
+        border: 1px solid #c0abab;
+        margin-left: 40px;
+        overflow:hidden;
+    }
+    .content img{
+        width:100%;
+        height:100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap-home clear">
+        <header>
+            <div class="title">
+                <h2>人力资源管理系统</h2>
+            </div>
+        </header>
+        <nav>
+            <div class="info clear">
+                <img src="./images/admin-tx.jpg">
+                <div class="info-cont">
+                    <label>你好,</label>
+                    <span class="userName" id="username">admin</span>
+                    <br />
+                    <a href="./login/index.html">[退出]</a>
+                </div>
+            </div>
+            <div class="nav" id="nav">
+                <div>
+                    <p><a href="#">人员管理</a></p>
+                    <ul class="nav-second" style="display:block">
+                        <li><a href="user/addUser.html" target="addUser" class="iframe-cont">人员信息录入</a></li>
+                        <li><a href="user/showUser.html" target="showUser" class="iframe-cont">人员信息查询</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><a href="#">招聘管理</a></p>
+                    <ul class="nav-second" style="display:block">
+                        <li><a href="recruit/addRecruit.html" target="addRecruit" class="iframe-cont">应聘信息录入</a></li>
+                        <li><a href="recruit/showRecruit.html" target="showRecruit" class="iframe-cont">应聘信息查看</a></li>
+                        <li><a href="recruit/showTalents.html" target="showTalents" class="iframe-cont">人才库浏览</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><a href="#">公告</a></p>
+                    <ul class="nav-second" style="display:block">
+                        <li><a href="notice/showNotice.html" target="showNotice" class="iframe-cont">查看公告</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        <div>
+            <div class="content">
+               
+                <iframe style="display:none" name="addUser" src="user/addUser.html" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe style="display:none" name="showUser" src="user/showUser.html" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe style="display:none" name="addRecruit" src="recruit/addRecruit.html" frameborder="0" width="100%" height="100%"></iframe>
+                 <iframe style="display:none" name="showRecruit" src="recruit/showRecruit.html" frameborder="0" width="100%" height="100%"></iframe>
+                 <iframe style="display:none" name="showTalents" src="recruit/showTalents.html" frameborder="0" width="100%" height="100%"></iframe>
+               <iframe style="display:block" name="showNotice" src="notice/showNotice.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+	    function $getId(id) {
+	        return document.getElementById(id);
+	    }
+
+        let username = $getId("username");
+        let name = localStorage.getItem("username");
+        username.innerHTML = name;
+
+	    let pLists = $getId("nav").getElementsByTagName('p'),
+	        ulLists = $getId("nav").getElementsByTagName("ul");
+	    // console.log(ulLists);
+	    // for (var i = 0; i < pLists.length; i++) {
+	    //     pLists[i].dataset.index = i;
+	    //     pLists[i].onclick = function() {
+	    //         // 获取点击的标题上的索引属性，根据该索引找到对应的列表
+	    //         var index = this.dataset.index;
+	    //         // 判断该列表，如果是显示的则将其隐藏，如果是隐藏的则将其显示出来
+	    //         if (ulLists[index].style.display === 'block') {
+	    //             // ulLists[index].style.transition = "500ms";
+	    //             // ulLists[index].style.color = "red";
+	    //             // ulLists[index].style.display = 'none';
+	    //             //注意下面的这个判断，首先是存在display且为空，之后是刚开始时并不存在display，
+	    //             //注意如何判断
+	    //         } else if (ulLists[index].style.display === 'none' || !ulLists[index].style.display) {
+	    //             ulLists[index].style.display = 'block'
+	    //         }
+	    //     }
+	    // }
+
+        /**
+         * 侧边栏的点击事件，显示点击的页面。
+         * @type {[type]}
+         */
+        let iframeContLists = document.querySelectorAll(".iframe-cont"),
+            iframeLists = document.querySelectorAll("iframe");
+            for(let i = 0;i<iframeContLists.length;i++){
+                iframeContLists[i].dataset.index = i;
+
+                iframeContLists[i].onclick = function(){
+
+                    let index = iframeContLists[i].dataset.index;
+                    this.style.background = "#e0d6d6";
+                    //显示当前页面，其余页面隐藏
+                    for(let j = 0;j<iframeLists.length;j++){
+                        if(index != j){
+                            // console.log("index="+index+",j="+j);
+                            iframeLists[j].style.display = "none";
+                            iframeContLists[j].style.backgroundColor = "inherit";
+                        }
+                    }
+                    iframeLists[index].style.display = "block";
+                }
+            }
+            // console.log(iframeContLists);
+            // console.log(iframeLists);
+        
+    </script>
+</body>
+
+</html>

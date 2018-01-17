@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<script src="../public/api.js"></script>
+	<script src="../lib/jquery-3.2.1.min.js"></script>
+	<script src="../lib/layer-v3.1.1/layer/layer.js"></script>
+	<style>
+	*{
+		padding:0;
+		margin:0;
+	}
+	.signup{
+		/*width: 300px;
+		height: 440px;*/
+		text-align: center;
+	}
+	.signup>label{
+		font-size:18px;
+		margin-bottom:20px;
+		display:block;
+	}
+	.signup>input{
+		width: 80%;
+		height: 35px;
+		margin: 5px 0;
+		border-radius: 20px;
+		border: none;
+		border: 1px solid #fff;
+		background: #f2f2f2;
+		text-align: center;
+		transition: background 1s;
+	}
+	.signup>input:focus{
+		background:#ccc;
+		outline:none;
+	}
+
+	.signup .gender{
+		font-size: 14px;
+		line-height: 30px;
+		height: 30px;
+		margin-top: 10px;
+	}
+	.signup .gender>label{
+		font-size: 14px;
+		margin-right: 10px;
+		vertical-align:middle;
+	}
+
+	.signup input[name="sex"]{
+		width: 18px;
+		height: 18px;
+		vertical-align: middle;
+	}
+	.signup .gender span{
+		vertical-align: middle;
+		padding-right:10px;
+		padding-left:5px;
+	}
+	.signup button{
+		width: 150px;
+		height: 30px;
+		margin-top: 20px;
+		border: none;
+		background: #02caca;
+		border-radius: 15px;
+		color: #fff;
+		cursor:pointer;
+		transition: background 1s;
+	}
+	.signup button:focus{
+		outline:none;
+	}
+	.signup button:hover{
+		background:#09f9f9;
+	}
+</style>
+</head>
+<body>
+	<div class="signup">
+		<label>注册用户</label>
+		<input type="text" name="username" placeholder="用户名" id="username">
+		<input type="password" name="password" placeholder="密码" id="password">
+		<input type="password" name="password_again" placeholder="确定密码" id="password_again" onblur="checkPsw()">
+		<input type="email" name="email" placeholder="email" id="email">
+		<input type="tel" name="tel" placeholder="手机" id="tel">
+		<input type="text" name="address" placeholder="地址" id="address">
+		<div class="gender">
+			<label>性别</label>
+			<input type="radio" name="sex" value=1 checked><span>男</span>
+			<input type="radio" name="sex" value=0><span>女</span>
+		</div>
+		<button id="signup">注册</button>
+	</div>
+	<script>
+
+		let sign = document.querySelector("#signup"),
+		username = document.querySelector("#username"),
+		password = document.querySelector("#password"),
+		password_again = document.querySelector("#password_again"),
+		email = document.querySelector("#email"),
+		tel = document.querySelector("#tel"),
+		address = document.querySelector("#address");
+		// 监听回车事件
+		document.onkeydown = function(event){
+			let e = event || window.event;
+			if(e && e.keyCode == 13){
+				signup();
+			}
+		}
+		sign.onclick = signup;
+		function signup(){
+			if(!check()){
+				return;
+			}else{
+				let data = {
+					username:username.value,
+					password:password.value,
+					email:email.value,
+					tel:tel.value,
+					address:address.value,
+					gender:checkRadio("sex")
+				}	
+				console.log(data);
+				myApi.signup(data,function(err,result){
+					if(err){
+						console.log(err);
+					}else{
+					username.value="";
+					password.value="";
+					email.value="";
+					tel.value = "";
+					address.value="";
+					document.getElementsByName("sex")[0].checked;
+					alert(result[0]+"\n你的员工编号是:"+result[1].userID+"\n员工编号用于用户登录，请牢记!!");
+					var index = parent.layer.getFrameIndex(window.name);  
+					parent.layer.close(index);  
+					location.href = "./index.html";
+					}
+				});
+			}
+		}
+		function check(){
+			let email_reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+			let tel_reg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+			if(username.value.trim()==""){
+				alert("用户名不可为空");
+				username.focus();
+				return false;
+			}
+			if(password.value.trim()==""){
+				alert("密码不可为空");
+				password.focus();
+				return false;
+			}
+			checkPsw();
+			if(email.value.trim()==""){
+				alert("电子邮箱不可为空");
+				email.focus();
+				return false;
+			}
+			if(!email_reg.test(email.value.trim())){
+				alert("邮箱格式不正确");
+				email.focus();
+				return false;
+			}
+			if(tel.value.trim()==""){
+				alert("手机号码不可为空");
+				tel.focus();
+				return false;
+			}
+			if(!tel_reg.test(tel.value.trim())){
+				alert("手机号码格式不正确");
+				tel.focus();
+				return false;
+			}
+			if(address.value.trim()==""){
+				alert("地址不可为空");
+				address.focus();
+				return false;
+			}
+			return true;
+		}
+		function checkPsw(){
+			if(password_again.value.trim() != password.value.trim()){
+				alert("两次输入的密码不一致");
+				return false;
+			}
+		};
+		function checkRadio(radioname){
+			let rList = document.getElementsByName(radioname),
+			radioV;
+			for(let i = 0;i<rList.length;i++){
+				if(rList[i].checked){
+					radioV = rList[i].value;
+					return radioV;
+				}
+			}
+		};
+	</script>
+</body>
+</html>

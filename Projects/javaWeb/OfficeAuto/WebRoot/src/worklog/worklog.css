@@ -1,0 +1,390 @@
+.home_content .worklog_title{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	background: #c3d1d8ed;
+	margin-top:10px;
+}
+
+.worklog_title label{
+	font-size: 1.2rem;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	font-weight: 500;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+.worklog_title .add_worklog{
+	font-size: 2rem;
+	background: #8cb4ca;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	vertical-align: middle;
+	float: right;
+	color: #7b0b0b;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #ccc;
+	margin-top: 2.3px;
+	margin-right: 10px;
+	cursor:pointer;
+	transition: color 1s;
+}
+.worklog_title .add_worklog:hover{
+	color:#ea1f1f;
+}
+
+/*show_calendar*/
+.home_content .show_calendar{
+	/*min-width:200px;*/
+	width:35%;
+	/*border:1px solid #ccc;*/
+	margin-top:10px;
+	float:left;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+
+.home_content .show_log{
+	width: 50%;
+	box-sizing: border-box;
+	padding: 20px 30px 20px 10px;
+	float: left;
+	height: 300px;
+	border: 1px solid #ced8de;
+	margin-top: 10px;
+	margin-left: 5%;
+	border-radius: 5px;
+}
+
+.show_log .log_title{
+	width:100%;
+	text-align: center;
+}
+
+.log_title input{
+	width: 80%;
+	height: 35px;
+	line-height: 35px;
+	font-size: 1.2rem;
+	border: none;
+	text-align: center;
+	background: #ccc;
+}
+
+.log_title .title_icon{
+	position:relative;
+	float:right;
+}
+.log_title .title_icon .opera{
+	float: right;
+	border-radius: 5px;
+	border: none;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	font-size: 1rem;
+	cursor: pointer;
+	background: #c6d3da;
+	color: #35484f;
+	transition:background 1s;
+	margin-left:20px;
+	margin-top:4px;
+}
+.log_title .title_icon .opera:hover{
+	background:#7fbbd8;
+}
+.log_title .title_icon .opera:focus{
+	outline:none;
+}
+/*.log_title .title_icon span{
+	display: block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background: #ccc;
+	box-sizing: border-box;
+	padding-bottom: -24px;
+	border-radius: 50%;
+	padding-left: 8px;
+	cursor: pointer;
+	color: #f1e6e6;
+	background: #00c2b1;
+	transition: background 1s;
+}
+.log_title .title_icon span:hover{
+	background-color: #08544e;
+	}*/
+/*.log_title .title_icon .opera{
+	position: absolute;
+	padding: 5px;
+	z-index: 100;
+	background: #00100f;
+	opacity: 0.6;
+	border-radius: 5px;
+	right: -6px;
+	top: 40px;
+	box-shadow: 0 0 5px #ccc;
+	display: none;
+}
+
+.log_title .title_icon .opera li a{
+	display: inline-block;
+	color: #fff;
+	border-bottom: 1px solid #ccc;
+	padding:0 5px;
+	transition: border 1s;
+}
+.log_title .title_icon .opera li a:hover{
+	border-color:#bf4646;
+	}*/
+	.log_title .title_icon span li{
+		float: left;
+		padding: 0;
+		margin: 0;
+		width: 7px;
+	}
+
+	.show_log .log_content{
+		/*border:1px solid red;*/
+	}
+
+	.log_content textarea{
+		height: 170px;
+		width: 100%;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		border: none;
+		padding:0 10px 10px 10px;
+		background: inherit;
+		text-indent: 2rem;
+		resize:none;
+	}
+	.log_content textarea:focus{
+		border:none;
+		outline:none;
+	}
+	.show_log .log_content .log_save{
+		text-align:right;
+		/*display:none;*/
+	}
+
+	.show_log .log_content .log_save button{
+		border: none;
+		padding: 5px 10px;
+		font-size: 1.1rem;
+		border-radius: 5px;
+		background: #00c2b1;
+		transition: background 1s;
+		cursor:pointer;
+
+	}
+	.show_log .log_content .log_save button:hover{
+		background:#0bf1dd;
+	}
+
+	.show_log .log_content .log_save button:focus{
+		outline:none;
+	}
+	.log_time,
+	.log_user{
+		width: 70px;
+		float: right;
+		padding-right: 5px;
+		font-size: 1rem;
+		color: #b7b3b3;
+		height: 25px;
+		line-height: 25px;
+		text-align:center;
+	}
+/*
+.log_time{
+	float:right;
+}
+.log_user{
+	float:left;
+	}*/
+
+/*.log_user{
+	padding-top:20px;
+	color:#000;
+}
+.log_user span{
+	background:#ccc;
+	padding:0px 20px ;
+	}*/
+
+	.calendar_list{
+		/*border:1px solid red;*/
+		height:200px;
+		padding:5px;
+		box-sizing:border-box;
+	}
+	.calendar_list label{
+		font-size: 1.2rem;
+		height: 40px;
+		line-height: 40px;
+		font-weight: 500;
+		padding-left: 10px;
+		display: inline-block;
+	}
+
+	.calendar_list .title{
+		width:100%;
+		background: #c6d3da;
+	}
+	.calendar_list .title .opera{
+		height:40px;
+		line-height:40px;
+		float:right;
+		padding-right:3px;
+	}
+	.calendar_list .title .opera button:nth-child(2){
+		background:#9dcfea;
+	}
+	.calendar_list .title button{
+		border:none;
+		padding: 5px 7px;
+		border-radius: 4px;
+		background: #c4e0ef;
+		cursor:pointer;
+		transition: border 1s;
+		border:1px solid #c6d3da;
+	}
+	.calendar_list .title button:hover{
+		border-color:#186d9a;
+	}
+	.calendar_list .title button:focus{
+		outline:none;
+	}
+
+	.calendar_list ul li{
+		height:35px;
+		line-height:35px;
+		font-size:1.2rem;
+		border-bottom: 1px dotted #000;
+	}
+
+	.calendar_list ul li a:nth-child(1){
+		color:#2b7fc1;
+		float:left;
+		padding-left:10px;
+	}
+	.calendar_list ul li a:nth-child(3){
+		color:#2b7fc1;
+		float:right;
+		padding-left:10px;
+	}
+	.calendar_list ul li a:hover{
+		text-decoration: underline;
+	}
+
+	.calendar_list ul li span{
+		float: right;
+		font-size: 1rem;
+		padding-right: 10px;
+		color: #b7b3b3;
+	}
+
+	
+	.calendar_list ul li time{
+		float:right;
+		padding-right:10px;
+		font-size:1rem;
+		color:#b7b3b3;
+	}
+
+
+
+
+	/*鏃ユ湡鎻掍欢*/
+	/*1銆佸紩鍏alendar.css鏂囦欢*/
+	/*2銆佹坊鍔犳樉绀烘棩鍘嗙殑鍦版柟*/
+	/*3銆佷娇鐢ㄤ竴涓殣钘忕殑input锛岃鏁版嵁鍦ㄩ噷闈㈡樉绀�*/
+	/*4銆佹坊鍔犲搴旂殑鏍峰紡*/
+	#calendar-box {
+		width: 80%;
+		height: 320px;
+		padding: 10px 20px;
+		font-size: 13px;
+		border-radius: 10px;
+		background-color: #ced8de;
+	}
+
+	.schedule-hd {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 15px;
+	}
+
+	.today {
+		flex: 1;
+		text-align: center;
+	}
+
+	.ul-box {
+		overflow: hidden;
+	}
+
+	.ul-box>li {
+		float: left;
+		width: 14.28%;
+		text-align: center;
+		padding: 5px 0;
+	}
+
+	.other-month {
+		color: #999999;
+	}
+
+	.current-month {
+		color: #333333;
+	}
+
+	.today-style {
+		border-radius: 50%;
+		background: #58d321;
+	}
+
+	.arrow {
+		cursor: pointer;
+	}
+
+	.dayStyle {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 35px;
+		cursor: pointer;
+	}
+
+	.current-month>.dayStyle:hover {
+		background: #00BDFF;
+		color: #ffffff;
+	}
+
+	.today-flag {
+		background: #00C2B1;
+		color: #fff;
+	}
+
+	.boxshaw {
+		box-shadow: 2px 2px 15px 2px #e3e3e3;
+	}
+
+	.selected-style {
+		background: #00BDFF;
+		color: #ffffff;
+	}
+
+	#select_date {
+		text-align: center;
+		padding: 10px;
+	}
+	/*5銆佸紩鍏alendar.js鏂囦欢*/
+	/*6銆佸啓浠ｇ爜*/
+

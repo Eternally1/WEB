@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<include file="conf/agenda-struts.xml"/>
+	<include file="conf/diary-struts.xml"/>
+	<include file="conf/user-struts.xml"/>
+	<package name="sentence" namespace="/sentence" extends="json-default">
+	    <action name="getSentence" class="action.SentenceAction" method="getSentence">
+	           <result name="success" type="json">
+		            <param name="root">sentenceMap</param>
+		       </result>
+	    </action>
+	</package>
+
+ 
+</struts>

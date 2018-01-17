@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>招聘信息录入</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/addRecruit.css">
+    <script src="../api/api.js"></script>
+</head>
+
+<body>
+    <div class="add-recruit-wrap">
+        <div class="title">
+            <h2>应聘信息录入</h2>
+        </div>
+        <div class="cont">
+            <label class="tl">应聘信息</label>
+            <div>
+                <p class="item">
+                    <label>姓名:</label>
+                    <input type="text" name="name" id="name" />
+                </p>
+                <p class="item">
+                    <label>性别:</label>
+                    <input type="radio" name="sex" value="1" checked />男
+                    <input type="radio" name="sex" value="0" />女
+                </p>
+            </div>
+            <div>
+                <p class="item">
+                    <label>年龄:</label>
+                    <input type="number" name="age" id="age" />
+                </p>
+                <p class="item">
+                    <label>职位:</label>
+                   <select id="job">
+                        <option value="软件工程师">软件工程师</option>
+                        <option value="游戏策划师" >游戏策划师</option>
+                        <option value="UI设计">UI设计</option>
+                        <option value="Web前端开发">Web前端开发</option>
+                        <option value="Java工程师">Java工程师</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p class="item">
+                    <label>所学专业:</label>
+                    <input type="text" name="specialty"  id="specialty"/>
+                </p>
+                <p class="item">
+                    <label>工作经验:</label>
+                    <input type="number" name="experience"  id="experience" placeholder="有几年的工经验？">
+                </p>
+            </div>
+            <div>
+                <p class="item">
+                    <label>学历:</label>
+                    <select id="studyeffort">
+                        <option value="大专">大专</option>
+                        <option value="本科" >本科</option>
+                        <option value="硕士">硕士</option>
+                        <option value="博士">博士</option>
+                    </select>
+                </p>
+                <p class="item">
+                    <label>毕业学院:</label>
+                    <input type="text" name="school" id="school">
+                </p>
+            </div>
+            <div>
+                <p class="item">
+                    <label>电话:</label>
+                    <input type="tel" name="tel" id="tel"/>
+                </p>
+                <p class="item">
+                    <label>email:</label>
+                    <input type="email" name="email" id="email">
+                </p>
+            </div>
+            <div>
+                <label>详细经历:</label>
+                <textarea id="content" name="content"></textarea>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="save" id="save">保存</button>
+            <button class="reset" id="reset">重置</button>
+        </div>
+    </div>
+    <script src="addRecruit.js"></script>
+</body>
+
+</html>

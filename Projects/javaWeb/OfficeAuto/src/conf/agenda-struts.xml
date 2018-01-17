@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+     <package name="agenda" namespace="/agenda" extends="json-default">
+          <action name="getAllAgenda" class="action.AgendaAction" method="getAllAgenda">
+             <result name="getsuccess" type="json">
+	            <param name="root">agendamap</param>
+	       </result>
+          </action>
+          <action name="addAgenda" class="action.AgendaAction" method="addAgenda">
+             <result name="addsuccess" type="json">
+	            <param name="root">agendamap</param>
+	         </result>
+	         <result name="addfailed" type="json">
+	            <param name="root">agendamap</param>
+	         </result>
+          </action>
+          <action name="updateAgenda" class="action.AgendaAction" method="updateAgenda">
+             <result name="updatesuccess" type="json">
+	            <param name="root">agendamap</param>
+	       </result>
+          </action>
+          <action name="deleteAgenda" class="action.AgendaAction" method="deleteAgenda">
+             <result name="deletesuccess" type="json">
+	            <param name="root">agendamap</param>
+	       </result>
+          </action>
+          <action name="finishAgenda" class="action.AgendaAction" method="finishAgenda">
+             <result name="finishsuccess" type="json">
+	            <param name="root">agendamap</param>
+	       </result>
+          </action>
+          <action name="getAgendaByIdAndTime" class="action.AgendaAction" method="getAgendaByIdAndTime">
+             <result name="getsuccess" type="json">
+	            <param name="root">agendamap</param>
+	       </result>
+          </action>
+          <action name="getNewestAgenda" class="action.AgendaAction" method="getNewestAgenda">
+             <result name="success" type="json">
+	            <param name="root">agendamap</param>
+	       	 </result>
+	       	 <result name="failed" type="json">
+	            <param name="root">agendamap</param>
+	       	 </result>
+          </action>
+           <action name="changeAgendaState" class="action.AgendaAction" method="changeAgendaState">
+             <result name="changesuccess" type="json">
+	            <param name="root">agendamap</param>
+	       </result>
+          </action>
+    </package>
+</struts>

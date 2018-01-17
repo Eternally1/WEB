@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索用户</title>
+	<script src="../lib/vue.js"></script>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		#app{
+			/*width:500px;
+			height:360px;
+			margin:100px auto;*/
+			padding:10px 20px;
+			box-sizing:border-box;
+			font-size:0.7rem;
+		}
+		#app li{
+			list-style:none;
+			border:2px solid #a3c7c1;
+			margin-bottom:10px;
+			border-radius:5px;
+			min-width:460px;
+		}
+		ul li p{
+			border-bottom:1px dotted #ccc;
+
+		}
+		ul li label,
+		ul li span{
+			height:25px;
+			line-height:25px;
+			display:inline-block;
+			vertical-align:middle;
+		}
+		ul li span{
+			width:150px;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			overflow:hidden;
+			display:inline-block;
+		}
+		ul li label{
+			width:70px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<ul id="app">
+		<li v-for="user in usersInfo">
+			<p>
+				<label>用户名</label><span>{{user.username}}</span>
+				<label>员工编号</label><span>{{user.userID}}</span>
+			</p>
+			<p>
+				<label>邮箱</label><span>{{user.email}}</span>
+				<label>电话</label><span>{{user.tel}}</span>
+			</p>
+			<p>
+				<label>性别</label><span>{{(user.gender==1?'男':'女')}}</span>
+				<label>地址</label><span>{{user.address}}</span>
+			</p>
+		</li>
+	</ul>
+	<script>
+		new Vue({
+			el:"#app",
+			data(){
+				return {
+					usersInfo:[]
+				}
+			},
+			created:function(){
+				this.usersInfo = JSON.parse(localStorage.getItem("usersInfo"));
+			}
+		})
+		
+
+	</script>
+</body>
+</html>

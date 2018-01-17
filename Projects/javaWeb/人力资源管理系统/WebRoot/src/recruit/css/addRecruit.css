@@ -1,0 +1,171 @@
+  * {
+      padding: 0;
+      margin: 0;
+  }
+
+  html,
+  body {
+      background: #ebeaea;
+      font-size: 12px;
+      font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+  }
+  /*右边的部分*/
+
+  .add-recruit-wrap .title h2 {
+      text-align: left;
+      line-height: 34px;
+      background: #0b5065;
+      color: #fff;
+      font-size: 1.6rem;
+      font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+  }
+
+  .add-recruit-wrap .cont {
+      padding: 5px 10px;
+      box-sizing: content-box;
+  }
+
+  .cont .tl {
+      font-size: 1.4rem;
+      padding-bottom: 5px;
+      display: block;
+      border-bottom: 1px solid #a59292
+  }
+
+  .cont div {
+      line-height: 40px;
+      font-size: 1.2rem;
+  }
+
+  .cont div p.item {
+      min-width: 280px;
+      float: left;
+      width: 48%;
+  }
+
+  .cont div select {
+      background: inherit;
+      width: 160px;
+      height: 30px;
+      border-radius: 5px;
+      outline: none;
+      /*margin-left: 10px;*/
+      border: 1px solid #9b9797;
+  }
+
+  .cont div input {
+      width: 160px;
+      height: 30px;
+      border-radius: 5px;
+      outline: none;
+      /*margin-left: 10px;*/
+      text-indent: 1rem;
+      font-family: "Verdana", serif;
+      background: #ebeaea;
+      border: 1px solid #9b9797;
+      transition: border-color 500ms;
+  }
+
+  .cont div input:focus {
+      border-color: #4493da;
+  }
+
+  .cont div label {
+      display: inline-block;
+      width: 90px;
+      text-align: center;
+  }
+
+  .cont div input[name="sex"] {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 3px
+  }
+
+  .cont div input[name="isadmin"] {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+  }
+
+  .pos {
+      position: relative;
+      /*用于日期插件的定位*/
+  }
+
+  .cont div .birthday {
+      line-height: 30px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 200px;
+      height: 30px;
+      border-radius: 5px;
+      outline: none;
+      margin-left: 10px;
+      text-indent: 1rem;
+      font-family: "Verdana", serif;
+      background: #ebeaea;
+      border: 1px solid #9b9797;
+      transition: border-color 500ms;
+      cursor: pointer;
+  }
+
+  .cont div .birthday:hover {
+      border-color: #4493da;
+  }
+
+  .cont div textarea {
+      border:1px solid #9b9797;
+      width: 300px;
+      height: 130px;
+      vertical-align: top;
+      border-radius: 5px;
+      outline: none;
+      text-indent: 1rem;
+      font-size: 1.2rem;
+      padding: 5px;
+      line-height: 1.7rem;
+      font-family: "Verdana", serif;
+      background: #ebeaea;
+      transition: border-color 500ms;
+  }
+
+  .cont div textarea:focus {
+      border-color: #4493da;
+  }
+
+  .add-recruit-wrap .footer {
+      text-align: center;
+      margin: 10px 0 20px 0;
+  }
+
+  .add-recruit-wrap .footer button {
+      width: 80px;
+      height: 30px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-right: 113px;
+      cursor: pointer;
+      transition: background 1s;
+  }
+
+  .add-recruit-wrap .footer .save {
+      background: #082a69;
+  }
+
+  .add-recruit-wrap .footer .reset {
+      background: #280101;
+  }
+
+  .add-recruit-wrap .footer .save:hover {
+      background: #5d72dc;
+  }
+
+  .add-recruit-wrap .footer .reset:hover {
+      background: #bc0909;
+  }
+  

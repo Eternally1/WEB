@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+	<script type="text/javascript" src="../public/api.js"></script>
+	<script src="../lib/jquery-3.2.1.min.js"></script>
+	<script src="../lib/layer-v3.1.1/layer/layer.js"></script>
+</head>
+<body>
+	<div class="login">
+		<label class="login_title">办公自动化系统</label>
+		<div class="login_content">
+			<div class="login_user">
+				<i class="fa fa-user" aria-hidden="true"></i> 
+				<input type="text" name="username" id="username">
+			</div>
+			<div class="login_psw">
+				<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+				<input type="password" name="password" id="password">
+			</div>
+			<button class="login_in" id="login_in">立即登录</button>
+			<div class="info">
+				<a href="#" class="register" onclick="signupBtn()">注册</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		// history.go(0);
+		let loginin = document.querySelector("#login_in");
+		let username = document.querySelector("#username");
+		let password = document.querySelector("#password");
+		loginin.onclick =login;
+		document.onkeydown = function(event){
+			let e = event || window.event;
+			if(e && e.keyCode==13){
+				login();
+			}
+		}
+		function login(){	
+			// 判断是否为空
+			if(username.value.trim()==""){
+				alert("用户名不可为空");
+				username.focus();
+				return;
+			}
+			if(password.value.trim()==""){
+				alert("密码不能为空");
+				password.focus();
+				return;
+			}
+			let data = {
+				userID:username.value,
+				password:password.value
+			};
+			// console.log(data);
+			// location.href="../home/home.html";
+			myApi.login(data,function(err,result){
+				if(err){
+					console.log(result);
+					alert(result[0]);
+				}else{
+					// 将user保存到浏览器中
+					console.log(result[1]);
+					localStorage.setItem("user",JSON.stringify(result[1]));
+					location.href="../home/home.html"
+				}
+			});
+		};
+		function signupBtn(){
+			layer.open({
+				type:2,
+				title:"注册",
+				shadeClose:true,
+				area:['300px','500px'],
+				content:"./signup.html",
+				skin:"demo-class"
+			})
+		}
+	</script>
+</body>
+</html>

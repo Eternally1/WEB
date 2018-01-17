@@ -1,0 +1,7 @@
+1、数据库用户名和密码统一
+2、tomcat端口的统一
+3、dao方法中查询语句：select * from "数据库表名：跟hibernate.hbm.xml映射文件设置的统一"
+4、action和html传送数据需要根据structs.xml映射
+5、想偷懒，多复制出来的文件导致后台传送数据出错
+6、导包的问题：log4j.jar  /  slf4j-log4j.jar  / hibernate-jpa-2.0-api.jar
+			

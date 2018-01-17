@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间插件</title>
+	<script type="text/javascript" src="../lib/layDate-v5.0.9/laydate/laydate.js"></script>
+</head>
+<body>
+	<input type="text"  id="timePlugin" name="">
+	<script type="text/javascript">
+		 history.go(0);
+		laydate.render({
+			elem:"#timePlugin",
+			type:"time",   //时间选择
+			formate:'HH点mm分',   //时间格式
+
+		})
+	</script>
+</body>
+</html>
