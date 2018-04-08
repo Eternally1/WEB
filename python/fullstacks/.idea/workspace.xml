@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/week2/day5/extract_txt_str.py" line="29" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ab5a57a1-5f41-4ba5-af6d-5a14017dbb20" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,137 +15,176 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/fullstacks$login.coverage" NAME="login Coverage Results" MODIFIED="1519881905107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day3" />
     <SUITE FILE_PATH="coverage/fullstacks$file.coverage" NAME="file Coverage Results" MODIFIED="1519636056979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day2" />
-    <SUITE FILE_PATH="coverage/fullstacks$collections.coverage" NAME="collections Coverage Results" MODIFIED="1520394064240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day2" />
     <SUITE FILE_PATH="coverage/fullstacks$pdf_miner.coverage" NAME="pdf_miner Coverage Results" MODIFIED="1520395981398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$functions_1.coverage" NAME="functions_1 Coverage Results" MODIFIED="1522290120380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day4" />
+    <SUITE FILE_PATH="coverage/fullstacks$threading2.coverage" NAME="threading2 Coverage Results" MODIFIED="1521291704945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittest_opera.coverage" NAME="Unittest opera Coverage Results" MODIFIED="1522390459514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$convert_to_txt.coverage" NAME="convert_to_txt Coverage Results" MODIFIED="1520582594676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/dataprocessing" />
+    <SUITE FILE_PATH="coverage/fullstacks$ExSQL.coverage" NAME="ExSQL Coverage Results" MODIFIED="1522720448119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day3" />
+    <SUITE FILE_PATH="coverage/fullstacks$mysql_1.coverage" NAME="mysql_1 Coverage Results" MODIFIED="1520741278362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day6" />
+    <SUITE FILE_PATH="coverage/fullstacks$main.coverage" NAME="main Coverage Results" MODIFIED="1520654977257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/dataprocessing" />
+    <SUITE FILE_PATH="coverage/fullstacks$numpy_basic.coverage" NAME="numpy_basic Coverage Results" MODIFIED="1522200043115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$path_split__1_.coverage" NAME="path_split (1) Coverage Results" MODIFIED="1520655579648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day5" />
+    <SUITE FILE_PATH="coverage/fullstacks$classfiy_one_article.coverage" NAME="classfiy_one_article Coverage Results" MODIFIED="1523072020911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/extract_info_2" />
+    <SUITE FILE_PATH="coverage/fullstacks$py_test_in_test_py.coverage" NAME="py.test in test.py Coverage Results" MODIFIED="1519455323911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittests_in_MyList.coverage" NAME="Unittests in MyList Coverage Results" MODIFIED="1520499460476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
+    <SUITE FILE_PATH="coverage/fullstacks$regexper_test.coverage" NAME="regexper_test Coverage Results" MODIFIED="1522058699046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/extract_info_2" />
+    <SUITE FILE_PATH="coverage/fullstacks$directory_lists.coverage" NAME="directory_lists Coverage Results" MODIFIED="1520557721842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day4" />
+    <SUITE FILE_PATH="coverage/fullstacks$nlpir_1.coverage" NAME="nlpir_1 Coverage Results" MODIFIED="1520827828459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$c2a__1_.coverage" NAME="c2a (1) Coverage Results" MODIFIED="1521514885594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/extract_info" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittest_TestDict_test_keyerror.coverage" NAME="Unittest TestDict.test_keyerror Coverage Results" MODIFIED="1520317772086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$crawl_2.coverage" NAME="crawl_2 Coverage Results" MODIFIED="1521187085808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$context_manager.coverage" NAME="context manager Coverage Results" MODIFIED="1521252667341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day6" />
+    <SUITE FILE_PATH="coverage/fullstacks$datetime_1.coverage" NAME="datetime_1 Coverage Results" MODIFIED="1521258926960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day6" />
     <SUITE FILE_PATH="coverage/fullstacks$shopping.coverage" NAME="shopping Coverage Results" MODIFIED="1519463537372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittest_get_article_link.coverage" NAME="Unittest get_article_link Coverage Results" MODIFIED="1520910053738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$crawl_1.coverage" NAME="crawl_1 Coverage Results" MODIFIED="1520934084073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day2" />
     <SUITE FILE_PATH="coverage/fullstacks$metaclass_1.coverage" NAME="metaclass_1 Coverage Results" MODIFIED="1520503131397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
     <SUITE FILE_PATH="coverage/fullstacks$sql.coverage" NAME="sql Coverage Results" MODIFIED="1520394113891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day2" />
     <SUITE FILE_PATH="coverage/fullstacks$hello.coverage" NAME="hello Coverage Results" MODIFIED="1519455337736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day1" />
     <SUITE FILE_PATH="coverage/fullstacks$Unittest_TestDict_test_attrerror.coverage" NAME="Unittest TestDict.test_attrerror Coverage Results" MODIFIED="1520317723783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
-    <SUITE FILE_PATH="coverage/fullstacks$Unittests_in_User.coverage" NAME="Unittests in User Coverage Results" MODIFIED="1520503624908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
+    <SUITE FILE_PATH="coverage/fullstacks$NF34.coverage" NAME="NF34 Coverage Results" MODIFIED="1523071868501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/extract_info_2" />
     <SUITE FILE_PATH="coverage/fullstacks$forTest.coverage" NAME="forTest Coverage Results" MODIFIED="1519737385336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1" />
     <SUITE FILE_PATH="coverage/fullstacks$a_easy_object_module.coverage" NAME="a_easy_object_module Coverage Results" MODIFIED="1520475859499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
-    <SUITE FILE_PATH="coverage/fullstacks$metaclass_2.coverage" NAME="metaclass_2 Coverage Results" MODIFIED="1520503746616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
-    <SUITE FILE_PATH="coverage/fullstacks$py_test_in_test_py.coverage" NAME="py.test in test.py Coverage Results" MODIFIED="1519455323911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day1" />
-    <SUITE FILE_PATH="coverage/fullstacks$Unittests_in_MyList.coverage" NAME="Unittests in MyList Coverage Results" MODIFIED="1520499460476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
     <SUITE FILE_PATH="coverage/fullstacks$Unittest_Model_save.coverage" NAME="Unittest Model.save Coverage Results" MODIFIED="1520503645028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
-    <SUITE FILE_PATH="coverage/fullstacks$level3menu.coverage" NAME="level3menu Coverage Results" MODIFIED="1519532353180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day1" />
-    <SUITE FILE_PATH="coverage/fullstacks$Unittest_TestDict_test_key.coverage" NAME="Unittest TestDict.test_key Coverage Results" MODIFIED="1520317785437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
-    <SUITE FILE_PATH="coverage/fullstacks$py2.coverage" NAME="py2 Coverage Results" MODIFIED="1519532357676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day2" />
-    <SUITE FILE_PATH="coverage/fullstacks$Unittest_TestDict_test_keyerror.coverage" NAME="Unittest TestDict.test_keyerror Coverage Results" MODIFIED="1520317772086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$DataPreProcessing.coverage" NAME="DataPreProcessing Coverage Results" MODIFIED="1520829959237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/dataprocessing" />
     <SUITE FILE_PATH="coverage/fullstacks$Unittest_TestDict_test_init.coverage" NAME="Unittest TestDict.test_init Coverage Results" MODIFIED="1520317782372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$path_split.coverage" NAME="path_split Coverage Results" MODIFIED="1520565990173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/dataprocessing" />
+    <SUITE FILE_PATH="coverage/fullstacks$mysql_3.coverage" NAME="mysql_3 Coverage Results" MODIFIED="1520742549522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day6" />
+    <SUITE FILE_PATH="coverage/fullstacks$get_file_path.coverage" NAME="get_file_path Coverage Results" MODIFIED="1521014140383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day3" />
+    <SUITE FILE_PATH="coverage/fullstacks$word2vec3.coverage" NAME="word2vec3 Coverage Results" MODIFIED="1522993359415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week5/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittests_in_User.coverage" NAME="Unittests in User Coverage Results" MODIFIED="1520503624908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
+    <SUITE FILE_PATH="coverage/fullstacks$2.coverage" NAME="卡牌问题2 Coverage Results" MODIFIED="1522590177165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$metaclass_2.coverage" NAME="metaclass_2 Coverage Results" MODIFIED="1520503746616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day3" />
+    <SUITE FILE_PATH="coverage/fullstacks$extract_txt_str.coverage" NAME="extract_txt_str Coverage Results" MODIFIED="1520582237059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/dataprocessing" />
+    <SUITE FILE_PATH="coverage/fullstacks$2017.coverage" NAME="2017机试 Coverage Results" MODIFIED="1522221405203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$context_manager_1.coverage" NAME="context manager_1 Coverage Results" MODIFIED="1521253067204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day6" />
+    <SUITE FILE_PATH="coverage/fullstacks$py2.coverage" NAME="py2 Coverage Results" MODIFIED="1519532357676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$collections.coverage" NAME="collections Coverage Results" MODIFIED="1520394064240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$word2vec2.coverage" NAME="word2vec2 Coverage Results" MODIFIED="1523067204236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week5/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$search_in_double_array.coverage" NAME="search_in_double_array Coverage Results" MODIFIED="1522201660777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$write_to_mysql.coverage" NAME="write_to_mysql Coverage Results" MODIFIED="1520584599509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/dataprocessing" />
+    <SUITE FILE_PATH="coverage/fullstacks$ThreadsAndProcesses.coverage" NAME="ThreadsAndProcesses Coverage Results" MODIFIED="1521291691066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$crawl_3.coverage" NAME="crawl_3 Coverage Results" MODIFIED="1522719863583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day2" />
+    <SUITE FILE_PATH="coverage/fullstacks$.coverage" NAME="内置数学工具 Coverage Results" MODIFIED="1522469864640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day5" />
+    <SUITE FILE_PATH="coverage/fullstacks$mysql_2.coverage" NAME="mysql_2 Coverage Results" MODIFIED="1520741708632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day6" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittest_mFind.coverage" NAME="Unittest mFind Coverage Results" MODIFIED="1522390464367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week4/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$context_manager_2.coverage" NAME="context manager_2 Coverage Results" MODIFIED="1521253209474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week3/day6" />
+    <SUITE FILE_PATH="coverage/fullstacks$level3menu.coverage" NAME="level3menu Coverage Results" MODIFIED="1519532353180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week1/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$threading3.coverage" NAME="threading3 Coverage Results" MODIFIED="1521292629397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$c2a.coverage" NAME="c2a Coverage Results" MODIFIED="1521514895368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBR emergency/extract_info_2" />
+    <SUITE FILE_PATH="coverage/fullstacks$Unittest_TestDict_test_key.coverage" NAME="Unittest TestDict.test_key Coverage Results" MODIFIED="1520317785437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week2/day1" />
+    <SUITE FILE_PATH="coverage/fullstacks$word2vec.coverage" NAME="word2vec Coverage Results" MODIFIED="1522983455308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week5/day1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="fullstacks" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="mydict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day1/mydict.py">
+      <file leaf-file-name="lib1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/lib1.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="318">
-              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mydict_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day1/mydict_test.py">
+      <file leaf-file-name="NF34.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/NF34.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="14" />
+            <state relative-caret-position="528">
+              <caret line="413" column="25" lean-forward="false" selection-start-line="413" selection-start-column="25" selection-end-line="413" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classfiy_one_article.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/classfiy_one_article.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
               <folding>
-                <element signature="e#47#62#0" expanded="true" />
+                <marker date="1523072020888" expanded="true" signature="182:458" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a_easy_object_module.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day3/a_easy_object_module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metaclass_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day3/metaclass_1.py">
+      <file leaf-file-name="lib2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/lib2.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
-              <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metaclass_2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day3/metaclass_2.py">
+      <file leaf-file-name="ExSQL.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/ExSQL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+            <state relative-caret-position="423">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
               <folding>
-                <marker date="1520503816560" expanded="true" signature="1794:1825" ph="insert into missing_value... " />
+                <marker date="1523068319475" expanded="true" signature="960:987" ph="insert into missing_value... " />
+                <marker date="1523068319475" expanded="true" signature="1530:1573" ph="select missi... missing_value" />
+                <marker date="1523068319475" expanded="true" signature="1927:1941" ph="select * fro... missing_value" />
+                <marker date="1523068319475" expanded="true" signature="2032:2047" ph="select missi... missing_value" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directory_lists.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/week2/day4/directory_lists.py">
+      <file leaf-file-name="word2vec2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/week5/day1/word2vec2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="594">
+              <caret line="18" column="72" lean-forward="false" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadsAndProcesses.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day1/ThreadsAndProcesses.py">
+      <file leaf-file-name="word2vec3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/week5/day1/word2vec3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="661">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="word2vec.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/week5/day1/word2vec.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="265">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day2/sql.py">
+      <file leaf-file-name="lib.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/lib.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <marker date="1520394168057" expanded="true" signature="255:317" ph="create table... user" />
-                <marker date="1520394168057" expanded="true" signature="345:385" ph="insert into user... " />
-                <marker date="1520394168057" expanded="true" signature="510:541" ph="select * fro... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pdf_miner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day2/pdf_miner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1855">
-              <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-              <folding>
-                <element signature="e#104#156#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/day2/1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="371">
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -160,8 +202,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>[</find>
-      <find>]</find>
+      <find>cur_time</find>
+      <find>try</find>
+      <find>record.run()</find>
+      <find>self.get_death()</find>
+      <find>get_death</find>
+      <find>run</find>
+      <find>place</find>
+      <find>print</find>
+      <find>news_search</find>
+      <find>loss_shu</find>
+      <find>公顷</find>
+      <find>get_time</find>
+      <find>host</find>
+      <find>pdf_url</find>
+      <find>get_pdf_url</find>
+      <find>sorts</find>
+      <find>get_loss</find>
+      <find>get_place</find>
+      <find>emer</find>
+      <find>insert_data</find>
+      <find>emergency_frame1</find>
+      <find>保障</find>
+      <find>主</find>
+      <find>运输</find>
+      <find>emergency_frame</find>
+      <find>市场</find>
+      <find>lib</find>
+      <find>emergency_fram</find>
+      <find>i</find>
+      <find>恶心</find>
     </findStrings>
     <replaceStrings>
       <replace>}</replace>
@@ -170,32 +240,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/week1/day1/test.ipynb" />
-        <option value="$PROJECT_DIR$/week1/day1/test.py" />
-        <option value="$PROJECT_DIR$/week1/day1/hello.py" />
-        <option value="$PROJECT_DIR$/week1/day1/hello2.py" />
-        <option value="$PROJECT_DIR$/week1/day1/shopping.py" />
-        <option value="$PROJECT_DIR$/week1/day1/level3menu.py" />
-        <option value="$PROJECT_DIR$/week1/day2/hello.py" />
-        <option value="$PROJECT_DIR$/week1/day2/py2.py" />
-        <option value="$PROJECT_DIR$/week1/day2/file" />
-        <option value="$PROJECT_DIR$/week1/day2/file.py" />
-        <option value="$PROJECT_DIR$/week1/forTest.py" />
-        <option value="$PROJECT_DIR$/week1/day3/login.py" />
-        <option value="$PROJECT_DIR$/DeskGUI/gui.py" />
-        <option value="$PROJECT_DIR$/week2/day1/mydict.py" />
-        <option value="$PROJECT_DIR$/week2/day1/mydict_test.py" />
+        <option value="$PROJECT_DIR$/week3/day3.py" />
+        <option value="$PROJECT_DIR$/week3/day3/get_file_path.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/ExSQL.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info/inputnews1.py" />
+        <option value="$PROJECT_DIR$/week3/day2/crawl_1.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/dataprocessing/DataPreProcessing.py" />
+        <option value="$PROJECT_DIR$/week3/day2/crawl_2.py" />
+        <option value="$PROJECT_DIR$/week3/day6/context manager.py" />
+        <option value="$PROJECT_DIR$/week3/day6/context manager_1.py" />
+        <option value="$PROJECT_DIR$/week3/day6/context manager_2.py" />
+        <option value="$PROJECT_DIR$/week3/day6/datetime——1.py" />
+        <option value="$PROJECT_DIR$/week3/day6/datetime_1.py" />
         <option value="$PROJECT_DIR$/week2/day1/ThreadsAndProcesses.py" />
-        <option value="$PROJECT_DIR$/week2/day2.py" />
-        <option value="$PROJECT_DIR$/week2/day2/collections.py" />
-        <option value="$PROJECT_DIR$/week2/day2/base_64.py" />
-        <option value="$PROJECT_DIR$/week2/day2/sql.py" />
-        <option value="$PROJECT_DIR$/week2/day2/1.txt" />
-        <option value="$PROJECT_DIR$/week2/day2/pdf_miner.py" />
-        <option value="$PROJECT_DIR$/week2/day3/a_easy_object_module.py" />
-        <option value="$PROJECT_DIR$/week2/day3/metaclass_1.py" />
-        <option value="$PROJECT_DIR$/week2/day3/metaclass_2.py" />
-        <option value="$PROJECT_DIR$/week2/day4/directory_lists.py" />
+        <option value="$PROJECT_DIR$/week2/day1/threading2.py" />
+        <option value="$PROJECT_DIR$/week2/day1/threading.py" />
+        <option value="$PROJECT_DIR$/week2/day1/threading3.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info/c2a.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/c2a.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/regexper_test.py" />
+        <option value="$PROJECT_DIR$/week4/day1/阶梯数.py" />
+        <option value="$PROJECT_DIR$/week4/day2/search_in_double_array.py" />
+        <option value="$PROJECT_DIR$/week4/day2/numpy_basic.py" />
+        <option value="$PROJECT_DIR$/week1/day3/list_tuple.py" />
+        <option value="$PROJECT_DIR$/week4/day2/后缀表达式求值.py" />
+        <option value="$PROJECT_DIR$/week4/day2/背包问题.py" />
+        <option value="$PROJECT_DIR$/week4/day1/2017机试.py" />
+        <option value="$PROJECT_DIR$/week4/day2/括号匹配.py" />
+        <option value="$PROJECT_DIR$/week4/day2/数.py" />
+        <option value="$PROJECT_DIR$/week4/day2/树.py" />
+        <option value="$PROJECT_DIR$/week4/day3/合唱团.py" />
+        <option value="$PROJECT_DIR$/week1/day4/functions_1.py" />
+        <option value="$PROJECT_DIR$/week4/day4/马的遍历.py" />
+        <option value="$PROJECT_DIR$/week4/day2/迷宫问题.py" />
+        <option value="$PROJECT_DIR$/week4/day3/地牢逃脱.py" />
+        <option value="$PROJECT_DIR$/week4/day5/表达式操作符.py" />
+        <option value="$PROJECT_DIR$/week4/day5/数字类型.py" />
+        <option value="$PROJECT_DIR$/week4/day5/内置数学工具.py" />
+        <option value="$PROJECT_DIR$/week4/day1/卡牌问题2.py" />
+        <option value="$PROJECT_DIR$/week3/day2/crawl_3.py" />
+        <option value="$PROJECT_DIR$/week3/day3/ExSQL.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info/NF34.py" />
+        <option value="$PROJECT_DIR$/week5/day1/boson_nlp.py" />
+        <option value="$PROJECT_DIR$/week5/day1/word2vec.py" />
+        <option value="$PROJECT_DIR$/week5/day1/word2vec3.py" />
+        <option value="$PROJECT_DIR$/week5/day1/word2vec2.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/ExSQL.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/lib1.txt" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/lib2.txt" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/NF34.py" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/lib.txt" />
+        <option value="$PROJECT_DIR$/CBR emergency/extract_info_2/classfiy_one_article.py" />
       </list>
     </option>
   </component>
@@ -239,12 +334,22 @@
               <option name="myItemId" value="fullstacks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
+              <option name="myItemId" value="fullstacks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fullstacks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="day4" />
+              <option name="myItemId" value="week5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="day1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,7 +363,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
+              <option name="myItemId" value="CBR emergency" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extract_info_2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,6 +378,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fullstacks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CBR emergency" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,15 +391,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="C:\Users\14259\AppData\Roaming\npm\node_modules\eslint" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/others/GITHUB/python/fullstacks/CBR emergency/extract_info_2/NF34.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Anaconda3/python.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\others\GITHUB\python\fullstacks\CBR emergency\extract_info_2" />
+      <recent name="C:\others\GITHUB\python\fullstacks\week3\day3" />
+      <recent name="C:\others\GITHUB\python\fullstacks\CBR emergency" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\others\GITHUB\python\fullstacks" />
-      <recent name="C:\others\GITHUB\python\fullstacks\week1" />
+      <recent name="C:\others\GITHUB\python\fullstacks\CBR emergency\extract_info_2" />
+      <recent name="C:\others\GITHUB\python\fullstacks\week3" />
+      <recent name="C:\others\GITHUB\python\fullstacks\week3\day1" />
+      <recent name="C:\others\GITHUB\python\fullstacks\week2\day5" />
+      <recent name="C:\others\GITHUB\python\fullstacks\CBR emergency" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -301,108 +424,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.metaclass_2">
-    <configuration default="false" name="Unittests in MyList" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week2/day3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="fullstacks" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2/day3/metaclass_1.py" />
-      <option name="CLASS_NAME" value="MyList" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="metaclass_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.classfiy_one_article">
+    <configuration default="false" name="NF34" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week2/day3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CBR emergency/extract_info_2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="fullstacks" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2/day3/metaclass_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CBR emergency/extract_info_2/NF34.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in User" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week2/day3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="fullstacks" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2/day3/metaclass_2.py" />
-      <option name="CLASS_NAME" value="User" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest Model.save" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week2/day3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="fullstacks" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2/day3/metaclass_2.py" />
-      <option name="CLASS_NAME" value="Model" />
-      <option name="METHOD_NAME" value="save" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="metaclass_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="classfiy_one_article" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week2/day3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CBR emergency/extract_info_2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="fullstacks" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2/day3/metaclass_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CBR emergency/extract_info_2/classfiy_one_article.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="word2vec2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week5/day1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fullstacks" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week5/day1/word2vec2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="word2vec" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week5/day1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fullstacks" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week5/day1/word2vec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="word2vec3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week5/day1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fullstacks" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week5/day1/word2vec3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -622,19 +730,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in MyList" />
-      <item index="1" class="java.lang.String" itemvalue="Python.metaclass_1" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in User" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest Model.save" />
-      <item index="4" class="java.lang.String" itemvalue="Python.metaclass_2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.NF34" />
+      <item index="1" class="java.lang.String" itemvalue="Python.classfiy_one_article" />
+      <item index="2" class="java.lang.String" itemvalue="Python.word2vec2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.word2vec" />
+      <item index="4" class="java.lang.String" itemvalue="Python.word2vec3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.metaclass_2" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest Model.save" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in User" />
-        <item index="3" class="java.lang.String" itemvalue="Python.metaclass_1" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in MyList" />
+        <item index="0" class="java.lang.String" itemvalue="Python.classfiy_one_article" />
+        <item index="1" class="java.lang.String" itemvalue="Python.NF34" />
+        <item index="2" class="java.lang.String" itemvalue="Python.word2vec2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.word2vec3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.word2vec" />
       </list>
     </recent_temporary>
   </component>
@@ -655,20 +763,20 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_Model_save - 2018.03.08 at 18h 07m 25s.xml">
-      <configuration name="Unittest Model.save" configurationId="tests" />
+    <history-entry file="Unittest_mFind - 2018.03.30 at 14h 14m 24s.xml">
+      <configuration name="Unittest mFind" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestDict_test_keyerror - 2018.03.06 at 14h 29m 32s.xml">
-      <configuration name="Unittest TestDict.test_keyerror" configurationId="tests" />
+    <history-entry file="Unittest_opera - 2018.03.30 at 14h 13m 48s.xml">
+      <configuration name="Unittest opera" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_MyList - 2018.03.08 at 16h 52m 11s.xml">
-      <configuration name="Unittests in MyList" configurationId="tests" />
+    <history-entry file="Unittest_opera - 2018.03.30 at 14h 14m 06s.xml">
+      <configuration name="Unittest opera" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_MyList - 2018.03.08 at 16h 57m 40s.xml">
-      <configuration name="Unittests in MyList" configurationId="tests" />
+    <history-entry file="Unittest_opera - 2018.03.30 at 14h 14m 17s.xml">
+      <configuration name="Unittest opera" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_User - 2018.03.08 at 18h 07m 05s.xml">
-      <configuration name="Unittests in User" configurationId="tests" />
+    <history-entry file="Unittest_opera - 2018.03.30 at 14h 14m 19s.xml">
+      <configuration name="Unittest opera" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_py - 2018.02.24 at 14h 48m 08s.xml">
       <configuration name="py.test in test.py" configurationId="tests" />
@@ -686,31 +794,40 @@
       <configuration name="py.test in test.py" configurationId="tests" />
     </history-entry>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1826415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19782461" sideWeight="0.5046948" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16150944" sideWeight="0.44487804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19782461" sideWeight="0.5046948" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29273218" sideWeight="0.43056604" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31027535" sideWeight="0.569434" order="11" side_tool="true" content_ui="combo" x="14" y="1096" width="2644" height="436" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33922502" sideWeight="0.49530515" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,306 +838,380 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="26" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="stack" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/week2/day1/mydict_test.py">
+    <entry file="file://C:/software/others/python/install3.6.4/Lib/urllib/request.py" />
+    <entry file="file://$PROJECT_DIR$/week3/day6/context manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="e#47#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="212">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day1/ThreadsAndProcesses.py">
+    <entry file="file://$PROJECT_DIR$/week3/day6/context manager_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="212">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/DeskGUI/gui.py">
+    <entry file="file://$PROJECT_DIR$/week3/day6/context manager_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="852">
+          <caret line="47" column="18" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="47" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day1/shopping.py">
+    <entry file="file://$PROJECT_DIR$/week2/day6/mysql_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+        <state relative-caret-position="-318">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/level3menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3550">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/software/others/python/install3.6.4/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16100">
-          <caret line="322" column="0" lean-forward="false" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/forTest.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day1/shopping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/level3menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3550">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/shopping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/level3menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3550">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/shopping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/level3menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3550">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/shopping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/level3menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/test.ipynb" />
-    <entry file="file://$PROJECT_DIR$/week1/day1/hello.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day1/hello2.py" />
-    <entry file="file://$PROJECT_DIR$/week1/day1/shopping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day1/level3menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3550">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/software/others/python/install3.6.4/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16100">
-          <caret line="322" column="0" lean-forward="false" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day2/file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/day3/login.py" />
-    <entry file="file://$PROJECT_DIR$/DeskGUI/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day2.py" />
-    <entry file="file://$PROJECT_DIR$/week2/day2/collections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2067">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day2/sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <marker date="1520394168057" expanded="true" signature="255:317" ph="create table... user" />
-            <marker date="1520394168057" expanded="true" signature="345:385" ph="insert into user... " />
-            <marker date="1520394168057" expanded="true" signature="510:541" ph="select * fro... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day2/1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day1/ThreadsAndProcesses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day2/pdf_miner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1855">
-          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-          <folding>
-            <element signature="e#104#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1/forTest.py" />
-    <entry file="file://$PROJECT_DIR$/week2/day1/mydict.py">
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info/stopwords1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day1/mydict_test.py">
+    <entry file="file://$PROJECT_DIR$/week3/day6/datetime_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="14" />
-          <folding>
-            <element signature="e#47#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="583">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day3/a_easy_object_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day3/metaclass_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day3/metaclass_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
-          <folding>
-            <marker date="1520503816560" expanded="true" signature="1794:1825" ph="insert into missing_value... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/day4/directory_lists.py">
+    <entry file="file://$PROJECT_DIR$/week2/day1/threading1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/day1/threading2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/day1/threading3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info/c2a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/c2a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4452">
+          <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info/inputnews1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/search_in_double_array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week1/day3/list_tuple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/后缀表达式求值.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day1/卡牌问题1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/numpy_basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/括号匹配.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week1/day4/functions_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day3/地牢逃脱.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3657">
+          <caret line="69" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day4/马的遍历.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1272">
+          <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day5/数字类型.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1643">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day5/内置数学工具.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day1/阶梯数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/树.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4081">
+          <caret line="77" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/背包问题.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1166">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day2/迷宫问题.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1749">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day3/合唱团.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="34" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day1/卡牌问题2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/day2/crawl_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/day6/mysql_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="859">
+          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/day5/表达式操作符.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/day3/get_file_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/day2/crawl_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8745">
+          <caret line="181" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/day2/crawl_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9858">
+          <caret line="202" column="42" lean-forward="false" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/day3/ExSQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2915">
+          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/regexper_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2014">
+          <caret line="38" column="58" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/software/others/python/install3.6.4/Lib/ntpath.py" />
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/stopwords1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info/NF34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7049">
+          <caret line="139" column="16" lean-forward="false" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/day1/boson_nlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/day1/word2vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/ExSQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding>
+            <marker date="1523068319475" expanded="true" signature="960:987" ph="insert into missing_value... " />
+            <marker date="1523068319475" expanded="true" signature="1530:1573" ph="select missi... missing_value" />
+            <marker date="1523068319475" expanded="true" signature="1927:1941" ph="select * fro... missing_value" />
+            <marker date="1523068319475" expanded="true" signature="2032:2047" ph="select missi... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/day1/word2vec3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/day1/word2vec2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="18" column="72" lean-forward="false" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/lib2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/lib1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/NF34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="413" column="25" lean-forward="false" selection-start-line="413" selection-start-column="25" selection-end-line="413" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/lib.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBR emergency/extract_info_2/classfiy_one_article.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+          <folding>
+            <marker date="1523072020888" expanded="true" signature="182:458" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
